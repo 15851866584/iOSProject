@@ -7,6 +7,16 @@
 //
 
 #import "AppDelegate.h"
+#import <WebKit/WebKit.h>
+#import <JLRoutes/JLRoutes.h>
+#import "AIHomeTabBarController.h"
+#import "AIGuidePageView.h"
+
+#import <UMMobClick/MobClick.h>
+
+#ifdef DEBUG
+#import "FPSLabel.h"
+#endif
 
 @interface AppDelegate ()
 
@@ -14,12 +24,118 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [NSThread sleepForTimeInterval:2.0f];
+    
+    //主窗口、根控制器
+    [self setRootWindow];
+    
+    //IOS11适配
+    [self configScrollViewAdapt4IOS11];
+    
+    //防止多个按钮同时触发
+    [[UIButton appearance] setExclusiveTouch:YES];
+    
+    //路由
+    [AIRouterConfig routesConfig];
+    
+    //nav配置
+//    [self setNavBarAppearence];
+    
+    //引导页
+    [self configGuidePage];
+    
+    //开启网络状态
+    [self monitorNetworking];
+    
+    //友盟统计
+    [self UMConfig];
+#ifdef DEBUG
+    [self.window addSubview:[FPSLabel new]];
+#endif
+
     return YES;
 }
 
+- (void)setRootWindow{
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
+    AIHomeTabBarController *tabBar = [[AIHomeTabBarController alloc]init];
+    [self.window setRootViewController:tabBar];
+    [self.window makeKeyAndVisible];
+    
+    // nav.tabbar阴影去除
+    [[UINavigationBar appearance] setTranslucent:NO];
+    [[UITabBar appearance] setTranslucent:NO];
+}
+
+- (void)setNavBarAppearence{
+    
+    [WRNavigationBar wr_widely];
+
+    // 设置导航栏默认的背景颜色
+    [WRNavigationBar wr_setDefaultNavBarBarTintColor:[UIColor redColor]];
+    // 设置导航栏所有按钮的默认颜色
+    //[WRNavigationBar wr_setDefaultNavBarTintColor:[UIColor whiteColor]];
+    // 设置导航栏标题默认颜色
+    [WRNavigationBar wr_setDefaultNavBarTitleColor:[UIColor blackColor]];
+    // 统一设置状态栏样式
+    //[WRNavigationBar wr_setDefaultStatusBarStyle:UIStatusBarStyleLightContent];
+    // 如果需要设置导航栏底部分割线隐藏，可以在这里统一设置
+    //[WRNavigationBar wr_setDefaultNavBarShadowImageHidden:YES];
+}
+
+- (void)configScrollViewAdapt4IOS11{
+    if (@available(iOS 11.0, *)) {
+        [UIScrollView appearance].contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        [UITableView appearance].contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        [UIWebView appearance].scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        [WKWebView appearance].scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        
+        [UITableView appearance].estimatedRowHeight = 0;
+        [UITableView appearance].estimatedSectionHeaderHeight = 0;
+        [UITableView appearance].estimatedSectionFooterHeight = 0;
+    }
+}
+
+- (void)configGuidePage{
+
+    NSString *key = @"guidePage";
+    if (!UDValue(key)) {
+        AIGuidePageView *guidePage = [[AIGuidePageView alloc]initWithFrame:self.window.bounds];
+        [[UIApplication sharedApplication].keyWindow addSubview:guidePage];
+        UDSave([NSNumber numberWithBool:YES], key);
+    }
+    
+}
+
+- (void)monitorNetworking{
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        
+    }];
+}
+
+- (void)UMConfig{
+    UMConfigInstance.appKey = @"5b87b06ef29d980a8900000e";
+    //一般是这样写，用于友盟后台的渠道统计，当然苹果也不会有其他渠道，写死就好
+    UMConfigInstance.channelId = @"App Store";
+    //上传模式，这种为最小间隔发送90S，也可按照要求选择其他上传模式。也可不设置，在友盟后台修改。
+    UMConfigInstance.ePolicy = SEND_INTERVAL;
+    [MobClick setAppVersion:APPVERSION];//进行分版本统
+    
+#ifdef DEBUG
+    [MobClick setLogEnabled:NO];
+#endif
+
+    [MobClick startWithConfigure:UMConfigInstance];//开启SDK
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
+    return [JLRoutes routeURL:url];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -1,0 +1,201 @@
+//
+//  PrefixHeader.pch
+//  learning
+//
+//  Created by 祥伟 on 2018/6/11.
+//  Copyright © 2018年 wanda. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//config
+#import "AIFontConfig.h"
+#import "AIColorConfig.h"
+#import "AIRouterConfig.h"
+
+//tools
+#import "UIView+tools.h"
+#import "UILabel+tools.h"
+#import "NSArray+tools.h"
+#import "UIImage+tools.h"
+#import "CALayer+Tools.h"
+#import "UIButton+tools.h"
+#import "NSString+Tools.h"
+#import "NSObject+Tools.h"
+#import "UITextView+tools.h"
+#import "MBProgressHUD+tools.h"
+#import "UIViewController+tools.h"
+#import "UIAlertController+tools.h"
+
+//frameworks
+#import <AFNetworking.h>
+#import "WRNavigationBar.h"
+#import <SDAutoLayout.h>
+#import <MJRefresh/MJRefresh.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <SDWebImage/UIImage+GIF.h>
+#import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
+
+//other
+#import "AppDelegate.h"
+
+
+
+static inline BOOL IsEmpty(id thing) {
+    return thing == nil || [thing isEqual:[NSNull null]]
+    || ([thing respondsToSelector:@selector(length)]
+        && [(NSData *)thing length] == 0)
+    || ([thing respondsToSelector:@selector(count)]
+        && [(NSArray *)thing count] == 0);
+}
+
+#ifdef DEBUG
+#define DLog(...) NSLog(@"\nfunc = %s\nline = %d\nresult = %@\n",__func__,__LINE__, [NSString stringWithFormat:__VA_ARGS__])//__PRETTY_FUNCTION__
+#else
+#define DLog(...)
+
+#endif
+
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#define VL(V)   V.x
+#define VT(V)   V.y
+#define VW(V)   V.width
+#define VH(V)   V.height
+#define VR(V)   VL(V)+VW(V)
+#define VB(V)   VT(V)+VH(V)
+#define VHD(V)  VL(V)+VW(V)/2    //水平
+#define VVD(V)  VT(V)+VH(V)/2    //竖直
+
+#define ViewBorderRadius(View, Radius, Width, Color)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES];\
+[View.layer setBorderWidth:(Width)];\
+[View.layer setBorderColor:[Color CGColor]]
+
+
+#define AI_StatusBarHeight     [[UIApplication sharedApplication] statusBarFrame].size.height
+#define AI_NavBarHeight        (iPhoneX_SERIES ? 68.0 : 44.0)
+#define AI_NavAndStatusHeight  (iPhoneX_SERIES ? 88.0 : 64.0)
+#define AI_TabbarSafeHeight    (iPhoneX_SERIES ? 34.0 : 0.0)
+#define AI_TabbarHeight        (iPhoneX_SERIES ? 83.0 : 49.0)
+
+//当前控制器
+#define AICURRENTVC AI_getCurrentViewController
+//局限：需要获得控制器的nav
+#define getRectNavAndStatusHight  self.navigationController.navigationBar.frame.size.height+AI_StatusBarHeight
+
+#define ViewH  SCREEN_HEIGHT-AI_TabbarSafeHeight
+#define ViewHN SCREEN_HEIGHT-AI_NavAndStatusHeight-AI_TabbarSafeHeight
+#define ViewHNT SCREEN_HEIGHT-AI_NavAndStatusHeight-AI_TabbarHeight
+
+
+#define iPhone_5s [[UIScreen mainScreen] bounds].size.width == 320.0f && [[UIScreen mainScreen] bounds].size.height == 568.0f
+#define iPhone_6 [[UIScreen mainScreen] bounds].size.width == 375.0f && [[UIScreen mainScreen] bounds].size.height == 667.0f
+#define iPhone_6plus [[UIScreen mainScreen] bounds].size.width == 414.0f && [[UIScreen mainScreen] bounds].size.height == 736.0f
+#define iPhone_X [[UIScreen mainScreen] bounds].size.width == 375.0f && [[UIScreen mainScreen] bounds].size.height == 812.0f//xs
+#define iPhone_XR [[UIScreen mainScreen] bounds].size.width == 414.0f && [[UIScreen mainScreen] bounds].size.height == 896.0f//xs mac
+#define iPhoneX_SERIES  (iPhone_X||iPhone_XR)
+
+
+#define IOS_SYSTEM_STRING [[UIDevice currentDevice] systemVersion]
+#define IOSLater(s) [IOS_SYSTEM_STRING floatValue] >= s
+
+#define DegreesToRadian(d) (d * M_PI / 180.0)//弧度
+#define RadianToDegrees(r) (r * 180.0 / M_PI)//角度
+
+//判断是否为iPhone
+//#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_IPHONE ([[[UIDevice currentDevice] model] isEqualToString:@"iPhone"])
+
+//判断是否为iPad
+//#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPAD ([[[UIDevice currentDevice] model] isEqualToString:@"iPad"])
+
+//判断是否为ipod
+#define IS_IPOD ([[[UIDevice currentDevice] model] isEqualToString:@"iPod touch"])
+
+#define UDSave(objc,key)\
+[[NSUserDefaults standardUserDefaults] setObject:objc forKey:key];\
+[[NSUserDefaults standardUserDefaults] synchronize]\
+
+#define UDValue(key) [[NSUserDefaults standardUserDefaults] objectForKey:key]
+
+#define UDRemove(key) [[NSUserDefaults standardUserDefaults] removeObjectForKey:key]
+
+#define APPINFO      [[NSBundle mainBundle] infoDictionary]
+#define APPBUNDLEID  APPINFO[@"CFBundleIdentifier"]
+#define APPVERSION   APPINFO[@"CFBundleShortVersionString"]
+
+//沙盒路径
+#define HOMEPATH     NSHomeDirectory()
+#define TMPPATH      NSTemporaryDirectory()
+#define DIRECTORY(d) NSSearchPathForDirectoriesInDomains(d, NSUserDomainMask, YES)[0]
+#define DOCUMENTPATH DIRECTORY(NSDocumentDirectory)
+#define CACHEPATH    DIRECTORY(NSCachesDirectory)
+#define LIBRARYPATH  DIRECTORY(NSLibraryDirectory)
+
+#ifndef weakify
+#if DEBUG
+#if __has_feature(objc_arc)
+#define weakify(object) autoreleasepool{} __weak __typeof__(object) weak##_##object = object;
+#else
+#define weakify(object) autoreleasepool{} __block __typeof__(object) block##_##object = object;
+#endif
+#else
+#if __has_feature(objc_arc)
+#define weakify(object) try{} @finally{} {} __weak __typeof__(object) weak##_##object = object;
+#else
+#define weakify(object) try{} @finally{} {} __block __typeof__(object) block##_##object = object;
+#endif
+#endif
+#endif
+
+#ifndef strongify
+#if DEBUG
+#if __has_feature(objc_arc)
+#define strongify(object) autoreleasepool{} __typeof__(object) object = weak##_##object;
+#else
+#define strongify(object) autoreleasepool{} __typeof__(object) object = block##_##object;
+#endif
+#else
+#if __has_feature(objc_arc)
+#define strongify(object) try{} @finally{} __typeof__(object) object = weak##_##object;
+#else
+#define strongify(object) try{} @finally{} __typeof__(object) object = block##_##object;
+#endif
+#endif
+#endif
+
+// .h
+#define singleton_interface(class) +(instancetype) shared##class;
+// .m
+#define singleton_implementation(class)\
+static class *_instance;\
+\
++(id) allocWithZone : (struct _NSZone *) zone {\
+static dispatch_once_t onceToken;\
+dispatch_once(&onceToken, ^{\
+_instance = [super allocWithZone:zone];\
+});\
+\
+return _instance;\
+}\
+\
++(instancetype) shared##class\
+{\
+if (_instance == nil) {\
+_instance = [[class alloc] init];\
+}\
+\
+return _instance;\
+}
+
+#endif /* PrefixHeader_pch */
