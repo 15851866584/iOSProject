@@ -19,7 +19,10 @@
 @implementation UIButton (tools)
 
 + (void)load{
-    [self swizzleInstanceMethod:@selector(sendAction:to:forEvent:) withSwizzleMethod:@selector(ai_SendAction:to:forEvent:)];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self swizzleInstanceMethod:@selector(sendAction:to:forEvent:) withSwizzleMethod:@selector(ai_SendAction:to:forEvent:)];
+    });
 }
 
 + (instancetype)buttonWithFrame:(CGRect)frame

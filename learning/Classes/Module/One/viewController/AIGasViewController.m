@@ -13,16 +13,16 @@
 #import "Knowledge.h"
 #import "NSObject+Tools.h"
 #import <objc/message.h>
+#import "Code.h"
+
 @interface AIGasViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) AIBaseTableView *tableView;
-@property (nonatomic, strong) NSString *string;
+
 @end
 
 @implementation AIGasViewController
-{
-    NSString *_string;
-}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -46,43 +46,43 @@
                      @"NSOperation",
                      @"SEl和IMP",
                      @"运行时机制",
+                     @"消息转发机制原理",
                      @"assign和weak的区别",
                      @"delegate跟block的区别",
-                     @"消息转发机制原理",
                      @"几种传值方式",
                      @"OC反射机制",
                      @"类方法和实例方法的区别",
-                     @"排序",
                      @"objc向nil对象发送消息",
                      @"类别能不能添加属性",
-                     @"lldb（gdb）常用的调试命令",
                      @"NSTimer",
-                     @"网络七层协议",
-                     @"HTTP",
-                     @"TCP和UDP",
-                     @"字典实现原理",
-                     @"预编译指令",
-                     @"数据持久化",
-                     @"NSUserDefault",
-                     @"CoreData",
-                     @"FMDB",
-                     @"App性能监控",
-                     @"MLeaksFinder",
-                     @"MVC和MVVM",
-                     @"autoreleasepool",
-                     @"字段符号的含义",
-                     @"app的生命周期",
-                     @"AFNetworking",
                      @"加密",
                      @"内存分配",
                      @"transform",
                      @"CAAnimation",
                      @"BezierPath",
                      @"锁",
-                     @"关键字property等"
+                     @"网络七层协议",
+                     @"HTTP",
+                     @"TCP和UDP",
+                     @"字典实现原理",
+                     @"数据持久化",
+                     @"NSUserDefault和encode",
+                     @"CoreData",
+                     @"FMDB",
+                     @"App性能监控",
+                     @"MVC和MVVM",
+                     @"autoreleasepool",
+                     @"AFNetworking",
+                     @"排序",
+                     @"关键字property等",
+                     @"app的生命周期",
+                     @"MLeaksFinder",
+                     @"字段符号的含义",
+                     @"预编译指令",
+                     @"lldb（gdb）常用的调试命令",
                                            ]];
     [self setUpSubViews];
-    [NSObject printIvarsList:[self class]];
+
 }
 
 - (void)click:(UIButton *)btn{

@@ -66,7 +66,7 @@
 }
 
 + (NSString *)OC反射机制{
-    return @"运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法；这种动态获取的以及动态调用对象的方法的功能就是反射机制。\n获得class\n1、FOUNDATION_EXPORT Class __nullable NSClassFromString(NSString *aClassName);\n2、调用某个类的class方法来获取。\n3、调用某个对象的class方法，该方法是NSObject类中的一个方法。\n检查继承关系\n1、isKindOfClass：\n2、isMemberOfClass：\n3、conformsToProtocol：\n\n\n// SEL和字符串转换\nFOUNDATION_EXPORT NSString *NSStringFromSelector(SEL aSelector);\nFOUNDATION_EXPORT SEL NSSelectorFromString(NSString *aSelectorName);\n// Class和字符串转换\nFOUNDATION_EXPORT NSString *NSStringFromClass(Class aClass);\nFOUNDATION_EXPORT Class __nullable NSClassFromString(NSString *aClassName);\n// Protocol和字符串转换\nFOUNDATION_EXPORT NSString *NSStringFromProtocol(Protocol *proto);\nFOUNDATION_EXPORT Protocol * __nullable NSProtocolFromString(NSString *namestr);\n";
+    return @"运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法；这种动态获取的以及动态调用对象的方法的功能就是反射机制。\n\n获得class\n1、FOUNDATION_EXPORT Class __nullable NSClassFromString(NSString *aClassName);\n2、调用某个类的class方法来获取。\n3、调用某个对象的class方法，该方法是NSObject类中的一个方法。\n检查继承关系\n1、isKindOfClass：\n2、isMemberOfClass：\n3、conformsToProtocol：\n\n\n// SEL、Class、Procotol和字符串转换NSObjCRuntime NS***from***\nNSString * NSStringFromSelector(SEL aSelector);\nSEL NSSelectorFromString(NSString *aSelectorName);\n// Class和字符串转换\nNSString * NSStringFromClass(Class aClass);\nClass NSClassFromString(NSString *aClassName);\n// Protocol和字符串转换\nFNSString * NSStringFromProtocol(Protocol *proto);\nProtocol * NSProtocolFromString(NSString *namestr);\n";
 }
 
 + (NSString *)类方法和实例方法的区别{
@@ -134,8 +134,8 @@
     return @"功能：主要是将数据持久化到本地，减少对网络请求的次数，既节省了用户的流量，也增强了App的体验效果\n\n种类：\n1.plist：键值对\n2.偏好存储：配置信息\n3.归档序列化存储：二进制序列化持久化\n4.沙盒存储：Document目录存储非机密数据，比如图片，音频，视频等\n5.本地数据库存储：存储大数据\n\nplist存储\n能存储NSString、NSArray、NSDictionary、NSData、NSDate、NSNumber、Boolean,常用于存储长时间不容易发生变化的数据，例如省市列表\n缺点：不能存储自定义对象,读写需要取出整个plist文件\n\n偏好存储\n可以存储OC定义的所有数据类型,保存到Library/Preferences目录下的plist 文件,常用于存储用户名、密码、字体大小等设置\n缺点：读写需要取出整个plist文件\n\n归档序列化存储\n存储遵循NSCoding协议的类的实例对象,存储到.archive的文件\n缺点：读写需要取出整个文件\n\nDocument沙盒存储\nApplication：存放程序源文件，上架前经过数字签名，上架后不可修改\nDocuments: 保存应⽤运行时生成的需要持久化的数据,iTunes同步设备时会备份该目录\ntmp: 保存应⽤运行时所需的临时数据,使⽤完毕后再将相应的文件从该目录删除\nLibrary/Caches: 保存应用运行时⽣成的需要持久化的数据,iTunes同步设备时不会备份该目录\nLibrary/Preference: 保存应用的所有偏好设置，iTunes同步设备时会备份该目录\n\n本地数据库存储\n通过表进行数据存储的方式,常用Sqlite、CoreData、FMDB,大数据量的存储,查询速度快";
 }
 
-+ (NSString *)NSUserDefault{
-    return @"存储数据量小，可以存储字符串、字典、数组、OC基本类型属性等\n如果要存储其他类型，则需要转换为前面的类型，才能用NSUserDefaults存储\n存储位置：沙河路径Library/perference目录下\n\n[[NSUserDefaults standardUserDefaults] synchronize]同步写入\n\n缺点：\n1.不能直接存自定义的类，比如存到数组或字典中\n解决：实现<NSCoding>协议中的- (id) initWithCoder: (NSCoder *)coder方法和- (void) encodeWithCoder: (NSCoder *)coder方法\n归档：[NSKeyedArchiver archivedDataWithRootObject:(nonnull id)] 进行数据编码转化成二进制流\n解档：[NSKeyedUnarchiver unarchiveObjectWithData:(nonnull NSData *)] 将序列化数据转化成对象\n\n归档方法：轻量级、加密处理、存储复杂对象\n缺点：一次性归档保存以及一次性解压，只能针对小量数据，改动一部分,需要解压整个归档数据";
++ (NSString *)NSUserDefault和encode{
+    return @"数据存储\n\n[NSUserDefaults standardUserDefaults]\nset***:forKey:\n***可以是基础类型、NSURL、id、NSInteger\n- (BOOL)synchronize\n- (void)removeObjectForKey:(NSString *)defaultName\n\n归档<coding>\n- (void)encodeWithCoder:(NSCoder *)aCoder//编码\n- (instancetype)initWithCoder:(NSCoder *)aDecoder//解码\n\nNSKeyedArchiver和NSKeyedUnarchiver\n\n+ (NSData *)archivedDataWithRootObject:(id)rootObject\n+ (BOOL)archiveRootObject:(id)rootObject toFile:(NSString *)path\n\n+ (id)unarchiveObjectWithData:(NSData *)data\n+ (id)unarchiveObjectWithFile:(NSString *)path";
     
 }
 
@@ -144,7 +144,7 @@
 }
 
 + (NSString *)FMDB{
-    return @"FMDB是针对libsqlite3框架进行封装的三方\nFMDB的优点：\n面向对象，避免了复杂的C语言代码\n比Core Data框架，更加轻量级和灵活\n多线程安全跟数据准确性\n\n使用示例\n1.建库 [FMDatabase databaseWithPath:#path];\\一般存在沙盒Document\n2.数据库是否open [db open]\n3.建表(sql语句) create table if not exists Student ('ID' INTEGER PRIMARY KEY AUTOINCREMENT,'name' TEXT NOT NULL, 'phone' TEXT NOT NULL,'score' INTEGER NOT NULL) 4.执行更新操作 [db executeUpdate:#sql] 判断创建表是否成功//增删改查中 除了查询（executeQuery 返回FMResultSet），其余操作都用（executeUpdate 返回BOOL）\n5. 插入命令sql语句 insert into 'Student'(ID,name,phone) values(?,?,?)\n6.更新命令sql语句 update 'Student' set ID = ? where name = ?\n7.查询命令sql语句 select * from 'Student' where ID = ?\n\nFMDB的事务\n原子性（Atomic）：事务中包含的一系列操作被看作一个逻辑单元，这个逻辑单元要不全部成功，要不全部失败\n一致性（Consistency）：事务中包含的一系列操作，只有合法的数据被写入数据库，一些列操作失败之后，事务会滚到最初创建事务的状态\n隔离性（Isolation）：对数据进行修改的多个事务之间是隔离的，每个事务是独立的，不应该以任何方式来影响其他事务\n持久性（Durability）事务完成之后，事务处理的结果必须得到固化，它对于系统的影响是永久的，该修改即使出现系统固执也将一直保留，真实的修改了数据库\n开启事务 ：beginTransaction\n回滚事务：rollback\n提交事务：commit";
+    return @"FMDB是针对libsqlite3框架进行封装的三方\nFMDB的优点：\n面向对象，避免了复杂的C语言代码\n比Core Data框架，更加轻量级和灵活\n多线程安全跟数据准确性\n\n使用示例\n1.建库 [FMDatabase databaseWithPath:#path];\\一般存在沙盒Document\n2.数据库是否open [db open]\n3.建表(sql语句) create table if not exists Student ('ID' INTEGER PRIMARY KEY AUTOINCREMENT,'name' TEXT NOT NULL, 'phone' TEXT NOT NULL,'score' INTEGER NOT NULL) \n4.执行更新操作 [db executeUpdate:#sql] 判断创建表是否成功//增删改查中 除了查询（executeQuery 返回FMResultSet），其余操作都用（executeUpdate 返回BOOL）\n5. 插入命令sql语句 insert into 'Student'(ID,name,phone) values(?,?,?)\n6.更新命令sql语句 update 'Student' set ID = ? where name = ?\n7.查询命令sql语句 select * from 'Student' where ID = ?\n\nFMDB的事务\n原子性（Atomic）：事务中包含的一系列操作被看作一个逻辑单元，这个逻辑单元要不全部成功，要不全部失败\n一致性（Consistency）：事务中包含的一系列操作，只有合法的数据被写入数据库，一些列操作失败之后，事务会滚到最初创建事务的状态\n隔离性（Isolation）：对数据进行修改的多个事务之间是隔离的，每个事务是独立的，不应该以任何方式来影响其他事务\n持久性（Durability）事务完成之后，事务处理的结果必须得到固化，它对于系统的影响是永久的，该修改即使出现系统固执也将一直保留，真实的修改了数据库\n开启事务 ：beginTransaction\n回滚事务：rollback\n提交事务：commit";
 }
 
 + (NSString *)App性能监控{
@@ -189,7 +189,7 @@
 }
 
 + (NSString *)transform{
-    return @"transform通常与UIView一起用\n\nview.transform使用CGAffineTransform\nview.layer.transform使用CATransform3D\n\n1.平移\nx,y,z代表坐标轴方向，t代表另一个动画\nMake区别动画是否叠加\nCGAffineTransformMakeTranslation(x,y)\nCGAffineTransformTranslate(t,x,y)\nCATransform3DMakeTranslation(x,y,z)\nCATransform3DTranslate(t,x,y,z)\n\n2.缩放\nCGAffineTransformMakeScale(x,y)\nCGAffineTransformScale(t,x,y)\nCATransform3DMakeScale(x,y)\nCATransform3DScale(t,x,y)\n\n3.旋转\nCGAffineTransformMakeRotation(angle)\nCGAffineTransformRotate(t,angle)\nCATransform3DMakeScale(angle,x,y,z)\nCATransform3DRotate(t,angle,x,y,z)";
+    return @"transform通常与UIView一起用\n\nview.transform使用CGAffineTransform\nview.layer.transform使用CATransform3D\n\n1.平移\nx,y,z代表坐标轴方向，t代表另一个动画\nMake区别动画是否叠加\nCGAffineTransformMakeTranslation(x,y)\nCGAffineTransformTranslate(t,x,y)\nCATransform3DMakeTranslation(x,y,z)\nCATransform3DTranslate(t,x,y,z)\n\n2.缩放\nCGAffineTransformMakeScale(x,y)\nCGAffineTransformScale(t,x,y)\nCATransform3DMakeScale(x,y)\nCATransform3DScale(t,x,y)\n\n3.旋转\nCGAffineTransformMakeRotation(angle)\nCGAffineTransformRotate(t,angle)\nCATransform3DMakeRotation(angle,x,y,z)\nCATransform3DRotate(t,angle,x,y,z)";
 }
 
 + (NSString *)CAAnimation{
@@ -209,7 +209,7 @@
 }
 
 + (NSString *)runtime{
-    return @"OC是运行时语言，runtime";
+    return @"OC是运行时语言，runtime使用场景有类别添加属性、KVO、动态添加或者获得（方法、属性、成员变量、协议）api\n\n1.类别添加属性\nsetAssociatedObject(id object,const void * key,id value,policy)\nOBJC_ASSOCIATION_RETAIN\nOBJC_ASSOCIATION_COPY_NONOTOMIC\nOBJC_ASSOCIATION_ASSIGN_NONATOMIC\nOBJC_ASSOCIATION_COPY\nOBJC_ASSOCIATION_ASSIGN\ngetAssociatedObject(id object,const void * key)\n\n动态添加方法前缀class_add***\nclass_addIvar(Class cls,const char * name,size_t size,unit8_t alignment,const char * types)\nclass_addProperty(Class cls,const char * name,const objc_property_attribute_t * attribute,unsigned int attributeCount)\ncalss_addMethod(Class cls,SEL sel,IMP imp,const char * types)\nclass_addProcotol(Class cls,Protocol * protocol)\n\n动态获得列表方法前缀class_copy***List\nclass_copyIvarList(Class cls,unsigned int * outCount)\nclass_copyPropertyList(Class cls,unsigned int * outCount)\nclass_copyMethodList(Class cls,unsigned int * outCount)\nclass_copyProtocolList(Class cls,unsigned int * couCount)\n\n动态替换方法class_replace***\nclass_replaceMethod(Class cls,SEL sel,IMP imp,const char * types)\nclass_replaceProperty(Class cls,const char * name,const objc_property_attribute_t *attributes,unsigned int attributeCount)\n\nclass_set***\nclass_setVersion(Class cls,int version)\nclass_setIvarLayout(Class cls,const unint8_t * layout)\nclass_setWeakIvarLayout(Class cls,const unint8_t * layout)\n\nclass_get***\nclass_getName(Class cls)\nclass_getSuperClass(Class cls)\nclass_getVersion(Class cls)\nclass_getInstanceSize(Class cls)\nclass_getInstanceVariable(Class cls,const char * name)\nclass_getClassVariable(Class cls,const char * name)\nclass_getInstanceMethod(Class cls,SEL name)\nclass_getClassMethod(Class cls,SEL name)\nclass_getMethodImplementation(Class cls,SEL name)\nclass_getMethodImplementation_stret(Class cls,SEL name)\nclass_getProperty(Class cls,const char * name)\nclass_getIvarLayout(Class cls)\nclass_getWeakLayout(Class cls)\nclass_getImageName(Class cls)\n\n";
 }
 
 @end

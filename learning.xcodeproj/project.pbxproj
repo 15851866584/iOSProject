@@ -50,6 +50,7 @@
 		6356C31620CF9F120034D5ED /* AIMedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6356C31520CF9F120034D5ED /* AIMedViewController.m */; };
 		6363B901211AEFFE0074B509 /* AICycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6363B900211AEFFE0074B509 /* AICycleScrollView.m */; };
 		6366A2B021070CDD0066F669 /* AIBaseTableViewHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6366A2AF21070CDD0066F669 /* AIBaseTableViewHeaderFooterView.m */; };
+		636A72BE219AA6E2003EBCE3 /* Code.m in Sources */ = {isa = PBXBuildFile; fileRef = 636A72BD219AA6E2003EBCE3 /* Code.m */; };
 		636C98B3210B159400137B79 /* AILocationConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 636C98B2210B159400137B79 /* AILocationConverter.m */; };
 		636F7DCB21250AAA00931C96 /* IMG_1032.png in Resources */ = {isa = PBXBuildFile; fileRef = 636F7DCA21250AA900931C96 /* IMG_1032.png */; };
 		636F7DCF2125321500931C96 /* 2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 636F7DCE2125321400931C96 /* 2.gif */; };
@@ -80,7 +81,6 @@
 		63A2B9F121144D100046CCF8 /* AISecondTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A2B9F021144D100046CCF8 /* AISecondTabBarController.m */; };
 		63BFBF022122A93800E68798 /* ZJPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BFBF002122A93700E68798 /* ZJPageControl.m */; };
 		63BFBF092122C7ED00E68798 /* AIGuidePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BFBF082122C7ED00E68798 /* AIGuidePageView.m */; };
-		63CAF85F2176E31300A3C6D0 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CAF85E2176E31300A3C6D0 /* TestVC.m */; };
 		63CD88CC212FD64100C30CA8 /* AISpringHeaderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CD88CB212FD64100C30CA8 /* AISpringHeaderVC.m */; };
 		63CD88D5212FDB7300C30CA8 /* AISpringView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CD88D4212FDB7300C30CA8 /* AISpringView.m */; };
 		63CD88D7212FF2C800C30CA8 /* saber.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 63CD88D6212FF2C800C30CA8 /* saber.jpeg */; };
@@ -199,6 +199,8 @@
 		6363B900211AEFFE0074B509 /* AICycleScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AICycleScrollView.m; sourceTree = "<group>"; };
 		6366A2AE21070CDD0066F669 /* AIBaseTableViewHeaderFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIBaseTableViewHeaderFooterView.h; sourceTree = "<group>"; };
 		6366A2AF21070CDD0066F669 /* AIBaseTableViewHeaderFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIBaseTableViewHeaderFooterView.m; sourceTree = "<group>"; };
+		636A72BC219AA6E2003EBCE3 /* Code.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Code.h; sourceTree = "<group>"; };
+		636A72BD219AA6E2003EBCE3 /* Code.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Code.m; sourceTree = "<group>"; };
 		636C98B1210B159400137B79 /* AILocationConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AILocationConverter.h; sourceTree = "<group>"; };
 		636C98B2210B159400137B79 /* AILocationConverter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AILocationConverter.m; sourceTree = "<group>"; };
 		636F7DCA21250AA900931C96 /* IMG_1032.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_1032.png; sourceTree = "<group>"; };
@@ -256,8 +258,6 @@
 		63BFBF012122A93800E68798 /* ZJPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJPageControl.h; sourceTree = "<group>"; };
 		63BFBF072122C7ED00E68798 /* AIGuidePageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIGuidePageView.h; sourceTree = "<group>"; };
 		63BFBF082122C7ED00E68798 /* AIGuidePageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIGuidePageView.m; sourceTree = "<group>"; };
-		63CAF85D2176E31300A3C6D0 /* TestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
-		63CAF85E2176E31300A3C6D0 /* TestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
 		63CD88CA212FD64100C30CA8 /* AISpringHeaderVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISpringHeaderVC.h; sourceTree = "<group>"; };
 		63CD88CB212FD64100C30CA8 /* AISpringHeaderVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISpringHeaderVC.m; sourceTree = "<group>"; };
 		63CD88D3212FDB7300C30CA8 /* AISpringView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISpringView.h; sourceTree = "<group>"; };
@@ -509,8 +509,6 @@
 				63CD88CB212FD64100C30CA8 /* AISpringHeaderVC.m */,
 				6351776D2151E3FE00059F21 /* AIButtonViewController.h */,
 				6351776E2151E3FE00059F21 /* AIButtonViewController.m */,
-				63CAF85D2176E31300A3C6D0 /* TestVC.h */,
-				63CAF85E2176E31300A3C6D0 /* TestVC.m */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -540,6 +538,8 @@
 			children = (
 				634F47E0212A5B1C004BEAE9 /* Knowledge.h */,
 				634F47E1212A5B1C004BEAE9 /* Knowledge.m */,
+				636A72BC219AA6E2003EBCE3 /* Code.h */,
+				636A72BD219AA6E2003EBCE3 /* Code.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -969,6 +969,7 @@
 				634F1DD92123F62B004C2E68 /* NSSet+UnicodeReadable.m in Sources */,
 				6335A36B20DCD27D001E1AA2 /* AIAnimationViewController.m in Sources */,
 				63CD88CC212FD64100C30CA8 /* AISpringHeaderVC.m in Sources */,
+				636A72BE219AA6E2003EBCE3 /* Code.m in Sources */,
 				6356C31620CF9F120034D5ED /* AIMedViewController.m in Sources */,
 				6381D32920DA264A00E59165 /* AIBaseTableView.m in Sources */,
 				637F5FA3213623800012BEF0 /* UITouch+MemoryLeak.m in Sources */,
@@ -987,7 +988,6 @@
 				634F1DDA2123F62B004C2E68 /* NSDictionary+UnicodeReadable.m in Sources */,
 				634176D820D2426B00A5BA51 /* UIViewController+tools.m in Sources */,
 				63A2B91E21143AB40046CCF8 /* AIBaseTabBarController.m in Sources */,
-				63CAF85F2176E31300A3C6D0 /* TestVC.m in Sources */,
 				630F4E8E20CE042900BEDFE2 /* ViewController.m in Sources */,
 				634F1DDE2123F79C004C2E68 /* AIDragViewController.m in Sources */,
 				634F1DD12123F622004C2E68 /* FPSLabel.m in Sources */,
