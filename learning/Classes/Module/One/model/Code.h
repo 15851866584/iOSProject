@@ -13,5 +13,5 @@
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *age;
 @property (nonatomic, copy) NSString *weight;
-
+@property (nonatomic, copy) NSArray *array;
 @end

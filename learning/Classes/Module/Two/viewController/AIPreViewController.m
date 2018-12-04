@@ -30,7 +30,7 @@
      @{@"HUD":@"AIHUDViewController"},
      @{@"SpringHeader":@"AISpringHeaderVC"},
      @{@"按钮":@"AIButtonViewController"},
-     @{@"测试":@"TestVC"}]];
+     @{@"布局":@"AILayoutViewController"}]];
     
     [self setUpSubViews];
 

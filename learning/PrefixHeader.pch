@@ -43,8 +43,6 @@
 //other
 #import "AppDelegate.h"
 
-
-
 static inline BOOL IsEmpty(id thing) {
     return thing == nil || [thing isEqual:[NSNull null]]
     || ([thing respondsToSelector:@selector(length)]
@@ -91,6 +89,9 @@ static inline BOOL IsEmpty(id thing) {
 #define AICURRENTVC AI_getCurrentViewController
 //局限：需要获得控制器的nav
 #define getRectNavAndStatusHight  self.navigationController.navigationBar.frame.size.height+AI_StatusBarHeight
+
+//时间点
+#define TIMEPOINT CFAbsoluteTimeGetCurrent()
 
 #define ViewH  SCREEN_HEIGHT-AI_TabbarSafeHeight
 #define ViewHN SCREEN_HEIGHT-AI_NavAndStatusHeight-AI_TabbarSafeHeight

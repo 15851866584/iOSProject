@@ -23,9 +23,11 @@
 
 @implementation AIGasViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    
     // Do any additional setup after loading the view.
     UILabel *lab = [UILabel labelWithFrame:CGRectMake(0, 0, 100, 30) textColor:[UIColor blackColor] font:AI_SYSTEM_Size(20) text:@"加载中..." textAlignment:NSTextAlignmentCenter];
     self.navigationItem.titleView = lab;
@@ -82,7 +84,7 @@
                      @"lldb（gdb）常用的调试命令",
                                            ]];
     [self setUpSubViews];
-
+    
 }
 
 - (void)click:(UIButton *)btn{

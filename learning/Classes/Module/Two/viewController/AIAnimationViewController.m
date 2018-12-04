@@ -24,6 +24,8 @@
     
     [self.view addSubview:_animationView];
 
+    
+
 }
 
 /*
@@ -75,10 +77,12 @@
     //背景色
     CABasicAnimation *animat = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
     animat.toValue = (id)[UIColor greenColor].CGColor;
+    
     [_animationView.layer addAnimation:animat forKey:@"backgroundAnimation"];
     
 //    CAAnimationGroup *groupAnimation = [CAAnimationGroup animation];
 //    groupAnimation.animations = [NSArray arrayWithObjects:anima1,anima2,anima3, nil];
+
 }
 
 /*  CAKeyframeAnimation
