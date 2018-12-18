@@ -9,9 +9,11 @@
 #import "AILayoutViewController.h"
 
 @interface AILayoutViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *xibTextField1;
-@property (weak, nonatomic) IBOutlet UITextField *xibTextField;
+@property (weak, nonatomic) IBOutlet UILabel *xibLabel1;
+@property (weak, nonatomic) IBOutlet UILabel *xibLabel2;
 
+@property (strong, nonatomic) UILabel *label1;
+@property (strong, nonatomic) UILabel *label2;
 
 @property (nonatomic, strong) UISlider *slider;
 
@@ -23,27 +25,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.view addSubview:self.slider];
-    
-    //第一个label展示全部文字，第二个label自适应,超出显示...
-    
-    //xib布局
-    [self setUpXIBSubViews];
-    
-    //SDAutoLayout布局
-    [self setUpSDSubViews];
 }
-
-
-- (void)setUpXIBSubViews{}
-
-- (void)setUpSDSubViews{}
 
 
 - (void)sliderAction:(UISlider *)slider{
-
-    _xibTextField1.font = _xibTextField.font = AI_SYSTEM_Size((slider.value+0.5)*14);
+    _xibLabel1.font = _xibLabel2.font = AI_SYSTEM_Size((slider.value+0.5)*17);
 }
-
 
 - (UISlider *)slider{
     if (!_slider) {

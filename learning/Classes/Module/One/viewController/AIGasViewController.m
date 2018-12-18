@@ -84,13 +84,14 @@
                      @"lldb（gdb）常用的调试命令",
                                            ]];
     [self setUpSubViews];
-    
+
 }
 
 - (void)click:(UIButton *)btn{
     [btn.titleLabel startActivityIndicator];
     
 }
+
 
 - (void)setUpSubViews{
 
@@ -104,7 +105,10 @@
 }
 
 - (void)newTab{
-    OpenURL(@"AISecondTabBarController?navigationBarControl=4");
+//    OpenURL(@"AISecondTabBarController?navigationBarControl=4");
+    AISecondTabBarController *vc = [[AISecondTabBarController alloc]init];
+    vc.navigationBarControl = 4;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

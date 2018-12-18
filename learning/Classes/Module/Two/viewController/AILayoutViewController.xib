@@ -13,8 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AILayoutViewController">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="xibTextField" destination="kmb-Ld-XMa" id="hsP-BY-icc"/>
-                <outlet property="xibTextField1" destination="lRD-yq-PZF" id="NTK-e1-abj"/>
+                <outlet property="xibLabel1" destination="MjU-DO-GbT" id="mhf-js-MT0"/>
+                <outlet property="xibLabel2" destination="T0z-pF-2WR" id="cra-Eb-guI"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -22,35 +22,33 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="第一个label展示全部文字" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lRD-yq-PZF">
-                    <rect key="frame" x="30" y="120" width="181" height="30"/>
-                    <color key="backgroundColor" red="1" green="0.33756292259999998" blue="0.30582409370000002" alpha="1" colorSpace="calibratedRGB"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="左label展示全部内容,超出显示..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjU-DO-GbT">
+                    <rect key="frame" x="10" y="120" width="245.5" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="5UV-hb-xt2"/>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" id="U6d-ro-cYo"/>
+                        <constraint firstAttribute="height" constant="30" id="0zN-IR-CoW"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" id="LFb-fQ-tng"/>
                     </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="第二个label自适应,超出显示..." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kmb-Ld-XMa">
-                    <rect key="frame" x="221" y="120" width="124" height="30"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="右label自适应,超出显示..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0z-pF-2WR">
+                    <rect key="frame" x="265.5" y="120" width="99.5" height="30"/>
                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="3Vl-A3-w4V"/>
-                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="kmb-Ld-XMa" firstAttribute="leading" secondItem="lRD-yq-PZF" secondAttribute="trailing" constant="10" id="5J3-w5-lq4"/>
-                <constraint firstItem="kmb-Ld-XMa" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="100" id="H3F-3Z-Buf"/>
-                <constraint firstItem="lRD-yq-PZF" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="100" id="N11-Wn-RcZ"/>
-                <constraint firstItem="lRD-yq-PZF" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="30" id="fZa-05-YnK"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kmb-Ld-XMa" secondAttribute="trailing" constant="30" id="ofb-go-jap"/>
+                <constraint firstItem="T0z-pF-2WR" firstAttribute="leading" secondItem="MjU-DO-GbT" secondAttribute="trailing" constant="10" id="AcW-kS-dS0"/>
+                <constraint firstItem="MjU-DO-GbT" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="Ie7-hy-Mcn"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="T0z-pF-2WR" secondAttribute="trailing" constant="10" id="IgC-Po-YZN"/>
+                <constraint firstItem="T0z-pF-2WR" firstAttribute="bottom" secondItem="MjU-DO-GbT" secondAttribute="bottom" id="NHL-ZM-pLK"/>
+                <constraint firstItem="MjU-DO-GbT" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="100" id="Wzo-Yj-8bd"/>
+                <constraint firstItem="T0z-pF-2WR" firstAttribute="top" secondItem="MjU-DO-GbT" secondAttribute="top" id="hF8-uE-7th"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="5.5999999999999996" y="55.322338830584712"/>

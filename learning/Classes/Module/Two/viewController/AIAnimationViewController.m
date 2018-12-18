@@ -24,8 +24,6 @@
     
     [self.view addSubview:_animationView];
 
-    
-
 }
 
 /*

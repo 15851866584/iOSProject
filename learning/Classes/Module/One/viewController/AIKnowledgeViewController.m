@@ -28,7 +28,6 @@
    
 }
 
-
 //static void resolveMethod(id self,SEL sel,id value){
 //    NSLog(@"resolveMethod");
 //}

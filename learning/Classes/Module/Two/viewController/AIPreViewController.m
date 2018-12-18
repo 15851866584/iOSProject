@@ -30,11 +30,14 @@
      @{@"HUD":@"AIHUDViewController"},
      @{@"SpringHeader":@"AISpringHeaderVC"},
      @{@"按钮":@"AIButtonViewController"},
-     @{@"布局":@"AILayoutViewController"}]];
+     @{@"布局":@"AILayoutViewController"},
+     @{@"简书":@"AIWebViewController"},
+     @{@"MVVM":@"AIMVVMViewController"}]];
     
     [self setUpSubViews];
 
-}  
+}
+
 
 - (void)setUpSubViews{
     self.tableView = [[AIBaseTableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, ViewHNT) style:(UITableViewStylePlain)];

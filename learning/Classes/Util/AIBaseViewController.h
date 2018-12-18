@@ -29,6 +29,8 @@
 
 - (void)hideHUDs;
 
+//返回事件
+- (void)backUpViewController;
 //privite 这里可以根据具体情况去实现私有api
 //- (void)showSuccess;
 //- (void)showError;

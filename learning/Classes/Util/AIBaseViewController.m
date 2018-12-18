@@ -28,8 +28,6 @@
     }
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:IMG(@"ai_login") style:(UIBarButtonItemStylePlain) target:self action:@selector(login)];
-    
-     self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 - (void)backUpViewController{

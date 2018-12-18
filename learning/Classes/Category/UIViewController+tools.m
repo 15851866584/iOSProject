@@ -22,9 +22,9 @@
 
 - (void)ai_viewWillAppear:(BOOL)animated{
     [self ai_viewWillAppear:animated];
-
+ 
     if (self.navigationController != nil) {
-        if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)] && self.navigationController.childViewControllers.count > 1) {
             self.navigationController.interactivePopGestureRecognizer.delegate = (id) self;
             self.navigationController.interactivePopGestureRecognizer.enabled = !self.isCloseRightSlide;
         }
