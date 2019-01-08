@@ -12,8 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AIMVVMViewModel : NSObject<UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic,strong, readonly) UIView *vcView;
-
 - (instancetype)initWithViewController:(UIViewController *)vc;
 
 @end

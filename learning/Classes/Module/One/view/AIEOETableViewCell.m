@@ -37,9 +37,11 @@
 - (void)setUpSubViews{
     
     _lab = [UILabel labelWithFrame:CGRectMake(15, 0, SCREEN_WIDTH-30, 50) textColor:AI_RGB51 font:[UIFont systemFontOfSize:16.0]];
+    _lab.backgroundColor = [UIColor whiteColor];
+    _lab.layer.masksToBounds = YES;
     _lab.numberOfLines = 2;
     [self.contentView addSubview:_lab];
-    
+  
 }
 
 - (void)setTitle:(NSString *)title{

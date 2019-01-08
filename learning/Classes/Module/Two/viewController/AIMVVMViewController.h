@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AIMVVMViewController : AIBaseViewController
-
+@property (nonatomic, strong) NSDictionary *deviceInfo;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationItem.title = @"设备信息";
     self.viewModel = [[AIMVVMViewModel alloc]initWithViewController:self];
 
 }

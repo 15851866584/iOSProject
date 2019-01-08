@@ -48,14 +48,11 @@
     //引导页
     [self configGuidePage];
     
-    //开启网络状态
-    [self monitorNetworking];
-    
     //友盟统计
     [self UMConfig];
-#ifdef DEBUG
-    [self.window addSubview:[FPSLabel new]];
-#endif
+//#ifdef DEBUG
+//    [self.window addSubview:[FPSLabel new]];
+//#endif
 
     return YES;
 }
@@ -102,21 +99,14 @@
 
 - (void)configGuidePage{
 
-    NSString *key = @"guidePage";
-    if (!UDValue(key)) {
+    if (IsEmpty([AITools readUUID])) {
+        [AITools saveUUID:DEVICEUUID];
         AIGuidePageView *guidePage = [[AIGuidePageView alloc]initWithFrame:self.window.bounds];
         [[UIApplication sharedApplication].keyWindow addSubview:guidePage];
-        UDSave([NSNumber numberWithBool:YES], key);
     }
     
 }
 
-- (void)monitorNetworking{
-    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
-    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-        
-    }];
-}
 
 - (void)UMConfig{
     UMConfigInstance.appKey = @"5b87b06ef29d980a8900000e";
@@ -155,7 +145,7 @@
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface. 
 }
 
 

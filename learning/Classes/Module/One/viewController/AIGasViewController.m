@@ -14,6 +14,7 @@
 #import "NSObject+Tools.h"
 #import <objc/message.h>
 #import "Code.h"
+#import "AIBaseNetwork.h"
 
 @interface AIGasViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -29,12 +30,12 @@
 
     
     // Do any additional setup after loading the view.
-    UILabel *lab = [UILabel labelWithFrame:CGRectMake(0, 0, 100, 30) textColor:[UIColor blackColor] font:AI_SYSTEM_Size(20) text:@"加载中..." textAlignment:NSTextAlignmentCenter];
+    UILabel *lab = [UILabel labelWithFrame:CGRectMake(0, 0, 100, 30) textColor:[UIColor blackColor] font:AI_SYSTEM_Size(20) text:@"模拟网络加载中..." textAlignment:NSTextAlignmentCenter];
     self.navigationItem.titleView = lab;
     [lab startActivityIndicatorColor:[UIColor redColor]];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [lab stopActivityIndicator];
-        lab.text = @"总结";
+        lab.text = @"知识点总结";
     });
    
     [self.dataSource addObjectsFromArray:@[
@@ -82,6 +83,7 @@
                      @"字段符号的含义",
                      @"预编译指令",
                      @"lldb（gdb）常用的调试命令",
+                     @"app和vc生命周期"
                                            ]];
     [self setUpSubViews];
 
@@ -91,7 +93,6 @@
     [btn.titleLabel startActivityIndicator];
     
 }
-
 
 - (void)setUpSubViews{
 

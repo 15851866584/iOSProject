@@ -23,13 +23,16 @@
 - (void)ai_viewWillAppear:(BOOL)animated{
     [self ai_viewWillAppear:animated];
  
-    if (self.navigationController != nil) {
-        if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)] && self.navigationController.childViewControllers.count > 1) {
-            self.navigationController.interactivePopGestureRecognizer.delegate = (id) self;
-            self.navigationController.interactivePopGestureRecognizer.enabled = !self.isCloseRightSlide;
-        }
-        
-        
+    NSInteger count = self.navigationController.childViewControllers.count;
+    
+    //全局设置右滑手势
+    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)] && count > 1) {
+        self.navigationController.interactivePopGestureRecognizer.delegate = (id) self;
+        self.navigationController.interactivePopGestureRecognizer.enabled = !self.isCloseRightSlide;
+    }
+    
+    
+    if (count) {
         if (self.navigationBarControl == NavigationBarHide || self.navigationBarControl == NavigationBarHideShow) {
             [self.navigationController setNavigationBarHidden:YES animated:YES];
         }else if (self.navigationBarControl == NavigationBarShow || self.navigationBarControl == NavigationBarShowHide){
@@ -42,7 +45,7 @@
 - (void)ai_viewWillDisappear:(BOOL)animated{
     [self ai_viewWillDisappear:animated];
     
-    if (self.navigationController != nil) {
+    if (self.navigationController.childViewControllers.count) {
         if (self.navigationBarControl == NavigationBarHide || self.navigationBarControl == NavigationBarShowHide) {
             [self.navigationController setNavigationBarHidden:YES animated:YES];
         }else if (self.navigationBarControl == NavigationBarShow || self.navigationBarControl == NavigationBarHideShow){

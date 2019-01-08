@@ -19,13 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.webView = [[WKWebView alloc]initWithFrame:self.view.bounds];
+    self.webView = [[WKWebView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-AI_TabbarHeight)];
 //    self.webView.navigationDelegate = self;
 //    self.webView.UIDelegate = self;
     
     [self.view addSubview:self.webView];
     
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.jianshu.com/u/1ce8edc3912f"]]];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://kf.wandaph.com/webchat/web/h5?groupNo=kyh_h5&tenantId=wandaph&callee=kyh_h5"]]];
 }
 
 

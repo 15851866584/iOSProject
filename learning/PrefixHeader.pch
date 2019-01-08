@@ -18,11 +18,13 @@
 #import "AIRouterConfig.h"
 
 //tools
+
 #import "UIView+tools.h"
 #import "UILabel+tools.h"
 #import "NSArray+tools.h"
 #import "UIImage+tools.h"
 #import "CALayer+Tools.h"
+#import "UIDevice+tool.h"
 #import "UIButton+tools.h"
 #import "NSString+Tools.h"
 #import "NSObject+Tools.h"
@@ -32,7 +34,7 @@
 #import "UIAlertController+tools.h"
 
 //frameworks
-#import <AFNetworking.h>
+
 #import "WRNavigationBar.h"
 #import <SDAutoLayout.h>
 #import <MJRefresh/MJRefresh.h>
@@ -42,6 +44,8 @@
 
 //other
 #import "AppDelegate.h"
+#import "AITools.h"
+#import "AIBaseNetwork.h"
 
 static inline BOOL IsEmpty(id thing) {
     return thing == nil || [thing isEqual:[NSNull null]]
@@ -88,7 +92,7 @@ static inline BOOL IsEmpty(id thing) {
 //当前控制器
 #define AICURRENTVC AI_getCurrentViewController
 //局限：需要获得控制器的nav
-#define getRectNavAndStatusHight  self.navigationController.navigationBar.frame.size.height+AI_StatusBarHeight
+#define getRectNavAndStatusHight  self.navigationController.navigationBar.frame.size.height+[[UIApplication sharedApplication] statusBarFrame].size.height
 
 //时间点
 #define TIMEPOINT CFAbsoluteTimeGetCurrent()
@@ -131,11 +135,20 @@ static inline BOOL IsEmpty(id thing) {
 
 #define UDRemove(key) [[NSUserDefaults standardUserDefaults] removeObjectForKey:key]
 
+
+//app信息 bundleid、name、version
 #define APPINFO      [[NSBundle mainBundle] infoDictionary]
+
 #define APPBUNDLEID  APPINFO[@"CFBundleIdentifier"]
+#define APPNAME      APPINFO[@"CFBundleDisplayName"]
 #define APPVERSION   APPINFO[@"CFBundleShortVersionString"]
 
-//沙盒路径
+//设备信息UUID、IDFA
+#define UUIDKEY    [NSString stringWithFormat:@"%@_UUID",APPBUNDLEID]
+#define DEVICEUUID [[UIDevice currentDevice].identifierForVendor UUIDString]
+#define DEVICEIDFA [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString]
+
+//沙盒路径 home、tmp、directory、doucument、cache、library
 #define HOMEPATH     NSHomeDirectory()
 #define TMPPATH      NSTemporaryDirectory()
 #define DIRECTORY(d) NSSearchPathForDirectoriesInDomains(d, NSUserDomainMask, YES)[0]

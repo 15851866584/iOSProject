@@ -73,6 +73,7 @@
     if (!_textView) {
         _textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, VW(self.view), ViewHN-60)];
         _textView.font = AI_SYSTEM_Size(12);
+        _textView.backgroundColor = [UIColor whiteColor];
     }
     return _textView;
 }

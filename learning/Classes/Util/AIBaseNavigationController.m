@@ -20,6 +20,12 @@
     
 }
 
+- (void)setAnimatedWithTransition{
+    
+   
+    
+}
+
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
     
     if (self.childViewControllers.count > 0) {

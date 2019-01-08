@@ -10,10 +10,14 @@
 #import "AIBaseTableView.h"
 #import "AIEOETableViewCell.h"
 #import "AILoginViewController.h"
+
+//测试,路由+传参+MVVM
+#import "DeviceModel.h"
+
 @interface AIPreViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) AIBaseTableView *tableView;
-@property (nonatomic, strong) NSMutableArray *dataArray;
+
 @end
 
 @implementation AIPreViewController
@@ -32,10 +36,12 @@
      @{@"按钮":@"AIButtonViewController"},
      @{@"布局":@"AILayoutViewController"},
      @{@"简书":@"AIWebViewController"},
-     @{@"MVVM":@"AIMVVMViewController"}]];
+     @{@"MVVM":@"AIMVVMViewController"},
+     @{@"html高度":@"AIGetHeightViewController"},
+     @{@"test":@"AIWebview"}]];
     
     [self setUpSubViews];
-
+ 
 }
 
 
@@ -66,7 +72,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSDictionary *dic = self.dataSource[indexPath.row];
-    OpenURL([[dic allValues] firstObject]);
+    NSString *urlString = [[dic allValues] firstObject];
+    OpenURLp(urlString,@{@"deviceInfo":[DeviceModel getDeviceInfo]});
 }
 
 @end
