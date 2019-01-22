@@ -10,12 +10,10 @@
 
 @implementation DeviceModel
 
+//使用performSelector返回值不支持基础类型，可以使用NSInvocation
 + (NSArray *)methodList{
     return @[
-#if (TARGET_OS_SIMULATOR == 0)
-             @"isJailBreak",
-#endif
-             
+
              @"wifiName",
              @"wifiMac",
              @"UUID",
@@ -24,7 +22,8 @@
              @"model",
              @"systemName",
              @"systemVersion",
-             @"getIPAddress:"
+             @"getIPAddress:",
+             
              ];
 }
 
@@ -34,10 +33,7 @@
     [[self methodList] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         SEL sel = NSSelectorFromString(obj);
         if ([UIDevice respondsToSelector:sel]) {
-            id value = [UIDevice performSelector:sel withObject:@(YES)];
-            if (![value isKindOfClass:[NSString class]]) {
-                value = value?@"YES":@"NO";
-            }
+            id value = [UIDevice performSelector:sel];
             
             obj = [obj stringByReplacingOccurrencesOfString:@":" withString:@""];
             [info setValue:value forKey:obj];
@@ -47,5 +43,7 @@
     
     return info;
 }
+
+
 
 @end

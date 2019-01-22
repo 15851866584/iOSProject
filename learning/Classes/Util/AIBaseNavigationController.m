@@ -28,6 +28,23 @@
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
     
+#if DEBUG
+    BOOL fromBase = NO;
+    UIViewController *vc = viewController;
+    while (vc) {
+        if ([vc isKindOfClass:NSClassFromString(@"AIBaseViewController")]) {
+            fromBase = YES;
+            break;
+        }else{
+            vc = (UIViewController *)vc.superclass;
+        }
+    }
+    
+    if (!fromBase) {
+        DLog(@"警告：%@未继承AIBaseViewController",viewController.class);
+    }
+#endif
+    
     if (self.childViewControllers.count > 0) {
         viewController.hidesBottomBarWhenPushed = YES;
     }

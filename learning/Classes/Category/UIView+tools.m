@@ -236,7 +236,7 @@ static NSString *tap_touch_block = @"tap_touch_block";
             for (UIView *subView in self.subviews) {
                 subView.viewLevel = self.viewLevel+1;
 #ifdef DEBUG
-                NSLog(@"层级%02zd-类名%@",subView.viewLevel,[subView class]);
+                DLog(@"层级%02zd-类名%@",subView.viewLevel,[subView class]);
 #endif
                 [subView subViewsList];
             }

@@ -25,7 +25,7 @@
     
     [self.view addSubview:self.webView];
     
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://kf.wandaph.com/webchat/web/h5?groupNo=kyh_h5&tenantId=wandaph&callee=kyh_h5"]]];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.jianshu.com/u/1ce8edc3912f"]]];
 }
 
 

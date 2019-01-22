@@ -84,6 +84,12 @@
     return [UIDevice currentDevice].name;
 }
 
++ (float)batteryLevel{
+    UIDevice *device = [UIDevice currentDevice];
+    device.batteryMonitoringEnabled = YES;
+    return device.batteryLevel;
+}
+
 + (NSString *)systemName{
     return [UIDevice currentDevice].systemName;
 }
@@ -178,7 +184,6 @@
 }
 
 + (NSString *)getIPAddress:(BOOL)preferIPv4{
-    
 
     NSArray *searchArray = preferIPv4 ?
     @[ IOS_VPN @"/" IP_ADDR_IPv4, IOS_VPN @"/" IP_ADDR_IPv6, IOS_WIFI @"/" IP_ADDR_IPv4, IOS_WIFI @"/" IP_ADDR_IPv6, IOS_CELLULAR @"/" IP_ADDR_IPv4, IOS_CELLULAR @"/" IP_ADDR_IPv6 ] :

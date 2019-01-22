@@ -16,13 +16,14 @@ PODS:
     - AFNetworking/NSURLSession
   - DZNEmptyDataSet (1.8.1)
   - iCarousel (1.8.3)
+  - IQKeyboardManager (6.2.0)
   - JLRoutes (2.1)
   - MBProgressHUD (1.1.0)
   - MJRefresh (3.1.15.7)
   - SDAutoLayout (2.2.1)
-  - SDWebImage (3.7.6):
-    - SDWebImage/Core (= 3.7.6)
-  - SDWebImage/Core (3.7.6)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
   - UMengAnalytics-NO-IDFA (4.2.5)
   - YYModel (1.0.4)
 
@@ -30,26 +31,28 @@ DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - DZNEmptyDataSet (~> 1.8.1)
   - iCarousel (~> 1.8.1)
+  - IQKeyboardManager (~> 6.2.0)
   - JLRoutes (~> 2.1)
   - MBProgressHUD (~> 1.1.0)
   - MJRefresh (~> 3.1)
   - SDAutoLayout (~> 2.2.0)
-  - SDWebImage (~> 3.7.5)
-  - UMengAnalytics-NO-IDFA (= 4.2.5)
+  - SDWebImage (~> 4.4.2)
+  - UMengAnalytics-NO-IDFA (~> 4.2.5)
   - YYModel (~> 1.0.4)
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
+  IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
   JLRoutes: d755245322b94227662ea3e43492fdca94e05c5b
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   SDAutoLayout: 8bf6b3bbc8b01f775d4defbb4fda2ace805461be
-  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: c7413171fc1f2789a0ab25e5e807d4819e500653
+PODFILE CHECKSUM: ef33d1b352f9b1d661fc485f767c0d8fb5397e48
 
 COCOAPODS: 1.4.0

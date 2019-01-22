@@ -70,7 +70,7 @@
         objc_property_t property = properties[i];
         NSString *name = [NSString stringWithUTF8String:property_getName(property)];
         NSString *attribute = [NSString stringWithUTF8String:property_getAttributes(property)];
-        NSLog(@"%@:%@",attribute,name);
+        DLog(@"%@:%@",attribute,name);
     }
     
     free(properties);
@@ -87,7 +87,7 @@
         Ivar ivar = ivars[i];
         NSString *name = [NSString stringWithUTF8String:ivar_getName(ivar)];
         NSString *type = [NSString stringWithUTF8String:ivar_getTypeEncoding(ivar)];
-        NSLog(@"%@:%@",type,name);
+        DLog(@"%@:%@",type,name);
     }
     
     free(ivars);

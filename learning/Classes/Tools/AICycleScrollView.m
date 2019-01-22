@@ -70,7 +70,7 @@
     if (self.delegate && [self.delegate respondsToSelector:@selector(cycleScrollViewCustomPageControl:)]) {
         UIView *customPageControl = [self.delegate cycleScrollViewCustomPageControl:self];
         if (customPageControl) {
-            self.pageControl.hidden = YES;
+            self.hidesForSinglePage = YES;
             [self addSubview:customPageControl];
         }
     }
@@ -101,7 +101,7 @@
 
 #pragma mark - pageControl
 - (void)updatePageControlView{
-    if (_imageStringsGroup.count) {
+    if (_imageStringsGroup.count && !_hidesForSinglePage) {
         _pageControl.numberOfPages = _imageStringsGroup.count;
         [_pageControl sizeToFit];
         

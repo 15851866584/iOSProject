@@ -20,6 +20,7 @@
     // Do any additional setup after loading the view.
 }
 
+
 - (void)setUpViewControllers{
     NSArray *vcs = @[@"AIGasViewController",@"AIPreViewController",@"AIMedViewController"];
     NSArray *names = @[@"小学",@"中学",@"大学"];

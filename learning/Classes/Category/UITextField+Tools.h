@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, TextInputType) {
+    TextInputTypeKeyboard,
+    TextInputTypePasteboard,
+    TextInputTypeOther,
+};
+
 @interface UITextField (Tools)
 
 @end

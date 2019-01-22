@@ -11,7 +11,7 @@
 #import <JLRoutes/JLRoutes.h>
 #import "AIHomeTabBarController.h"
 #import "AIGuidePageView.h"
-
+#import <IQKeyboardManager/IQKeyboardManager.h>
 #import <UMMobClick/MobClick.h>
 
 #ifdef DEBUG
@@ -29,7 +29,7 @@
     
     
     [NSThread sleepForTimeInterval:2.0f];
-    
+
     //主窗口、根控制器
     [self setRootWindow];
     
@@ -54,6 +54,7 @@
 //    [self.window addSubview:[FPSLabel new]];
 //#endif
 
+    
     return YES;
 }
 
@@ -94,6 +95,12 @@
         [UITableView appearance].estimatedRowHeight = 0;
         [UITableView appearance].estimatedSectionHeaderHeight = 0;
         [UITableView appearance].estimatedSectionFooterHeight = 0;
+    }
+
+    if (@available(iOS 12.0, *)) {
+        [UITextField appearance].textContentType = UITextContentTypeOneTimeCode;
+    }else if (@available(iOS 10.0, *)) {
+        [UITextField appearance].textContentType = @"one-time-code";
     }
 }
 

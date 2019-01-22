@@ -46,6 +46,7 @@
 #import "AppDelegate.h"
 #import "AITools.h"
 #import "AIBaseNetwork.h"
+#import "AIBaseViewController.h"
 
 static inline BOOL IsEmpty(id thing) {
     return thing == nil || [thing isEqual:[NSNull null]]

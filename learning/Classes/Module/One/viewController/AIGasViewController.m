@@ -24,7 +24,6 @@
 
 @implementation AIGasViewController
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -87,6 +86,7 @@
                                            ]];
     [self setUpSubViews];
 
+    
 }
 
 - (void)click:(UIButton *)btn{
@@ -106,10 +106,7 @@
 }
 
 - (void)newTab{
-//    OpenURL(@"AISecondTabBarController?navigationBarControl=4");
-    AISecondTabBarController *vc = [[AISecondTabBarController alloc]init];
-    vc.navigationBarControl = 4;
-    [self.navigationController pushViewController:vc animated:YES];
+    OpenURL(@"AISecondTabBarController?navigationBarControl=4");
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

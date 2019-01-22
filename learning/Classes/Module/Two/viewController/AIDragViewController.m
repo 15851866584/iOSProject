@@ -32,13 +32,13 @@
     @weakify(drag2)
     [drag2 addActionWithBlock:^{
          @strongify(drag2)
-        NSLog(@"%@",[drag2 class]);
+        DLog(@"%@",[drag2 class]);
     }];
     
     @weakify(drag3)
     [drag3 addActionWithBlock:^{
         @strongify(drag3)
-        NSLog(@"%@",[drag3 class]);
+        DLog(@"%@",[drag3 class]);
     }];
   
 }

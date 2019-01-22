@@ -24,7 +24,7 @@
 }
 
 - (void)dealloc{
-    NSLog(@"%s",__func__);
+    DLog(@"%s",__func__);
 }
 
 /*

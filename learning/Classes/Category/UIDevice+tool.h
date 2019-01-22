@@ -29,6 +29,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSString *)model;
 
++ (float)batteryLevel;
+
 + (NSString *)systemName;
 
 + (NSString *)systemVersion;

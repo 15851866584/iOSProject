@@ -45,7 +45,7 @@ static NSString * const DEVICE_UUID = @"device_uuid";
         @try {
             ret = [NSKeyedUnarchiver unarchiveObjectWithData:(__bridge_transfer NSData *)keyData];
         } @catch (NSException *e) {
-            NSLog(@"Unarchive of %@ failed: %@", service, e);
+            DLog(@"Unarchive of %@ failed: %@", service, e);
         } @finally {
         }
     }

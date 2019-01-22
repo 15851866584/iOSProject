@@ -20,6 +20,7 @@
     });
 }
 
+
 - (void)ai_viewWillAppear:(BOOL)animated{
     [self ai_viewWillAppear:animated];
  
