@@ -86,7 +86,6 @@
                                            ]];
     [self setUpSubViews];
 
-    
 }
 
 - (void)click:(UIButton *)btn{
@@ -125,6 +124,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *path = [NSString stringWithFormat:@"AIKnowledgeViewController?navTitle=%@",self.dataSource[indexPath.row]];
     OpenURL(path);
+
 }
 
 - (void)didReceiveMemoryWarning {

@@ -127,17 +127,17 @@
     return self.cycleView.height;
 }
 
-- (UIView *)cycleScrollViewCustomPageControl:(AICycleScrollView *)cycleScrollView{
-    ZJPageControl *control = [[ZJPageControl alloc]initWithFrame:CGRectMake(0, VH(cycleScrollView)-40, VW(cycleScrollView), 30)];
-    control.backgroundColor = [UIColor clearColor];
-    control.pageIndicatorTintColor = [UIColor blueColor];
-    control.currentPageIndicatorTintColor = [UIColor greenColor];
-    control.numberOfPages = 4;
-    control.currentPage = 0;
-    control.userInteractionEnabled = NO;
-    self.control = control;
-    return control;
-}
+//- (UIView *)cycleScrollViewCustomPageControl:(AICycleScrollView *)cycleScrollView{
+//    ZJPageControl *control = [[ZJPageControl alloc]initWithFrame:CGRectMake(0, VH(cycleScrollView)-40, VW(cycleScrollView), 30)];
+//    control.backgroundColor = [UIColor clearColor];
+//    control.pageIndicatorTintColor = [UIColor blueColor];
+//    control.currentPageIndicatorTintColor = [UIColor greenColor];
+//    control.numberOfPages = 4;
+//    control.currentPage = 0;
+//    control.userInteractionEnabled = NO;
+//    self.control = control;
+//    return control;
+//}
 
 - (void)cycleScrollView:(AICycleScrollView *)cycleScrollView didChangeToIndex:(NSInteger)index{
 

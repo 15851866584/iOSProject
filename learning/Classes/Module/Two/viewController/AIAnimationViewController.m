@@ -75,7 +75,6 @@
     //背景色
     CABasicAnimation *animat = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
     animat.toValue = (id)[UIColor greenColor].CGColor;
-    
     [_animationView.layer addAnimation:animat forKey:@"backgroundAnimation"];
     
 //    CAAnimationGroup *groupAnimation = [CAAnimationGroup animation];
@@ -141,26 +140,11 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
   
+    NSArray *oks = @[@"CABasicAnimation",@"CAKeyframeAnimation",@"CATransitionAnimation",@"CGAffineTransformIdentity"];
     UIAlertController *vc = [UIAlertController alertStyle:0 title:@"动画实例" message:nil cancelTitle:@"取消" cancel:^(NSString *cancel) {
         
-    } oksTitle:@[@"CABasicAnimation",@"CAKeyframeAnimation",@"CATransitionAnimation",@"CGAffineTransformIdentity"] ok:^(NSUInteger index) {
-        switch (index) {
-            case 0:
-                [self CABasicAnimation];
-                break;
-            case 1:
-                [self CAKeyframeAnimation];
-                break;
-            case 2:
-                [self CATransition];
-                break;
-            case 3:
-                [self CGAffineTransformIdentity];
-                break;
-            default:
-                break;
-        }
-     
+    } oksTitle:oks ok:^(NSUInteger index) {
+        [self performMethod:oks[index]];
     }];
     [self presentViewController:vc animated:YES completion:nil];
 }

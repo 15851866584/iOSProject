@@ -60,7 +60,7 @@
 }
 
 + (void)printPropertysList:(Class)cla{
-    if (![cla isKindOfClass:[NSObject class]]) return;
+    if (!class_isMetaClass(object_getClass(cla))) return;
     
     unsigned int propertyCount;
     objc_property_t *properties = class_copyPropertyList(cla, &propertyCount);
@@ -77,7 +77,7 @@
 }
 
 + (void)printIvarsList:(Class)cla{
-    if (![cla isKindOfClass:[NSObject class]]) return;
+    if (!class_isMetaClass(object_getClass(cla))) return;
     
     unsigned int count;
     Ivar *ivars = class_copyIvarList(cla, &count);
@@ -94,7 +94,7 @@
 }
 
 + (void)printAllIvarsList:(Class)cla{
-    while (cla && cla != [NSObject class]) {
+    while (class_isMetaClass(object_getClass(cla))) {
         [self printIvarsList:cla];
         cla = [cla superclass];
     }
@@ -102,10 +102,77 @@
 
 //----------------------------------------------
 
-void swizzleClassMethod(Class cls, SEL originSelector, SEL swizzleSelector){
-    if (!cls) {
+- (void)performMethod:(NSString *)method{
+    if (!method) return;
+    
+    SEL sel = NSSelectorFromString(method);
+    if ([self respondsToSelector:sel]) {
+        IMP imp = [self methodForSelector:sel];
+        void (*func)(id, SEL) = (void *)imp;
+        func(self, sel);
+    }
+}
+
+
+- (void)performMethod:(NSString *)method withObject:(id)object{
+    if (!method) return;
+    
+    SEL sel = NSSelectorFromString(method);
+    if ([self respondsToSelector:sel]) {
+        IMP imp = [self methodForSelector:sel];
+        void (*func)(id, SEL, id) = (void *)imp;
+        func(self, sel, object);
+    }
+}
+
+- (void)performMethod:(NSString *)method withObject:(id)object1 withObject:(id)object2{
+    if (!method) return;
+    
+    SEL sel = NSSelectorFromString(method);
+    if ([self respondsToSelector:sel]) {
+        IMP imp = [self methodForSelector:sel];
+        void (*func)(id, SEL, id, id) = (void *)imp;
+        func(self, sel, object1, object2);
+    }
+}
+
+- (void)performMethod:(NSString *)method withBool:(id)object{
+    if (!method) return;
+    
+    SEL sel = NSSelectorFromString(method);
+    if ([self respondsToSelector:sel]) {
+        IMP imp = [self methodForSelector:sel];
+        void (*func)(id, SEL, BOOL) = (void *)imp;
+        func(self, sel, object);
+    }
+}
+
+- (void)performMethod:(NSString *)method withObject:(id)object1 withBool:(BOOL)object2{
+    if (!method) return;
+    
+    SEL sel = NSSelectorFromString(method);
+    if ([self respondsToSelector:sel]) {
+        IMP imp = [self methodForSelector:sel];
+        void (*func)(id, SEL, id, BOOL) = (void *)imp;
+        func(self, sel, object1, object2);
+    }
+}
+//----------------------------------------------
+
+
++ (void)swizzleClassMethod:(SEL)originSelector withSwizzleMethod:(SEL)swizzleSelector{
+    swizzleClassMethod(self.class, originSelector, swizzleSelector);
+}
+
+- (void)swizzleInstanceMethod:(SEL)originSelector withSwizzleMethod:(SEL)swizzleSelector{
+    swizzleInstanceMethod(self.class, originSelector, swizzleSelector);
+}
+
+static void swizzleClassMethod(Class cls, SEL originSelector, SEL swizzleSelector){
+    if (!class_isMetaClass(object_getClass(cls))) {
         return;
     }
+
     Method originalMethod = class_getClassMethod(cls, originSelector);
     Method swizzledMethod = class_getClassMethod(cls, swizzleSelector);
     
@@ -131,10 +198,11 @@ void swizzleClassMethod(Class cls, SEL originSelector, SEL swizzleSelector){
     }
 }
 
-void swizzleInstanceMethod(Class cls, SEL originSelector, SEL swizzleSelector){
-    if (!cls) {
+static void swizzleInstanceMethod(Class cls, SEL originSelector, SEL swizzleSelector){
+    if (!class_isMetaClass(object_getClass(cls))) {
         return;
     }
+    
     /* if current class not exist selector, then get super*/
     Method originalMethod = class_getInstanceMethod(cls, originSelector);
     Method swizzledMethod = class_getInstanceMethod(cls, swizzleSelector);
@@ -161,14 +229,6 @@ void swizzleInstanceMethod(Class cls, SEL originSelector, SEL swizzleSelector){
                                                 method_getTypeEncoding(swizzledMethod)),
                             method_getTypeEncoding(originalMethod));
     }
-}
-
-+ (void)swizzleClassMethod:(SEL)originSelector withSwizzleMethod:(SEL)swizzleSelector{
-    swizzleClassMethod(self.class, originSelector, swizzleSelector);
-}
-
-- (void)swizzleInstanceMethod:(SEL)originSelector withSwizzleMethod:(SEL)swizzleSelector{
-    swizzleInstanceMethod(self.class, originSelector, swizzleSelector);
 }
 
 @end

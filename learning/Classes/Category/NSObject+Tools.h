@@ -27,10 +27,15 @@
 + (void)printAllIvarsList:(Class)cla;
 
 
-//swizzleObject
+//Method执行者
+- (void)performMethod:(NSString *)method;
+- (void)performMethod:(NSString *)method withObject:(id)object;
+- (void)performMethod:(NSString *)method withObject:(id)object1 withObject:(id)object2;
 
-void swizzleClassMethod(Class cls, SEL originSelector, SEL swizzleSelector);
-void swizzleInstanceMethod(Class cls, SEL originSelector, SEL swizzleSelector);
+- (void)performMethod:(NSString *)method withBool:(id)object;
+- (void)performMethod:(NSString *)method withObject:(id)object1 withBool:(BOOL)object2;
+
+//swizzleObject
 
 + (void)swizzleClassMethod:(SEL)originSelector withSwizzleMethod:(SEL)swizzleSelector;
 

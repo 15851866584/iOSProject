@@ -59,6 +59,7 @@
     CAMediaTimingFunction *strokeStartTimingFunction = [[CAMediaTimingFunction alloc] initWithControlPoints: 0.65 : 0.0 :1.0 : 1.0];
     progressLongEndAnimation.timingFunction = strokeStartTimingFunction;
     progressLongEndAnimation.repeatCount = MAXFLOAT;
+    progressLongEndAnimation.removedOnCompletion = NO;
     
     CABasicAnimation *progressLongAnimation = [CABasicAnimation animationWithKeyPath: @"strokeEnd"];
     progressLongAnimation.fromValue = [NSNumber numberWithFloat: 0.0];
@@ -67,12 +68,14 @@
     CAMediaTimingFunction *progressRotateTimingFunction = [CAMediaTimingFunction functionWithControlPoints:0.25 :0.80 :0.75 :1.00];
     progressLongAnimation.timingFunction = progressRotateTimingFunction;
     progressLongAnimation.repeatCount = MAXFLOAT;
-
+    progressLongAnimation.removedOnCompletion = NO;
+    
     CABasicAnimation *progressRotateAnimation = [CABasicAnimation animationWithKeyPath: @"transform.rotation.z"];
     progressRotateAnimation.fromValue = [NSNumber numberWithFloat: 0.0];
     progressRotateAnimation.toValue = [NSNumber numberWithFloat:CIRCLE_END];
     progressRotateAnimation.repeatCount = MAXFLOAT;
     progressRotateAnimation.duration = 6;
+    progressRotateAnimation.removedOnCompletion = NO;
     
     [topLayer addAnimation:progressLongEndAnimation forKey:@"strokeStart"];
     [topLayer addAnimation:progressLongAnimation forKey:@"strokeEnd"];
