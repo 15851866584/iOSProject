@@ -18,9 +18,9 @@ static NSString *_static_identifier = nil;
 }
 
 + (instancetype)initWithTableView:(UITableView *)tableView andIdentifier:(NSString *)identifier{
-    id view = [tableView dequeueReusableCellWithIdentifier:identifier];
+    id view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:identifier];
     if (!view) {
-        view = [[self alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
+        view = [[self alloc] initWithReuseIdentifier:identifier];
     }
     return view;
 }

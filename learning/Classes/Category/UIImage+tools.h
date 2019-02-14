@@ -16,11 +16,13 @@
 
 @interface UIImage (tools)
 
+//图片拉伸
 + (UIImage *)imageStretchableWithName:(NSString *)imageName;
 
 + (UIImage *)createImageWithColor:(UIColor *)color;
 + (UIImage *)createImageWithColor:(UIColor *)color size:(CGSize)size;
 
 //绘制圆角
-+ (UIImage *)circleImageWithImage:(UIImage *)sourceImage borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor;
+- (UIImage *)circleImageWithCornerRadius:(CGFloat)radius;
+
 @end

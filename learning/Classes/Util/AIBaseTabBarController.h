@@ -32,8 +32,9 @@
 - (void)setUpViewControllersInNavClass:(Class)navClass
                              rootClass:(Class)rootClass
                             tabBarName:(NSString *)name
+                       tabBarImageName:(NSString *)imageName
                                   size:(UIFont *)size
                                  color:(UIColor *)color
-                              selColor:(UIColor *)selColor
-                       tabBarImageName:(NSString *)imageName;
+                              selColor:(UIColor *)selColor;
+
 @end

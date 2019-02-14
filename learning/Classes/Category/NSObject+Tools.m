@@ -136,7 +136,7 @@
     }
 }
 
-- (void)performMethod:(NSString *)method withBool:(id)object{
+- (void)performMethod:(NSString *)method withBool:(BOOL)object{
     if (!method) return;
     
     SEL sel = NSSelectorFromString(method);

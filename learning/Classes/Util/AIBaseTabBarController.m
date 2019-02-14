@@ -29,16 +29,16 @@
                              rootClass:(Class)rootClass
                             tabBarName:(NSString *)name
                        tabBarImageName:(NSString *)imageName{
-    [self setUpViewControllersInNavClass:navClass rootClass:rootClass tabBarName:name size:AI_SYSTEM_Size(12) color:[UIColor grayColor] selColor:[UIColor darkGrayColor] tabBarImageName:imageName];
+    [self setUpViewControllersInNavClass:navClass rootClass:rootClass tabBarName:name tabBarImageName:imageName size:AI_SYSTEM_Size(12) color:[UIColor grayColor] selColor:[UIColor darkGrayColor]];
 }
 
 - (void)setUpViewControllersInNavClass:(Class)navClass
                              rootClass:(Class)rootClass
                             tabBarName:(NSString *)name
+                       tabBarImageName:(NSString *)imageName
                                   size:(UIFont *)size
                                  color:(UIColor *)color
-                              selColor:(UIColor *)selColor
-                       tabBarImageName:(NSString *)imageName{
+                              selColor:(UIColor *)selColor{
     UINavigationController *nav = [[navClass  alloc] initWithRootViewController:[rootClass new]];
     
     nav.title = name;//tabbar
@@ -48,9 +48,13 @@
     nav.tabBarItem.selectedImage = OrgIMG(selectedImage);
     
     [nav.tabBarItem setTitleTextAttributes:
-     @{NSForegroundColorAttributeName:color,NSFontAttributeName:size} forState:UIControlStateNormal];
+     @{NSForegroundColorAttributeName:color,
+                  NSFontAttributeName:size}
+                             forState:UIControlStateNormal];
     [nav.tabBarItem setTitleTextAttributes:
-     @{NSForegroundColorAttributeName:selColor,NSFontAttributeName:size} forState:UIControlStateSelected];
+     @{NSForegroundColorAttributeName:selColor,
+                  NSFontAttributeName:size}
+                             forState:UIControlStateSelected];
     [self addChildViewController:nav];
     
 }

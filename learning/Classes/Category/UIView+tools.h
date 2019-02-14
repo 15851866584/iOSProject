@@ -49,5 +49,6 @@ typedef void (^UITouchBlock)(void);
 //画直线、虚线
 - (void)drawLineWithRect:(CGRect)rect color:(UIColor *)color;
 - (void)drawDottedWithRect:(CGRect)rect color:(UIColor *)color dashPattern:(NSArray<NSNumber *> *)dashPattern;
-
+- (CAShapeLayer *)lineWithRect:(CGRect)rect color:(UIColor *)color  dashPattern:(NSArray<NSNumber *> *)dashPattern;
+//
 @end

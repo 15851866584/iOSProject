@@ -26,13 +26,6 @@
     // Configure the view for the selected state
 }
 
-- (void)layoutSubviews{
-    [super layoutSubviews];
-    _lab.height = self.height-0.5;
-    
-    [self.contentView drawLineWithRect:CGRectMake(VL(_lab), VH(self)-0.5, VW(_lab), 0.5) color:AI_RGB125];
- 
-}
 
 - (void)setUpSubViews{
     
@@ -42,6 +35,8 @@
     _lab.numberOfLines = 2;
     [self.contentView addSubview:_lab];
   
+
+    [self.contentView drawLineWithRect:CGRectMake(VL(_lab), 50-0.5, VW(_lab), 0.5) color:AI_RGB125];
 }
 
 - (void)setTitle:(NSString *)title{

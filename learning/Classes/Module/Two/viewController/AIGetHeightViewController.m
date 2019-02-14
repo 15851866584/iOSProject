@@ -27,6 +27,7 @@
     textView.selectable = NO;
     textView.bounces = NO;
     [self.view addSubview:textView];
+    
 }
 
 - (NSString *)defineHTML{

@@ -10,6 +10,10 @@
 
 @interface NSObject (Tools)
 
+//这里为项目开发方便定义一个统一数据源，大家请忽略
++ (id)responseObject;//网络
++ (id)localData;//本地
+
 //kvc修改属性值
 - (void)changeValueForProperty:(NSDictionary *)property;
 
@@ -25,7 +29,6 @@
 + (void)printIvarsList:(Class)cla;
 
 + (void)printAllIvarsList:(Class)cla;
-
 
 //Method执行者
 - (void)performMethod:(NSString *)method;

@@ -22,4 +22,17 @@
 #define AI_RGB125 AIRGB(125, 125, 125)
 #define AI_RGB255 AIRGB(255, 255, 255)
 
+//weChat颜色值
+#define WeChatRGB0 AIRGB(0, 0, 0)
+#define WeChatRGB20 AIRGB(20, 20, 20)
+#define WeChatRGB40 AIRGB(40, 40, 40)
+#define WeChatRGB110 AIRGB(110, 110, 110)
+#define WeChatRGB160 AIRGB(160, 160, 160)
+#define WeChatRGB200 AIRGB(200, 200, 200)
+#define WeChatRGB234 AIRGB(234, 234, 234)
+#define WeChatRGB241 AIRGB(241, 241, 241)
+#define WeChatRGB256 AIRGB(256, 256, 256)
+
+#define WeChatBlue AIRGB(30, 182, 95)
+
 #endif /* AIColorConfig_h */

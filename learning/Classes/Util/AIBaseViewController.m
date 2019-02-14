@@ -26,8 +26,7 @@
     if (self.navigationController.childViewControllers.count > 1) {
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:IMG(@"ai_left_back") style:(UIBarButtonItemStyleDone) target:self action:@selector(backUpViewController)];
     }
-    
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:IMG(@"ai_login") style:(UIBarButtonItemStylePlain) target:self action:@selector(login)];
+
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
 
@@ -35,10 +34,6 @@
 
 - (void)backUpViewController{
     CloseURL(nil);
-}
-
-- (void)login{
-    OpenURL(@"present/AILoginViewController");
 }
 
 - (void)didReceiveMemoryWarning {

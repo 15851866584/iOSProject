@@ -290,19 +290,24 @@ static NSString *tap_touch_block = @"tap_touch_block";
 }
 
 - (void)drawDottedWithRect:(CGRect)rect color:(UIColor *)color dashPattern:(NSArray<NSNumber *> *)dashPattern{
+    
+    [self.layer addSublayer:[self lineWithRect:rect color:color dashPattern:dashPattern]];
+}
+
+- (CAShapeLayer *)lineWithRect:(CGRect)rect color:(UIColor *)color  dashPattern:(NSArray<NSNumber *> *)dashPattern{
     UIBezierPath *bezierPath = [UIBezierPath bezierPath];
     CGFloat anchorY = rect.origin.y+rect.size.height/2;
     [bezierPath moveToPoint:CGPointMake(rect.origin.x, anchorY)];
-    [bezierPath addLineToPoint:CGPointMake(rect.size.width, anchorY)];
+    [bezierPath addLineToPoint:CGPointMake(rect.origin.x+rect.size.width, anchorY)];
     
     CAShapeLayer *lineLayer = [[CAShapeLayer alloc]init];
     lineLayer.lineWidth = rect.size.height;
     lineLayer.strokeColor = color.CGColor;
     lineLayer.path = bezierPath.CGPath;
     if (dashPattern.count) {
-      lineLayer.lineDashPattern = dashPattern;
+        lineLayer.lineDashPattern = dashPattern;
     }
-    [self.layer addSublayer:lineLayer];
+    return lineLayer;
 }
 
 @end

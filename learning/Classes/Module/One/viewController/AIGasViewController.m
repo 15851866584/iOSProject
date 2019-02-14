@@ -99,9 +99,15 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.showsVerticalScrollIndicator = YES;
+    self.tableView.rowHeight = 50;
     [self.view addSubview:self.tableView];
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:IMG(@"ai_login") style:(UIBarButtonItemStylePlain) target:self action:@selector(login)];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:IMG(@"small_normal_sel") style:(UIBarButtonItemStylePlain) target:self action:@selector(newTab)];
+}
+
+- (void)login{
+    OpenURL(@"present/AILoginViewController");
 }
 
 - (void)newTab{

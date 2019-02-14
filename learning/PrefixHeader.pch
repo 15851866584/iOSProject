@@ -35,7 +35,7 @@
 
 //frameworks
 
-#import "WRNavigationBar.h"
+#import <YYModel.h>
 #import <SDAutoLayout.h>
 #import <MJRefresh/MJRefresh.h>
 #import <SDWebImage/UIImageView+WebCache.h>
@@ -99,7 +99,8 @@ static inline BOOL IsEmpty(id thing) {
 #define TIMEPOINT CFAbsoluteTimeGetCurrent()
 
 #define ViewH  SCREEN_HEIGHT-AI_TabbarSafeHeight
-#define ViewHN SCREEN_HEIGHT-AI_NavAndStatusHeight-AI_TabbarSafeHeight
+#define ViewHN SCREEN_HEIGHT-AI_NavAndStatusHeight
+#define ViewHT SCREEN_HEIGHT-AI_TabbarHeight
 #define ViewHNT SCREEN_HEIGHT-AI_NavAndStatusHeight-AI_TabbarHeight
 
 

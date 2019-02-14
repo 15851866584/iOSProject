@@ -22,6 +22,7 @@
     self.textField.backgroundColor = [UIColor redColor];
     [self.view addSubview:self.textField];
     
+    
 //    UIPasteboard *pd = [UIPasteboard generalPasteboard];
      [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(posted:) name:UIMenuControllerDidHideMenuNotification object:nil];
 }

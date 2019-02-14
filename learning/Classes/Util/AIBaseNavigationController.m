@@ -32,7 +32,8 @@
     BOOL fromBase = NO;
     UIViewController *vc = viewController;
     while (vc) {
-        if ([vc isKindOfClass:NSClassFromString(@"AIBaseViewController")]) {
+        NSString *vcString = NSStringFromClass(vc.class);
+        if ([vcString containsString:@"AIBase"]) {
             fromBase = YES;
             break;
         }else{
