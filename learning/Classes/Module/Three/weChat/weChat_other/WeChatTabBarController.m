@@ -20,6 +20,7 @@
     // Do any additional setup after loading the view.
     self.tabBar.backgroundImage = [UIImage createImageWithColor:WeChatRGB234];
     self.tabBar.shadowImage = [UIImage new];
+    
 }
 
 - (void)setUpViewControllers{
@@ -32,6 +33,7 @@
         [self setUpViewControllersInNavClass:[WeChatNavigationController class] rootClass:class tabBarName:names[i] tabBarImageName:images[i] size:WeChatFont10  color:WeChatRGB20 selColor:WeChatBlue];
     }
 }
+
 /*
 #pragma mark - Navigation
 

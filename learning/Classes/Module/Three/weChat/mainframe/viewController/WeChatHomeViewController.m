@@ -12,10 +12,13 @@
 #import "WeChatHomeTableViewCell.h"
 #import "WeChatHomeMenuView.h"
 #import "UITabBarItem+WZLBadge.h"
-
-@interface WeChatHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
+#import "WeChatSearchController.h"
+#import "WeChatSearchResultController.h"
+@interface WeChatHomeViewController ()<UITableViewDelegate,UITableViewDataSource,UISearchControllerDelegate>
 @property (nonatomic, strong) AIBaseTableView *tableView;
 @property (nonatomic, strong) WeChatHomeMenuView *menuView;
+
+@property (nonatomic, strong) WeChatSearchController *searchController;
 
 @end
 
@@ -28,6 +31,7 @@
     self.title = @"微信";
     //实际开发中：首页的逻辑比较复杂
     [self setUpSubViews];
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -37,6 +41,7 @@
     if ([window.subviews containsObject:_menuView]) {
         [self.menuView removeFromSuperview];
     }
+    
 }
 
 - (void)setUpSubViews{
@@ -48,16 +53,32 @@
     self.tableView.rowHeight = 70;
     self.tableView.showsVerticalScrollIndicator = YES;
     self.tableView.backgroundColor = self.view.backgroundColor;
+
     [self.view addSubview:self.tableView];
     [self tabBarBadgeCount];
   
+    [self setSearchController];
+    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:OrgIMG(@"wechat_menu") style:(UIBarButtonItemStylePlain) target:self action:@selector(homeMenu)];
 
     
 }
 
-- (void)loadNewData{
-    [self.tableView.mj_header endRefreshing];
+//搜索页
+- (void)setSearchController{
+
+    self.searchController = [WeChatSearchController initSearchController];
+  
+    self.searchController.delegate = self;
+    self.tableView.tableHeaderView = self.searchController.searchBar;
+    self.definesPresentationContext = YES;
+    
+    UISearchBar *searchBar = self.searchController.searchBar;
+    searchBar.placeholder = @"搜索";
+    //背景色
+    searchBar.barTintColor = WeChatRGB241;
+    //去掉边线
+    [searchBar setBackgroundImage:[UIImage new]];
 }
 
 - (void)tabBarBadgeCount{
@@ -126,6 +147,20 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+}
+
+#pragma mark - UISearchControllerDelegate
+- (void)willPresentSearchController:(UISearchController *)searchController{
+    
+    self.tabBarController.tabBar.hidden = YES;
+    [searchController.searchResultsController becomeFirstResponder];
+}
+
+- (void)willDismissSearchController:(UISearchController *)searchController {
+  
+    self.tabBarController.tabBar.hidden = NO;
+    [searchController.searchResultsController resignFirstResponder];
     
 }
 

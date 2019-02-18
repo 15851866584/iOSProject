@@ -20,8 +20,5 @@ typedef NS_ENUM(NSInteger,NavigationBarControl) {
 
 @property (nonatomic, assign) NavigationBarControl navigationBarControl;
 
-/* default set open */
-@property (nonatomic, assign) BOOL isCloseRightSlide;
-
 
 @end

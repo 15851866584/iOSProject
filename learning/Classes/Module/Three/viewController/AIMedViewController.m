@@ -17,6 +17,10 @@ static NSString *identifier = @"AIMedCollectionViewCell";
 @interface AIMedViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
+
+//点击返回
+@property (nonatomic, strong) UIButton *backBtn;
+
 @end
 
 
@@ -35,6 +39,22 @@ static NSString *identifier = @"AIMedCollectionViewCell";
     
     self.view.backgroundColor = AIRGB(235, 204, 185);
     [self.view addSubview:self.collectionView];
+
+}
+
+- (void)clickBackBtnEvent{
+    CloseURL(nil);
+}
+
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    self.backBtn.hidden = !self.presentedViewController;
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    self.backBtn.hidden = !self.presentedViewController;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,7 +84,7 @@ static NSString *identifier = @"AIMedCollectionViewCell";
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    OpenURL(@"WeChatTabBarController");
+    OpenURL(@"present/WeChatTabBarController");
 }
 
 - (UICollectionView *)collectionView{
@@ -86,6 +106,17 @@ static NSString *identifier = @"AIMedCollectionViewCell";
         [_collectionView registerClass:NSClassFromString(identifier) forCellWithReuseIdentifier:identifier];
     }
     return _collectionView;
+}
+
+- (UIButton *)backBtn{
+    if (!_backBtn) {
+        _backBtn = [UIButton buttonWithFrame:CGRectMake(20, 50, 70, 30) textColor:AI_RGB51 backgroundColor:AI_RGB125 font:WeChatFont10 text:@"点击返回" target:self action:@selector(clickBackBtnEvent)];
+        _backBtn.layer.cornerRadius = 15;
+        _backBtn.layer.masksToBounds = YES;
+        _backBtn.isDragable = YES;
+        [[UIApplication sharedApplication].keyWindow addSubview:_backBtn];
+    }
+    return _backBtn;
 }
 
 @end

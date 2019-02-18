@@ -24,7 +24,11 @@
     [self.navigationBar setTitleTextAttributes:
   @{NSForegroundColorAttributeName:WeChatRGB0,
                NSFontAttributeName:WeChatFont20}];
+    
+    //searchController 的背景色
+    self.view.backgroundColor = WeChatRGB241;
 }
+
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];

@@ -12,9 +12,13 @@
 #import "WeChatContactTableViewCell.h"
 #import "BMChineseSort.h"
 #import "WeChatContactTableViewHeaderFooterView.h"
+#import "WeChatSearchController.h"
 
-@interface WeChatContactViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface WeChatContactViewController ()<UITableViewDelegate,UITableViewDataSource,UISearchControllerDelegate>
 @property (nonatomic, strong) AIBaseTableView *tableView;
+
+@property (nonatomic, strong) WeChatSearchController *searchController;
+
 @end
 
 @implementation WeChatContactViewController
@@ -59,9 +63,24 @@
     self.tableView.backgroundColor = self.view.backgroundColor;
     
     [self.view addSubview:self.tableView];
-    
+    [self setSearchController];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:OrgIMG(@"wechat_contact") style:(UIBarButtonItemStylePlain) target:self action:@selector(contactNewfriend)];
+}
+
+- (void)setSearchController{
+    
+    self.searchController = [WeChatSearchController initSearchController];
+    self.searchController.delegate = self;
+    self.tableView.tableHeaderView = self.searchController.searchBar;
+    self.definesPresentationContext = YES;
+    
+    UISearchBar *searchBar = self.searchController.searchBar;
+    searchBar.placeholder = @"搜索";
+    //背景色
+    searchBar.barTintColor = WeChatRGB241;
+    //去掉边线
+    [searchBar setBackgroundImage:[UIImage new]];
 }
 
 - (void)contactNewfriend{
@@ -126,6 +145,22 @@
     
     return @[editAction];
     
+}
+
+
+#pragma mark - UISearchControllerDelegate
+- (void)willPresentSearchController:(UISearchController *)searchController{
+    
+    self.tabBarController.tabBar.hidden = YES;
+    
+    [searchController.searchResultsController becomeFirstResponder];
+}
+
+- (void)willDismissSearchController:(UISearchController *)searchController {
+    
+    self.tabBarController.tabBar.hidden = NO;
+    
+    [searchController.searchResultsController resignFirstResponder];
 }
 /*
 #pragma mark - Navigation

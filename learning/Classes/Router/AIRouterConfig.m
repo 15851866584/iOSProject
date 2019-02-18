@@ -185,7 +185,7 @@ NSString *const AIControllerPopRoot           = @"root";
 
 //动态添加属性、父类属性需要单独处理(viewController)
 + (void)additionalPropertyListToVC:(UIViewController *)vc param:(NSDictionary<NSString *,NSString *> *)parameters{
-    NSArray *properties = @[@"navigationBarControl",@"isCloseRightSlide"];
+    NSArray *properties = @[@"navigationBarControl",@"fd_interactivePopDisabled"];
     [properties enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
         NSString *param = parameters[obj];

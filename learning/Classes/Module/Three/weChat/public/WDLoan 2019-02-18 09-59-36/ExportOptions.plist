@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>destination</key>
+	<string>export</string>
+	<key>method</key>
+	<string>app-store</string>
+	<key>provisioningProfiles</key>
+	<dict>
+		<key>com.wandaloans.timesloan</key>
+		<string>timesloan_chongqi_appStore_Distribution</string>
+	</dict>
+	<key>signingCertificate</key>
+	<string>B87C8FB8FFE2FF503BA5511FC83C3BF9702E2DA4</string>
+	<key>signingStyle</key>
+	<string>manual</string>
+	<key>stripSwiftSymbols</key>
+	<true/>
+	<key>teamID</key>
+	<string>8UA5Z3S999</string>
+	<key>uploadSymbols</key>
+	<true/>
+</dict>
+</plist>

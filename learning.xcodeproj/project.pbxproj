@@ -90,6 +90,7 @@
 		635DB87321FEDB2D00988502 /* WeChatContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635DB87221FEDB2D00988502 /* WeChatContactViewController.m */; };
 		635DB87621FEE39D00988502 /* WeChatContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 635DB87521FEE39D00988502 /* WeChatContactTableViewCell.m */; };
 		635DB87921FEFDC500988502 /* WeChatContactListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 635DB87821FEFDC500988502 /* WeChatContactListModel.m */; };
+		63610AFC2216551600B24608 /* WeChatSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63610AFB2216551600B24608 /* WeChatSearchController.m */; };
 		6362C54C2203F1F9000AD7BA /* UIBarButtonItem+WZLBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 6362C5452203F1F7000AD7BA /* UIBarButtonItem+WZLBadge.m */; };
 		6362C54D2203F1F9000AD7BA /* UITabBarItem+WZLBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 6362C5492203F1F8000AD7BA /* UITabBarItem+WZLBadge.m */; };
 		6362C54E2203F1F9000AD7BA /* CAAnimation+WAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6362C54A2203F1F9000AD7BA /* CAAnimation+WAnimation.m */; };
@@ -105,6 +106,7 @@
 		63798B0121096FF600E8330E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63798B0021096FF600E8330E /* Assets.xcassets */; };
 		637A03D92201358A00E04A12 /* BMChineseSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 637A03D82201358A00E04A12 /* BMChineseSort.m */; };
 		637A03DC2201468000E04A12 /* WeChatContactTableViewHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 637A03DB2201468000E04A12 /* WeChatContactTableViewHeaderFooterView.m */; };
+		637A9A1A2216673C00A0B4BB /* WeChatSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637A9A192216673C00A0B4BB /* WeChatSearchResultController.m */; };
 		6381D32920DA264A00E59165 /* AIBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6381D32820DA264A00E59165 /* AIBaseTableView.m */; };
 		6381D32C20DA286B00E59165 /* AIBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6381D32B20DA286B00E59165 /* AIBaseTableViewCell.m */; };
 		6381D32F20DA2AC500E59165 /* AIEOETableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6381D32E20DA2AC500E59165 /* AIEOETableViewCell.m */; };
@@ -120,6 +122,7 @@
 		63A2B91E21143AB40046CCF8 /* AIBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A2B91D21143AB40046CCF8 /* AIBaseTabBarController.m */; };
 		63A2B92121143B2F0046CCF8 /* AIHomeTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A2B92021143B2F0046CCF8 /* AIHomeTabBarController.m */; };
 		63A2B9F121144D100046CCF8 /* AISecondTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A2B9F021144D100046CCF8 /* AISecondTabBarController.m */; };
+		63A5918D221A8CD7003B2330 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A5918B221A8CD7003B2330 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		63BFBF022122A93800E68798 /* ZJPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BFBF002122A93700E68798 /* ZJPageControl.m */; };
 		63BFBF092122C7ED00E68798 /* AIGuidePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BFBF082122C7ED00E68798 /* AIGuidePageView.m */; };
 		63CD88CC212FD64100C30CA8 /* AISpringHeaderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CD88CB212FD64100C30CA8 /* AISpringHeaderVC.m */; };
@@ -320,6 +323,8 @@
 		635DB87521FEE39D00988502 /* WeChatContactTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatContactTableViewCell.m; sourceTree = "<group>"; };
 		635DB87721FEFDC500988502 /* WeChatContactListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatContactListModel.h; sourceTree = "<group>"; };
 		635DB87821FEFDC500988502 /* WeChatContactListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatContactListModel.m; sourceTree = "<group>"; };
+		63610AFA2216551600B24608 /* WeChatSearchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatSearchController.h; sourceTree = "<group>"; };
+		63610AFB2216551600B24608 /* WeChatSearchController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatSearchController.m; sourceTree = "<group>"; };
 		6362C5422203F1F7000AD7BA /* WZLBadgeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLBadgeProtocol.h; sourceTree = "<group>"; };
 		6362C5432203F1F7000AD7BA /* UITabBarItem+WZLBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+WZLBadge.h"; sourceTree = "<group>"; };
 		6362C5442203F1F7000AD7BA /* UIView+WZLBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WZLBadge.h"; sourceTree = "<group>"; };
@@ -348,6 +353,8 @@
 		637A03D82201358A00E04A12 /* BMChineseSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMChineseSort.m; sourceTree = "<group>"; };
 		637A03DA2201468000E04A12 /* WeChatContactTableViewHeaderFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatContactTableViewHeaderFooterView.h; sourceTree = "<group>"; };
 		637A03DB2201468000E04A12 /* WeChatContactTableViewHeaderFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatContactTableViewHeaderFooterView.m; sourceTree = "<group>"; };
+		637A9A182216673C00A0B4BB /* WeChatSearchResultController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatSearchResultController.h; sourceTree = "<group>"; };
+		637A9A192216673C00A0B4BB /* WeChatSearchResultController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatSearchResultController.m; sourceTree = "<group>"; };
 		6381D32720DA264A00E59165 /* AIBaseTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIBaseTableView.h; sourceTree = "<group>"; };
 		6381D32820DA264A00E59165 /* AIBaseTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIBaseTableView.m; sourceTree = "<group>"; };
 		6381D32A20DA286B00E59165 /* AIBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIBaseTableViewCell.h; sourceTree = "<group>"; };
@@ -378,6 +385,8 @@
 		63A2B92021143B2F0046CCF8 /* AIHomeTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIHomeTabBarController.m; sourceTree = "<group>"; };
 		63A2B9EF21144D100046CCF8 /* AISecondTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISecondTabBarController.h; sourceTree = "<group>"; };
 		63A2B9F021144D100046CCF8 /* AISecondTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISecondTabBarController.m; sourceTree = "<group>"; };
+		63A5918B221A8CD7003B2330 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		63A5918C221A8CD7003B2330 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		63BFBF002122A93700E68798 /* ZJPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJPageControl.m; sourceTree = "<group>"; };
 		63BFBF012122A93800E68798 /* ZJPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJPageControl.h; sourceTree = "<group>"; };
 		63BFBF072122C7ED00E68798 /* AIGuidePageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIGuidePageView.h; sourceTree = "<group>"; };
@@ -604,6 +613,8 @@
 				634176D720D2426B00A5BA51 /* UIViewController+tools.m */,
 				63DC007920E4C2DE001C332D /* UIAlertController+tools.h */,
 				63DC007A20E4C2DE001C332D /* UIAlertController+tools.m */,
+				63A5918C221A8CD7003B2330 /* UINavigationController+FDFullscreenPopGesture.h */,
+				63A5918B221A8CD7003B2330 /* UINavigationController+FDFullscreenPopGesture.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -957,6 +968,17 @@
 			path = viewController;
 			sourceTree = "<group>";
 		};
+		63610AF9221654B500B24608 /* public */ = {
+			isa = PBXGroup;
+			children = (
+				63610AFA2216551600B24608 /* WeChatSearchController.h */,
+				63610AFB2216551600B24608 /* WeChatSearchController.m */,
+				637A9A182216673C00A0B4BB /* WeChatSearchResultController.h */,
+				637A9A192216673C00A0B4BB /* WeChatSearchResultController.m */,
+			);
+			path = public;
+			sourceTree = "<group>";
+		};
 		6362C53A2203E2D6000AD7BA /* locationConverter */ = {
 			isa = PBXGroup;
 			children = (
@@ -1175,6 +1197,7 @@
 		63FCA7C121F994BB00586618 /* weChat */ = {
 			isa = PBXGroup;
 			children = (
+				63610AF9221654B500B24608 /* public */,
 				63F258562202C6A100C295E5 /* me */,
 				63F258462202882D00C295E5 /* discover */,
 				63FCA7CA21F999FC00586618 /* weChat_other */,
@@ -1508,6 +1531,7 @@
 				6363B901211AEFFE0074B509 /* AICycleScrollView.m in Sources */,
 				63F2584C220288C000C295E5 /* WeChatDiscoverListModel.m in Sources */,
 				63BFBF022122A93800E68798 /* ZJPageControl.m in Sources */,
+				63610AFC2216551600B24608 /* WeChatSearchController.m in Sources */,
 				6356E26D21D7064C0089D098 /* AITools.m in Sources */,
 				6368F21C21FE947C0008670F /* WeChatHomeMenuView.m in Sources */,
 				63A2B92121143B2F0046CCF8 /* AIHomeTabBarController.m in Sources */,
@@ -1533,6 +1557,8 @@
 				630F4EC420CE231600BEDFE2 /* UIView+tools.m in Sources */,
 				6362C54F2203F1F9000AD7BA /* UIView+WZLBadge.m in Sources */,
 				639563C921DCA29D001A3D08 /* UIDevice+tool.m in Sources */,
+				637A9A1A2216673C00A0B4BB /* WeChatSearchResultController.m in Sources */,
+				63A5918D221A8CD7003B2330 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				635DB87921FEFDC500988502 /* WeChatContactListModel.m in Sources */,
 				6362C54C2203F1F9000AD7BA /* UIBarButtonItem+WZLBadge.m in Sources */,
 				63FCA7C921F9991E00586618 /* WeChatHomeViewController.m in Sources */,

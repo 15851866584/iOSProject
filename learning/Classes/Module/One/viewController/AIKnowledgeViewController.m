@@ -25,7 +25,7 @@
     [self.view addSubview:self.textView];
     [self.view addSubview:self.slider];
     self.textView.text = [Knowledge showKnowledge:self.navTitle];    
-   
+    
 }
 
 //static void resolveMethod(id self,SEL sel,id value){
