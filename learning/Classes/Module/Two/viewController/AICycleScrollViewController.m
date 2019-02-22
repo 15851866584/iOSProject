@@ -45,7 +45,7 @@
                                              ];
         
     });
-    self.navigationBarControl = NavigationBarHideShow;
+    self.fd_prefersNavigationBarHidden = YES;
 }
 
 - (void)setUpSubViews{

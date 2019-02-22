@@ -35,7 +35,7 @@
 - (void)performMethod:(NSString *)method withObject:(id)object;
 - (void)performMethod:(NSString *)method withObject:(id)object1 withObject:(id)object2;
 
-- (void)performMethod:(NSString *)method withBool:(id)object;
+- (void)performMethod:(NSString *)method withBool:(BOOL)object;
 - (void)performMethod:(NSString *)method withObject:(id)object1 withBool:(BOOL)object2;
 
 //swizzleObject

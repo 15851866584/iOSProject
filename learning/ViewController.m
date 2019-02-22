@@ -41,7 +41,7 @@
     
     // 一定要禁止系统自带的滑动手势
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;
-    self.navigationBarControl = 2;
+    self.fd_prefersNavigationBarHidden = YES;
 }
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{

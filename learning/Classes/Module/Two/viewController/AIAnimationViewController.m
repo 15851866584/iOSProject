@@ -23,7 +23,6 @@
     _animationView = [UIView viewWithFrame:CGRectMake(100, 100, 100, 100) backgroundColor:[UIColor redColor]];
     
     [self.view addSubview:_animationView];
-
 }
 
 /*

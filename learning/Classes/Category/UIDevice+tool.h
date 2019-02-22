@@ -36,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)systemVersion;
 
 + (NSString *)getIPAddress:(BOOL)preferIPv4;
-
++ (NSString *)getMacAddress;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -39,7 +39,6 @@
 		633BE2A420EF66120024D945 /* UIButton+tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 633BE2A320EF66120024D945 /* UIButton+tools.m */; };
 		633E10DC20D0B32900D16A21 /* DoubiCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 633E10DB20D0B32900D16A21 /* DoubiCarousel.m */; };
 		633E10E820D0BC9F00D16A21 /* UILabel+tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 633E10E720D0BC9F00D16A21 /* UILabel+tools.m */; };
-		634176D820D2426B00A5BA51 /* UIViewController+tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 634176D720D2426B00A5BA51 /* UIViewController+tools.m */; };
 		63437E3A212E3D1F005407FD /* AIHUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63437E39212E3D1F005407FD /* AIHUDViewController.m */; };
 		63455A0B21B76BA20010FB1E /* AIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63455A0A21B76BA20010FB1E /* AIWebViewController.m */; };
 		634A3C8121E43C61003EC8D8 /* AIBaseNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 634A3C7F21E43C61003EC8D8 /* AIBaseNetwork.m */; };
@@ -226,6 +225,7 @@
 		6313CF2420DBA285003B9278 /* AIRouterConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIRouterConfig.m; sourceTree = "<group>"; };
 		6314A30621DDEE7E0049FD8A /* DeviceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceModel.h; sourceTree = "<group>"; };
 		6314A30721DDEE7E0049FD8A /* DeviceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceModel.m; sourceTree = "<group>"; };
+		6319B21F221F9D6300679BB2 /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
 		631B0EE02119944D00B5C52D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		632CFD3720D349F500E1B2B8 /* MBProgressHUD+tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+tools.h"; sourceTree = "<group>"; };
 		632CFD3820D349F500E1B2B8 /* MBProgressHUD+tools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+tools.m"; sourceTree = "<group>"; };
@@ -245,8 +245,6 @@
 		633E10E620D0BC9F00D16A21 /* UILabel+tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+tools.h"; sourceTree = "<group>"; };
 		633E10E720D0BC9F00D16A21 /* UILabel+tools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+tools.m"; sourceTree = "<group>"; };
 		633E10E920D0C21700D16A21 /* AIFontConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIFontConfig.h; sourceTree = "<group>"; };
-		634176D620D2426B00A5BA51 /* UIViewController+tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+tools.h"; sourceTree = "<group>"; };
-		634176D720D2426B00A5BA51 /* UIViewController+tools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+tools.m"; sourceTree = "<group>"; };
 		63437E38212E3D1F005407FD /* AIHUDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIHUDViewController.h; sourceTree = "<group>"; };
 		63437E39212E3D1F005407FD /* AIHUDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIHUDViewController.m; sourceTree = "<group>"; };
 		63455A0921B76BA20010FB1E /* AIWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIWebViewController.h; sourceTree = "<group>"; };
@@ -609,8 +607,6 @@
 				63061613214A5D0F00C7B934 /* UITextView+tools.m */,
 				632CFD3720D349F500E1B2B8 /* MBProgressHUD+tools.h */,
 				632CFD3820D349F500E1B2B8 /* MBProgressHUD+tools.m */,
-				634176D620D2426B00A5BA51 /* UIViewController+tools.h */,
-				634176D720D2426B00A5BA51 /* UIViewController+tools.m */,
 				63DC007920E4C2DE001C332D /* UIAlertController+tools.h */,
 				63DC007A20E4C2DE001C332D /* UIAlertController+tools.m */,
 				63A5918C221A8CD7003B2330 /* UINavigationController+FDFullscreenPopGesture.h */,
@@ -1242,6 +1238,7 @@
 		FCA65E21EA9FA7795291C3A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6319B21F221F9D6300679BB2 /* libresolv.9.tbd */,
 				63E653E221E2F44100268F66 /* libMobileGestalt.tbd */,
 				631B0EE02119944D00B5C52D /* UIKit.framework */,
 				6313CF2020DB973E003B9278 /* MobileCoreServices.framework */,
@@ -1542,7 +1539,6 @@
 				633BE2A420EF66120024D945 /* UIButton+tools.m in Sources */,
 				634F1DDA2123F62B004C2E68 /* NSDictionary+UnicodeReadable.m in Sources */,
 				63052E6F21B6621C002F5285 /* UIPageViewController+MemoryLeak.m in Sources */,
-				634176D820D2426B00A5BA51 /* UIViewController+tools.m in Sources */,
 				63A2B91E21143AB40046CCF8 /* AIBaseTabBarController.m in Sources */,
 				630F4E8E20CE042900BEDFE2 /* ViewController.m in Sources */,
 				634F1DDE2123F79C004C2E68 /* AIDragViewController.m in Sources */,

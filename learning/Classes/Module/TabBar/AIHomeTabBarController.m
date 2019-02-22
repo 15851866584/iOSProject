@@ -22,8 +22,8 @@
 
 
 - (void)setUpViewControllers{
-    NSArray *vcs = @[@"AIGasViewController",@"AIPreViewController",@"AIMedViewController"];
-    NSArray *names = @[@"小学",@"中学",@"大学"];
+    NSArray *vcs = @[@"AIPreViewController",@"AIMedViewController",@"AIGasViewController"];
+    NSArray *names = @[@"demo",@"项目",@"总结"];
     NSArray *images = @[@"small_normal",@"middle_normal",@"college_normal"];
     
     for (int i = 0; i < vcs.count; i++ ) {

@@ -85,7 +85,6 @@
                      @"app和vc生命周期"
                                            ]];
     [self setUpSubViews];
-
 }
 
 - (void)click:(UIButton *)btn{
@@ -111,7 +110,7 @@
 }
 
 - (void)newTab{
-    OpenURL(@"AISecondTabBarController?navigationBarControl=4");
+    OpenURL(@"AISecondTabBarController?fd_prefersNavigationBarHidden=YES");
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

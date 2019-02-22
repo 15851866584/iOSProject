@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationBarControl = NavigationBarHideShow;
+    self.fd_prefersNavigationBarHidden = YES;
     
     
     self.tableView = [[AIBaseTableView alloc]initWithFrame:CGRectMake(0, 0, VW(self.view), ViewH) style:(UITableViewStylePlain)];
