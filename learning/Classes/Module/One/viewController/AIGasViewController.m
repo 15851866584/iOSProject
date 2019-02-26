@@ -77,7 +77,6 @@
                      @"AFNetworking",
                      @"排序",
                      @"关键字property等",
-                     @"app的生命周期",
                      @"MLeaksFinder",
                      @"字段符号的含义",
                      @"预编译指令",
@@ -85,6 +84,7 @@
                      @"app和vc生命周期"
                                            ]];
     [self setUpSubViews];
+
 }
 
 - (void)click:(UIButton *)btn{

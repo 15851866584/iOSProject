@@ -13,7 +13,9 @@
 @end
 
 @implementation AIHUDViewController
-
+{
+    UIAlertController *_alert;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -22,7 +24,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self hideHUDs];
-    UIAlertController *alert = [UIAlertController alertStyle:UIAlertControllerStyleActionSheet title:@"HUD" message:@"MBProgress扩展" cancelTitle:@"取消" cancel:^(NSString *cancel) {
+    _alert = [UIAlertController alertStyle:UIAlertControllerStyleActionSheet title:@"HUD" message:@"MBProgress扩展" cancelTitle:@"取消" cancel:^(NSString *cancel) {
         
     } oksTitle:@[@"菊花",@"文字",@"图片",@"图文",@"动图",@"自定义"] ok:^(NSUInteger index) {
         switch (index) {
@@ -53,7 +55,7 @@
                 break;
         }
     }];
-    [self presentViewController:alert animated:YES completion:nil];
+    [self presentViewController:_alert animated:YES completion:nil];
     
 }
 

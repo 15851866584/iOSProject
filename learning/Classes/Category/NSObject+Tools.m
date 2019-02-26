@@ -11,54 +11,6 @@
 
 @implementation NSObject (Tools)
 
-- (void)changeValueForProperty:(NSDictionary *)property{
-
-    [property enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-        NSString *keyPath = [key componentsSeparatedByString:@"."].lastObject;
-        
-        if ([self matchClassObj:obj keyPath:keyPath]){
-            [self setValue:obj forKeyPath:key];
-        }
-    }];
-}
-
-- (BOOL)matchClassObj:(id)obj keyPath:(NSString *)keyPath{
-    NSDictionary *property = [self propertyGenericClass];
-    Class cla = [[property objectForKey:keyPath] class];
-    if ([obj isKindOfClass:cla]) {
-        return YES;
-    }
-    return NO;
-}
-
-- (NSDictionary *)genericClass{
-    NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:[self propertyGenericClass]];
-    if ([self respondsToSelector:@selector(customPropertyGenericClass)]) {
-        NSDictionary *custom = [self customPropertyGenericClass];
-        if (custom) [dic addEntriesFromDictionary:[self customPropertyGenericClass]];
-    }
-    return dic;
-}
-
-- (NSDictionary *)propertyGenericClass{
-    return @{
-             
-             @"font" : [UIFont class],
-             @"text" : [NSString class],
-             @"image" : [UIImage class],
-             @"textColor" : [UIColor class],
-             @"backgroundColor" : [UIColor class]
-             };
-}
-
-- (id)valueForUndefinedKey:(NSString *)key{
-    return nil;
-}
-
-- (void)setValue:(id)value forUndefinedKey:(NSString *)key{
-    
-}
-
 + (void)printPropertysList:(Class)cla{
     if (!class_isMetaClass(object_getClass(cla))) return;
     

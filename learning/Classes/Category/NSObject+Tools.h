@@ -14,15 +14,6 @@
 + (id)responseObject;//网络
 + (id)localData;//本地
 
-//kvc修改属性值
-- (void)changeValueForProperty:(NSDictionary *)property;
-
-//自定义赋值方式
-- (void)customValueForProperty:(NSDictionary *)property;
-
-//自定义添加属性
-- (NSDictionary *)customPropertyGenericClass;
-
 //打印
 + (void)printPropertysList:(Class)cla;
 
