@@ -28,11 +28,11 @@
     drag3.isDragable = YES;
     [box addSubview:drag3];
     
-  
     @weakify(drag2)
     [drag2 addActionWithBlock:^{
          @strongify(drag2)
         DLog(@"%@",[drag2 class]);
+        
     }];
     
     @weakify(drag3)
