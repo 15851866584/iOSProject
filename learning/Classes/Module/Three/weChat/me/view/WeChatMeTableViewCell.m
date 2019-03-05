@@ -39,7 +39,7 @@
     //这里cell的高度是44,如果不是自适应高度，尽可能计算出
     _faceImageView.sd_layout
     .leftSpaceToView(referView, edge)
-    .topSpaceToView(referView, margin+7)
+    .topSpaceToView(referView, margin)
     .widthIs(26)
     .heightIs(26);
     
@@ -47,10 +47,10 @@
     .topSpaceToView(referView, margin)
     .rightSpaceToView(referView, 30)
     .widthIs(40)
-    .heightIs(40);
+    .heightIs(26);
     
     _arrowImageView.sd_layout
-    .topSpaceToView(referView, margin*2)
+    .topSpaceToView(referView, 21)
     .rightSpaceToView(referView, margin)
     .widthIs(8)
     .heightIs(14);
@@ -59,9 +59,9 @@
     .leftSpaceToView(_faceImageView, margin)
     .topSpaceToView(referView, margin)
     .rightSpaceToView(referView, edge)
-    .heightIs(40);
+    .heightIs(26);
     
-    _line = [self.contentView lineWithRect:CGRectMake(75, 70-0.2, SCREEN_WIDTH-75, 0.2) color:AI_RGB125 dashPattern:nil];
+    _line = [self.contentView lineWithRect:CGRectMake(75, 56-0.2, SCREEN_WIDTH-75, 0.2) color:AI_RGB125 dashPattern:nil];
     [self.contentView.layer addSublayer:_line];
     
     _arrowImageView.image = IMG(@"wechat_discover_arrow");

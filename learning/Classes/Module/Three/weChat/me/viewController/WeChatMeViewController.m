@@ -23,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    self.fd_prefersNavigationBarHidden = YES;
     
     
     [self setUpSubViews];
@@ -37,7 +37,7 @@
     self.tableView = [[AIBaseTableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, ViewHT) style:UITableViewStyleGrouped];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.rowHeight = 70;
+    self.tableView.rowHeight = 56;
     self.tableView.showsVerticalScrollIndicator = YES;
     self.tableView.backgroundColor = self.view.backgroundColor;
     
