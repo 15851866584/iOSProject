@@ -36,7 +36,7 @@
      @{@"按钮":@"AIButtonViewController"},
      @{@"布局":@"AILayoutViewController"},
      @{@"简书":@"AIWebViewController"},
-     @{@"MVVM":@"AIMVVMViewController"},
+     @{@"传参":@"AIMVVMViewController"},
      @{@"html高度":@"AIGetHeightViewController"},
      @{@"test":@"AITextInputViewController"}]];
     
