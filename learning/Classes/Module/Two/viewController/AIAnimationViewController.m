@@ -11,7 +11,7 @@
 
 @interface AIAnimationViewController ()<AICycleScrollViewDelegate>
 
-@property (nonatomic, strong) UIView *animationView;
+@property (nonatomic, strong) UIButton *animationView;
 
 @end
 
@@ -20,8 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _animationView = [UIView viewWithFrame:CGRectMake(100, 100, 100, 100) backgroundColor:[UIColor redColor]];
-    
+    _animationView = [UIButton buttonWithFrame:CGRectMake(100, 100, 100, 100) textColor:[UIColor whiteColor] backgroundColor:[UIColor redColor] font:WeChatFont20 text:@"点我" target:self action:@selector(clickEvent)];
     [self.view addSubview:_animationView];
 }
 
@@ -137,8 +136,7 @@
     }];
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-  
+- (void)clickEvent{
     NSArray *oks = @[@"CABasicAnimation",@"CAKeyframeAnimation",@"CATransitionAnimation",@"CGAffineTransformIdentity"];
     UIAlertController *vc = [UIAlertController alertStyle:0 title:@"动画实例" message:nil cancelTitle:@"取消" cancel:^(NSString *cancel) {
         
@@ -148,6 +146,10 @@
     [self presentViewController:vc animated:YES completion:nil];
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

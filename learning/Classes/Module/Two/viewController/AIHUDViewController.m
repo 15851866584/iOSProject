@@ -13,18 +13,24 @@
 @end
 
 @implementation AIHUDViewController
-{
-    UIAlertController *_alert;
-}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-   
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self showAlert];
+    });
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self hideHUDs];
-    _alert = [UIAlertController alertStyle:UIAlertControllerStyleActionSheet title:@"HUD" message:@"MBProgress扩展" cancelTitle:@"取消" cancel:^(NSString *cancel) {
+    [self showAlert];
+    
+}
+
+- (void)showAlert{
+    UIAlertController *alert = [UIAlertController alertStyle:UIAlertControllerStyleActionSheet title:@"HUD" message:@"MBProgress扩展" cancelTitle:@"取消" cancel:^(NSString *cancel) {
         
     } oksTitle:@[@"菊花",@"文字",@"图片",@"图文",@"动图",@"自定义"] ok:^(NSUInteger index) {
         switch (index) {
@@ -55,8 +61,12 @@
                 break;
         }
     }];
-    [self presentViewController:_alert animated:YES completion:nil];
-    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -49,9 +49,27 @@
     if (self.childViewControllers.count > 0) {
         viewController.hidesBottomBarWhenPushed = YES;
     }
+    
+    NSString *type = UDValue(@"type");
+    if (type.length > 0) {
+        CATransition *animation = [CATransition animation];
+        //动画时间
+        animation.duration = 1.0f;
+        animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        //过渡效果
+        animation.type = type;
+        //过渡方向
+        animation.subtype = kCATransitionFromRight;
+        if (self.tabBarController) {
+            [self.tabBarController.view.layer addAnimation:animation forKey:nil];
+        }else{
+            [self.view.layer addAnimation:animation forKey:nil];
+        }
+    }
+    
+    
     [super pushViewController:viewController animated:animated];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

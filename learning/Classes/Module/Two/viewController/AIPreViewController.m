@@ -38,7 +38,7 @@
      @{@"简书":@"AIWebViewController"},
      @{@"传参":@"AIMVVMViewController"},
      @{@"html高度":@"AIGetHeightViewController"},
-     @{@"test":@"AITextInputViewController"}]];
+     @{@"页面跳转动画":@"AIPageAnimationViewController"}]];
     
     [self setUpSubViews];
   

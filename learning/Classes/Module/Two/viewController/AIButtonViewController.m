@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIButton *btn = [UIButton buttonWithFrame:CGRectMake(100, 100, 100, 100) textColor:AI_RGB255 backgroundColor:[UIColor grayColor] font:AI_SYSTEM_Size(16) text:@"按钮" image:IMG(@"ai_login") target:self action:@selector(click:)];
+    UIButton *btn = [UIButton buttonWithFrame:CGRectMake(100, 100, 100, 100) textColor:AI_RGB255 backgroundColor:[UIColor grayColor] font:AI_SYSTEM_Size(16) text:@"点我" image:IMG(@"ai_login") target:self action:@selector(click:)];
     [self.view addSubview:btn];
 
 }
@@ -42,7 +42,7 @@
                 break;
                 
             case 4:
-                sender.enlargedEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10);
+                sender.enlargedEdgeInsets = UIEdgeInsetsMake(50, 50, 50, 50);
                 break;
                 
             case 5:

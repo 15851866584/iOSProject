@@ -21,6 +21,7 @@
 		63052E7421B6621C002F5285 /* NSObject+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 63052E6821B6621C002F5285 /* NSObject+MemoryLeak.m */; };
 		6306052020F3608F002F8245 /* NSArray+tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 6306051F20F3608F002F8245 /* NSArray+tools.m */; };
 		63061614214A5D0F00C7B934 /* UITextView+tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 63061613214A5D0F00C7B934 /* UITextView+tools.m */; };
+		630A7F6C22364D2900F28BE4 /* AIPageAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630A7F6B22364D2900F28BE4 /* AIPageAnimationViewController.m */; };
 		630F4E8B20CE042900BEDFE2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 630F4E8A20CE042900BEDFE2 /* AppDelegate.m */; };
 		630F4E8E20CE042900BEDFE2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630F4E8D20CE042900BEDFE2 /* ViewController.m */; };
 		630F4E9120CE042900BEDFE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 630F4E8F20CE042900BEDFE2 /* Main.storyboard */; };
@@ -116,7 +117,6 @@
 		639563C921DCA29D001A3D08 /* UIDevice+tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 639563C821DCA29D001A3D08 /* UIDevice+tool.m */; };
 		639B1F962126A2B7000CAA41 /* NSObject+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 639B1F952126A2B7000CAA41 /* NSObject+Tools.m */; };
 		639C5631211050650095149A /* UniversLTStd-UltraCn.otf in Resources */ = {isa = PBXBuildFile; fileRef = 639C5630211050650095149A /* UniversLTStd-UltraCn.otf */; };
-		639F5A8921F1705E0078A64A /* AITextInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639F5A8821F1705E0078A64A /* AITextInputViewController.m */; };
 		63A2B917211431610046CCF8 /* AIBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A2B916211431610046CCF8 /* AIBaseNavigationController.m */; };
 		63A2B91E21143AB40046CCF8 /* AIBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A2B91D21143AB40046CCF8 /* AIBaseTabBarController.m */; };
 		63A2B92121143B2F0046CCF8 /* AIHomeTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A2B92021143B2F0046CCF8 /* AIHomeTabBarController.m */; };
@@ -202,6 +202,8 @@
 		6306051F20F3608F002F8245 /* NSArray+tools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+tools.m"; sourceTree = "<group>"; };
 		63061612214A5D0F00C7B934 /* UITextView+tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+tools.h"; sourceTree = "<group>"; };
 		63061613214A5D0F00C7B934 /* UITextView+tools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+tools.m"; sourceTree = "<group>"; };
+		630A7F6A22364D2900F28BE4 /* AIPageAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIPageAnimationViewController.h; sourceTree = "<group>"; };
+		630A7F6B22364D2900F28BE4 /* AIPageAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIPageAnimationViewController.m; sourceTree = "<group>"; };
 		630F4E8620CE042900BEDFE2 /* learning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = learning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		630F4E8920CE042900BEDFE2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		630F4E8A20CE042900BEDFE2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -373,8 +375,6 @@
 		639B1F942126A2B7000CAA41 /* NSObject+Tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Tools.h"; sourceTree = "<group>"; };
 		639B1F952126A2B7000CAA41 /* NSObject+Tools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Tools.m"; sourceTree = "<group>"; };
 		639C5630211050650095149A /* UniversLTStd-UltraCn.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UniversLTStd-UltraCn.otf"; sourceTree = "<group>"; };
-		639F5A8721F1705E0078A64A /* AITextInputViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AITextInputViewController.h; sourceTree = "<group>"; };
-		639F5A8821F1705E0078A64A /* AITextInputViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AITextInputViewController.m; sourceTree = "<group>"; };
 		63A2B915211431610046CCF8 /* AIBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIBaseNavigationController.h; sourceTree = "<group>"; };
 		63A2B916211431610046CCF8 /* AIBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIBaseNavigationController.m; sourceTree = "<group>"; };
 		63A2B91C21143AB40046CCF8 /* AIBaseTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIBaseTabBarController.h; sourceTree = "<group>"; };
@@ -728,8 +728,8 @@
 				63837F8F21C0F2EC00EDEE57 /* AIMVVMViewController.m */,
 				63E3F2CC21CA231E00B01BD3 /* AIGetHeightViewController.h */,
 				63E3F2CD21CA231E00B01BD3 /* AIGetHeightViewController.m */,
-				639F5A8721F1705E0078A64A /* AITextInputViewController.h */,
-				639F5A8821F1705E0078A64A /* AITextInputViewController.m */,
+				630A7F6A22364D2900F28BE4 /* AIPageAnimationViewController.h */,
+				630A7F6B22364D2900F28BE4 /* AIPageAnimationViewController.m */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -1535,6 +1535,7 @@
 				637A03D92201358A00E04A12 /* BMChineseSort.m in Sources */,
 				63FCA7D021F99AA100586618 /* WeChatNavigationController.m in Sources */,
 				63052E6A21B6621C002F5285 /* UINavigationController+MemoryLeak.m in Sources */,
+				630A7F6C22364D2900F28BE4 /* AIPageAnimationViewController.m in Sources */,
 				63533F01213E7EF6008975DF /* AppFluencyMonitor.m in Sources */,
 				633BE2A420EF66120024D945 /* UIButton+tools.m in Sources */,
 				634F1DDA2123F62B004C2E68 /* NSDictionary+UnicodeReadable.m in Sources */,
@@ -1577,7 +1578,6 @@
 				634F47E2212A5B1C004BEAE9 /* Knowledge.m in Sources */,
 				633E10DC20D0B32900D16A21 /* DoubiCarousel.m in Sources */,
 				63F258522202958F00C295E5 /* WeChatDiscoverTableViewCell.m in Sources */,
-				639F5A8921F1705E0078A64A /* AITextInputViewController.m in Sources */,
 				63DC007E20E4D34F001C332D /* AIDrawViewController.m in Sources */,
 				632CFD3C20D3541B00E1B2B8 /* UIImage+tools.m in Sources */,
 				634A3C8121E43C61003EC8D8 /* AIBaseNetwork.m in Sources */,
