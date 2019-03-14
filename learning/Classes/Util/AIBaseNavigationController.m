@@ -20,11 +20,6 @@
    
 }
 
-- (void)setAnimatedWithTransition{
-    
-   
-    
-}
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
     
@@ -60,13 +55,8 @@
         animation.type = type;
         //过渡方向
         animation.subtype = kCATransitionFromRight;
-        if (self.tabBarController) {
-            [self.tabBarController.view.layer addAnimation:animation forKey:nil];
-        }else{
-            [self.view.layer addAnimation:animation forKey:nil];
-        }
+        [[UIApplication sharedApplication].keyWindow.layer addAnimation:animation forKey:nil];
     }
-    
     
     [super pushViewController:viewController animated:animated];
 }
