@@ -25,6 +25,7 @@
     
     if (self.navigationController.childViewControllers.count > 1) {
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:IMG(@"ai_left_back") style:(UIBarButtonItemStyleDone) target:self action:@selector(backUpViewController)];
+         self.navigationItem.leftBarButtonItem.tintColor = AI_RGB51;
     }
 
     

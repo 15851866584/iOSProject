@@ -66,9 +66,9 @@ NSString *const AIControllerPopRoot           = @"root";
         viewController = [self currentViewController];
     }
     
-    if (viewController.presentingViewController) {
-        [viewController dismissViewControllerAnimated:YES completion:nil];
-    }else{
+    UINavigationController *nav = viewController.navigationController;
+   
+    if (nav && nav.viewControllers.count > 1){
         if (path == AIControllerPopRoot){
             [viewController.navigationController popToRootViewControllerAnimated:YES];
         }else if (!IsEmpty(path)){
@@ -81,7 +81,10 @@ NSString *const AIControllerPopRoot           = @"root";
         }else{
             [viewController.navigationController popViewControllerAnimated:YES];
         }
+    }else if (viewController.presentingViewController){
+        [viewController dismissViewControllerAnimated:YES completion:nil];
     }
+
 }
 
 + (void)routesConfig{

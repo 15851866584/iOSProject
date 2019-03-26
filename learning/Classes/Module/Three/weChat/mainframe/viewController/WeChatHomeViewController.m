@@ -19,7 +19,7 @@
 @property (nonatomic, strong) WeChatHomeMenuView *menuView;
 
 @property (nonatomic, strong) WeChatSearchController *searchController;
-
+@property (nonatomic, assign) NSInteger badgeCount;
 @end
 
 @implementation WeChatHomeViewController
@@ -81,6 +81,7 @@
     [searchBar setBackgroundImage:[UIImage new]];
 }
 
+//记录总未读数
 - (void)tabBarBadgeCount{
     NSInteger badgeCount = 0;
     for (WeChatMessageListModel *model in self.dataSource) {
@@ -88,6 +89,8 @@
             badgeCount += model.unreadCount;
         }
     }
+    
+    self.badgeCount = badgeCount;
     UITabBarItem *firstItem = self.tabBarController.tabBar.items.firstObject;
     [firstItem showBadgeWithStyle:WBadgeStyleNumber value:badgeCount animationType:WBadgeAnimTypeNone];
 }
@@ -118,7 +121,20 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
+    
+    
+    WeChatMessageListModel *model = self.dataSource[indexPath.row];
+    
+    NSString *urlString = [NSString stringWithFormat:@"WeChatChatRoomViewController?weChatName=%@&badgeCount=%ld&unreadCount=%ld",model.name,_badgeCount,model.silent?0:model.unreadCount];
+    OpenURL(urlString);
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        model.unreadCount = 0;
+        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+        [self tabBarBadgeCount];
+    });
+    
+    
 }
 
 //侧滑使用系统和微信优点却别，有兴趣的小伙伴可以去自己写个demo

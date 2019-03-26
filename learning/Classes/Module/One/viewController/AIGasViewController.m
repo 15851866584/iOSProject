@@ -84,8 +84,10 @@
                      @"app和vc生命周期"
                                            ]];
     [self setUpSubViews];
-
+  
 }
+
+
 
 - (void)click:(UIButton *)btn{
     [btn.titleLabel startActivityIndicator];
