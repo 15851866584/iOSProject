@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AIWebViewController : AIBaseViewController
-
+@property (nonatomic, copy) NSString *url;
 @end
 
 NS_ASSUME_NONNULL_END

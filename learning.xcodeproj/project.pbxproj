@@ -54,6 +54,7 @@
 		634F47DF212A5A3D004BEAE9 /* AIKnowledgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634F47DE212A5A3D004BEAE9 /* AIKnowledgeViewController.m */; };
 		634F47E2212A5B1C004BEAE9 /* Knowledge.m in Sources */ = {isa = PBXBuildFile; fileRef = 634F47E1212A5B1C004BEAE9 /* Knowledge.m */; };
 		6351776F2151E3FE00059F21 /* AIButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351776E2151E3FE00059F21 /* AIButtonViewController.m */; };
+		6352B1C9224B73DF0017BF18 /* WeChatChatRoomModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6352B1C8224B73DF0017BF18 /* WeChatChatRoomModel.m */; };
 		63533EF0213E6A79008975DF /* CPU.m in Sources */ = {isa = PBXBuildFile; fileRef = 63533EEF213E6A79008975DF /* CPU.m */; };
 		63533EF7213E6EB6008975DF /* Memory.m in Sources */ = {isa = PBXBuildFile; fileRef = 63533EF6213E6EB6008975DF /* Memory.m */; };
 		63533EFB213E7BFE008975DF /* BacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 63533EFA213E7BFE008975DF /* BacktraceLogger.m */; };
@@ -115,6 +116,10 @@
 		63837F9421C0F34100EDEE57 /* AIMVVMViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63837F9321C0F34100EDEE57 /* AIMVVMViewModel.m */; };
 		6386F67C2145F9F00064A1C7 /* AIToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F67B2145F9F00064A1C7 /* AIToastView.m */; };
 		6386F67F2145FF920064A1C7 /* AITextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386F67E2145FF920064A1C7 /* AITextView.m */; };
+		638C5407224CBB420024D64A /* image0.png in Resources */ = {isa = PBXBuildFile; fileRef = 638C5406224CBB420024D64A /* image0.png */; };
+		638C5409224CBC290024D64A /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = 638C5408224CBC290024D64A /* image1.png */; };
+		638C540B224CBC3D0024D64A /* image2.png in Resources */ = {isa = PBXBuildFile; fileRef = 638C540A224CBC3D0024D64A /* image2.png */; };
+		638C540D224CBD6E0024D64A /* image3.png in Resources */ = {isa = PBXBuildFile; fileRef = 638C540C224CBD6E0024D64A /* image3.png */; };
 		639563C921DCA29D001A3D08 /* UIDevice+tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 639563C821DCA29D001A3D08 /* UIDevice+tool.m */; };
 		639B1F962126A2B7000CAA41 /* NSObject+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 639B1F952126A2B7000CAA41 /* NSObject+Tools.m */; };
 		639C5631211050650095149A /* UniversLTStd-UltraCn.otf in Resources */ = {isa = PBXBuildFile; fileRef = 639C5630211050650095149A /* UniversLTStd-UltraCn.otf */; };
@@ -124,6 +129,24 @@
 		63A2B9F121144D100046CCF8 /* AISecondTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A2B9F021144D100046CCF8 /* AISecondTabBarController.m */; };
 		63A5918D221A8CD7003B2330 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A5918B221A8CD7003B2330 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		63B68B3A2249B3A700158BEA /* UIBarButtonItem+tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B68B392249B3A700158BEA /* UIBarButtonItem+tools.m */; };
+		63B68B3D224A19ED00158BEA /* WeChatChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B68B3C224A19ED00158BEA /* WeChatChatTableViewCell.m */; };
+		63B68B63224A1A3D00158BEA /* MLEmoji_Expression.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63B68B3F224A1A3C00158BEA /* MLEmoji_Expression.plist */; };
+		63B68B64224A1A3D00158BEA /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 63B68B41224A1A3C00158BEA /* LICENSE */; };
+		63B68B65224A1A3D00158BEA /* NSMutableAttributedString+MLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B68B45224A1A3D00158BEA /* NSMutableAttributedString+MLLabel.m */; };
+		63B68B66224A1A3D00158BEA /* NSString+MLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B68B48224A1A3D00158BEA /* NSString+MLLabel.m */; };
+		63B68B67224A1A3D00158BEA /* NSAttributedString+MLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B68B4A224A1A3D00158BEA /* NSAttributedString+MLLabel.m */; };
+		63B68B68224A1A3D00158BEA /* MLLinkLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B68B4C224A1A3D00158BEA /* MLLinkLabel.m */; };
+		63B68B69224A1A3D00158BEA /* NSAttributedString+MLExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B68B4F224A1A3D00158BEA /* NSAttributedString+MLExpression.m */; };
+		63B68B6A224A1A3D00158BEA /* MLTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B68B50224A1A3D00158BEA /* MLTextAttachment.m */; };
+		63B68B6B224A1A3D00158BEA /* NSString+MLExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B68B53224A1A3D00158BEA /* NSString+MLExpression.m */; };
+		63B68B6C224A1A3D00158BEA /* MLExpressionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B68B55224A1A3D00158BEA /* MLExpressionManager.m */; };
+		63B68B6D224A1A3D00158BEA /* MLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B68B56224A1A3D00158BEA /* MLLabel.m */; };
+		63B68B6E224A1A3D00158BEA /* MLLabelLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B68B58224A1A3D00158BEA /* MLLabelLayoutManager.m */; };
+		63B68B6F224A1A3D00158BEA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 63B68B5B224A1A3D00158BEA /* README.md */; };
+		63B68B70224A1A3D00158BEA /* MLEmojiLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B68B5D224A1A3D00158BEA /* MLEmojiLabel.m */; };
+		63B68B71224A1A3D00158BEA /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B68B60224A1A3D00158BEA /* TTTAttributedLabel.m */; };
+		63B68B72224A1A3D00158BEA /* MLEmoji_ExpressionImage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63B68B61224A1A3D00158BEA /* MLEmoji_ExpressionImage.plist */; };
+		63B68B73224A1A3D00158BEA /* MLEmoji_Expression.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 63B68B62224A1A3D00158BEA /* MLEmoji_Expression.bundle */; };
 		63BFBF022122A93800E68798 /* ZJPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BFBF002122A93700E68798 /* ZJPageControl.m */; };
 		63BFBF092122C7ED00E68798 /* AIGuidePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BFBF082122C7ED00E68798 /* AIGuidePageView.m */; };
 		63CD88CC212FD64100C30CA8 /* AISpringHeaderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CD88CB212FD64100C30CA8 /* AISpringHeaderVC.m */; };
@@ -277,6 +300,8 @@
 		634F47E1212A5B1C004BEAE9 /* Knowledge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Knowledge.m; sourceTree = "<group>"; };
 		6351776D2151E3FE00059F21 /* AIButtonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIButtonViewController.h; sourceTree = "<group>"; };
 		6351776E2151E3FE00059F21 /* AIButtonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIButtonViewController.m; sourceTree = "<group>"; };
+		6352B1C7224B73DF0017BF18 /* WeChatChatRoomModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatChatRoomModel.h; sourceTree = "<group>"; };
+		6352B1C8224B73DF0017BF18 /* WeChatChatRoomModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatChatRoomModel.m; sourceTree = "<group>"; };
 		63533EEE213E6A79008975DF /* CPU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPU.h; sourceTree = "<group>"; };
 		63533EEF213E6A79008975DF /* CPU.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPU.m; sourceTree = "<group>"; };
 		63533EF5213E6EB5008975DF /* Memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Memory.h; sourceTree = "<group>"; };
@@ -373,6 +398,10 @@
 		6386F67B2145F9F00064A1C7 /* AIToastView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIToastView.m; sourceTree = "<group>"; };
 		6386F67D2145FF920064A1C7 /* AITextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AITextView.h; sourceTree = "<group>"; };
 		6386F67E2145FF920064A1C7 /* AITextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AITextView.m; sourceTree = "<group>"; };
+		638C5406224CBB420024D64A /* image0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image0.png; sourceTree = "<group>"; };
+		638C5408224CBC290024D64A /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.png; sourceTree = "<group>"; };
+		638C540A224CBC3D0024D64A /* image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image2.png; sourceTree = "<group>"; };
+		638C540C224CBD6E0024D64A /* image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image3.png; sourceTree = "<group>"; };
 		639563C721DCA29D001A3D08 /* UIDevice+tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+tool.h"; sourceTree = "<group>"; };
 		639563C821DCA29D001A3D08 /* UIDevice+tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+tool.m"; sourceTree = "<group>"; };
 		639563CA21DCA785001A3D08 /* learning.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = learning.entitlements; sourceTree = "<group>"; };
@@ -391,6 +420,38 @@
 		63A5918C221A8CD7003B2330 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		63B68B382249B3A700158BEA /* UIBarButtonItem+tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+tools.h"; sourceTree = "<group>"; };
 		63B68B392249B3A700158BEA /* UIBarButtonItem+tools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+tools.m"; sourceTree = "<group>"; };
+		63B68B3B224A19ED00158BEA /* WeChatChatTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatChatTableViewCell.h; sourceTree = "<group>"; };
+		63B68B3C224A19ED00158BEA /* WeChatChatTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatChatTableViewCell.m; sourceTree = "<group>"; };
+		63B68B3F224A1A3C00158BEA /* MLEmoji_Expression.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MLEmoji_Expression.plist; sourceTree = "<group>"; };
+		63B68B41224A1A3C00158BEA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		63B68B43224A1A3D00158BEA /* MLLinkLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLinkLabel.h; sourceTree = "<group>"; };
+		63B68B45224A1A3D00158BEA /* NSMutableAttributedString+MLLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+MLLabel.m"; sourceTree = "<group>"; };
+		63B68B46224A1A3D00158BEA /* NSString+MLLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MLLabel.h"; sourceTree = "<group>"; };
+		63B68B47224A1A3D00158BEA /* NSAttributedString+MLLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+MLLabel.h"; sourceTree = "<group>"; };
+		63B68B48224A1A3D00158BEA /* NSString+MLLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MLLabel.m"; sourceTree = "<group>"; };
+		63B68B49224A1A3D00158BEA /* NSMutableAttributedString+MLLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+MLLabel.h"; sourceTree = "<group>"; };
+		63B68B4A224A1A3D00158BEA /* NSAttributedString+MLLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+MLLabel.m"; sourceTree = "<group>"; };
+		63B68B4B224A1A3D00158BEA /* MLLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLabel.h; sourceTree = "<group>"; };
+		63B68B4C224A1A3D00158BEA /* MLLinkLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLinkLabel.m; sourceTree = "<group>"; };
+		63B68B4E224A1A3D00158BEA /* NSString+MLExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MLExpression.h"; sourceTree = "<group>"; };
+		63B68B4F224A1A3D00158BEA /* NSAttributedString+MLExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+MLExpression.m"; sourceTree = "<group>"; };
+		63B68B50224A1A3D00158BEA /* MLTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLTextAttachment.m; sourceTree = "<group>"; };
+		63B68B51224A1A3D00158BEA /* MLExpressionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLExpressionManager.h; sourceTree = "<group>"; };
+		63B68B52224A1A3D00158BEA /* NSAttributedString+MLExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+MLExpression.h"; sourceTree = "<group>"; };
+		63B68B53224A1A3D00158BEA /* NSString+MLExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MLExpression.m"; sourceTree = "<group>"; };
+		63B68B54224A1A3D00158BEA /* MLTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLTextAttachment.h; sourceTree = "<group>"; };
+		63B68B55224A1A3D00158BEA /* MLExpressionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLExpressionManager.m; sourceTree = "<group>"; };
+		63B68B56224A1A3D00158BEA /* MLLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLabel.m; sourceTree = "<group>"; };
+		63B68B58224A1A3D00158BEA /* MLLabelLayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLabelLayoutManager.m; sourceTree = "<group>"; };
+		63B68B59224A1A3D00158BEA /* MLLabelLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLabelLayoutManager.h; sourceTree = "<group>"; };
+		63B68B5A224A1A3D00158BEA /* MLLabel+Override.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MLLabel+Override.h"; sourceTree = "<group>"; };
+		63B68B5B224A1A3D00158BEA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		63B68B5C224A1A3D00158BEA /* MLEmojiLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLEmojiLabel.h; sourceTree = "<group>"; };
+		63B68B5D224A1A3D00158BEA /* MLEmojiLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLEmojiLabel.m; sourceTree = "<group>"; };
+		63B68B5F224A1A3D00158BEA /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
+		63B68B60224A1A3D00158BEA /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
+		63B68B61224A1A3D00158BEA /* MLEmoji_ExpressionImage.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MLEmoji_ExpressionImage.plist; sourceTree = "<group>"; };
+		63B68B62224A1A3D00158BEA /* MLEmoji_Expression.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MLEmoji_Expression.bundle; sourceTree = "<group>"; };
 		63BFBF002122A93700E68798 /* ZJPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJPageControl.m; sourceTree = "<group>"; };
 		63BFBF012122A93800E68798 /* ZJPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJPageControl.h; sourceTree = "<group>"; };
 		63BFBF072122C7ED00E68798 /* AIGuidePageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIGuidePageView.h; sourceTree = "<group>"; };
@@ -901,6 +962,10 @@
 		63598BAF21FAA1A600055668 /* photo */ = {
 			isa = PBXGroup;
 			children = (
+				638C540C224CBD6E0024D64A /* image3.png */,
+				638C540A224CBC3D0024D64A /* image2.png */,
+				638C5408224CBC290024D64A /* image1.png */,
+				638C5406224CBB420024D64A /* image0.png */,
 				63F258632202CBB800C295E5 /* face2.jpg */,
 				63F2586B2202D55000C295E5 /* wechat_me_face.jpg */,
 				63598BB921FAA1CE00055668 /* 0.jpg */,
@@ -1006,6 +1071,7 @@
 		6362C53C2203E33A000AD7BA /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				63B68B3E224A1A2400158BEA /* MLEmojiLabel */,
 				6362C5402203E39E000AD7BA /* badge */,
 			);
 			path = Other;
@@ -1047,6 +1113,91 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		63B68B3E224A1A2400158BEA /* MLEmojiLabel */ = {
+			isa = PBXGroup;
+			children = (
+				63B68B62224A1A3D00158BEA /* MLEmoji_Expression.bundle */,
+				63B68B3F224A1A3C00158BEA /* MLEmoji_Expression.plist */,
+				63B68B61224A1A3D00158BEA /* MLEmoji_ExpressionImage.plist */,
+				63B68B5C224A1A3D00158BEA /* MLEmojiLabel.h */,
+				63B68B5D224A1A3D00158BEA /* MLEmojiLabel.m */,
+				63B68B40224A1A3C00158BEA /* MLLabel */,
+				63B68B5E224A1A3D00158BEA /* TTTAttributedLabel */,
+			);
+			path = MLEmojiLabel;
+			sourceTree = "<group>";
+		};
+		63B68B40224A1A3C00158BEA /* MLLabel */ = {
+			isa = PBXGroup;
+			children = (
+				63B68B41224A1A3C00158BEA /* LICENSE */,
+				63B68B42224A1A3C00158BEA /* Classes */,
+				63B68B5B224A1A3D00158BEA /* README.md */,
+			);
+			path = MLLabel;
+			sourceTree = "<group>";
+		};
+		63B68B42224A1A3C00158BEA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				63B68B43224A1A3D00158BEA /* MLLinkLabel.h */,
+				63B68B44224A1A3D00158BEA /* Category */,
+				63B68B4B224A1A3D00158BEA /* MLLabel.h */,
+				63B68B4C224A1A3D00158BEA /* MLLinkLabel.m */,
+				63B68B4D224A1A3D00158BEA /* Expression */,
+				63B68B56224A1A3D00158BEA /* MLLabel.m */,
+				63B68B57224A1A3D00158BEA /* Helper */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		63B68B44224A1A3D00158BEA /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				63B68B45224A1A3D00158BEA /* NSMutableAttributedString+MLLabel.m */,
+				63B68B46224A1A3D00158BEA /* NSString+MLLabel.h */,
+				63B68B47224A1A3D00158BEA /* NSAttributedString+MLLabel.h */,
+				63B68B48224A1A3D00158BEA /* NSString+MLLabel.m */,
+				63B68B49224A1A3D00158BEA /* NSMutableAttributedString+MLLabel.h */,
+				63B68B4A224A1A3D00158BEA /* NSAttributedString+MLLabel.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		63B68B4D224A1A3D00158BEA /* Expression */ = {
+			isa = PBXGroup;
+			children = (
+				63B68B4E224A1A3D00158BEA /* NSString+MLExpression.h */,
+				63B68B4F224A1A3D00158BEA /* NSAttributedString+MLExpression.m */,
+				63B68B50224A1A3D00158BEA /* MLTextAttachment.m */,
+				63B68B51224A1A3D00158BEA /* MLExpressionManager.h */,
+				63B68B52224A1A3D00158BEA /* NSAttributedString+MLExpression.h */,
+				63B68B53224A1A3D00158BEA /* NSString+MLExpression.m */,
+				63B68B54224A1A3D00158BEA /* MLTextAttachment.h */,
+				63B68B55224A1A3D00158BEA /* MLExpressionManager.m */,
+			);
+			path = Expression;
+			sourceTree = "<group>";
+		};
+		63B68B57224A1A3D00158BEA /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				63B68B58224A1A3D00158BEA /* MLLabelLayoutManager.m */,
+				63B68B59224A1A3D00158BEA /* MLLabelLayoutManager.h */,
+				63B68B5A224A1A3D00158BEA /* MLLabel+Override.h */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		63B68B5E224A1A3D00158BEA /* TTTAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				63B68B5F224A1A3D00158BEA /* TTTAttributedLabel.h */,
+				63B68B60224A1A3D00158BEA /* TTTAttributedLabel.m */,
+			);
+			path = TTTAttributedLabel;
+			sourceTree = "<group>";
+		};
 		63BFBF032122A9B100E68798 /* GuidePage */ = {
 			isa = PBXGroup;
 			children = (
@@ -1074,6 +1225,8 @@
 				63D0017321F9AFF9002764B7 /* WeChatHomeTableViewCell.m */,
 				6368F21A21FE947C0008670F /* WeChatHomeMenuView.h */,
 				6368F21B21FE947C0008670F /* WeChatHomeMenuView.m */,
+				63B68B3B224A19ED00158BEA /* WeChatChatTableViewCell.h */,
+				63B68B3C224A19ED00158BEA /* WeChatChatTableViewCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1083,6 +1236,8 @@
 			children = (
 				63598BAA21FA9FE100055668 /* WeChatMessageListModel.h */,
 				63598BAB21FA9FE100055668 /* WeChatMessageListModel.m */,
+				6352B1C7224B73DF0017BF18 /* WeChatChatRoomModel.h */,
+				6352B1C8224B73DF0017BF18 /* WeChatChatRoomModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1269,7 +1424,6 @@
 				630F4E8320CE042900BEDFE2 /* Frameworks */,
 				630F4E8420CE042900BEDFE2 /* Resources */,
 				A26E2A8423EA9909DABCB7C6 /* [CP] Copy Pods Resources */,
-				E2E44CAE87B58EB386477C38 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1371,11 +1525,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63B68B72224A1A3D00158BEA /* MLEmoji_ExpressionImage.plist in Resources */,
+				63B68B63224A1A3D00158BEA /* MLEmoji_Expression.plist in Resources */,
 				63598BD921FAA1D000055668 /* 10.jpg in Resources */,
 				63598BDB21FAA1D000055668 /* 17.jpg in Resources */,
 				63F258642202CBB800C295E5 /* face2.jpg in Resources */,
 				63598BD121FAA1D000055668 /* 0.jpg in Resources */,
+				638C540B224CBC3D0024D64A /* image2.png in Resources */,
 				63598BD621FAA1D000055668 /* 22.jpg in Resources */,
+				63B68B64224A1A3D00158BEA /* LICENSE in Resources */,
 				63598BCE21FAA1D000055668 /* 14.jpg in Resources */,
 				63598BCA21FAA1D000055668 /* 6.jpg in Resources */,
 				639C5631211050650095149A /* UniversLTStd-UltraCn.otf in Resources */,
@@ -1389,6 +1547,7 @@
 				63598BDE21FAA1D000055668 /* 13.jpg in Resources */,
 				63598BD021FAA1D000055668 /* 19.jpg in Resources */,
 				636F7DCF2125321500931C96 /* 2.gif in Resources */,
+				638C540D224CBD6E0024D64A /* image3.png in Resources */,
 				63598BDD21FAA1D000055668 /* 11.jpg in Resources */,
 				63598BCD21FAA1D000055668 /* 8.jpg in Resources */,
 				63598BD321FAA1D000055668 /* 18.jpg in Resources */,
@@ -1398,12 +1557,16 @@
 				63598BDC21FAA1D000055668 /* 23.jpg in Resources */,
 				63598BCF21FAA1D000055668 /* 15.jpg in Resources */,
 				63598BCB21FAA1D000055668 /* 9.jpg in Resources */,
+				63B68B6F224A1A3D00158BEA /* README.md in Resources */,
 				630F4E9120CE042900BEDFE2 /* Main.storyboard in Resources */,
+				638C5409224CBC290024D64A /* image1.png in Resources */,
 				63598BD521FAA1D000055668 /* 16.jpg in Resources */,
+				638C5407224CBB420024D64A /* image0.png in Resources */,
 				63CD88D7212FF2C800C30CA8 /* saber.jpeg in Resources */,
 				63598BD821FAA1D000055668 /* 2.jpg in Resources */,
 				63598BCC21FAA1D000055668 /* 4.jpg in Resources */,
 				63598BD221FAA1D000055668 /* 20.jpg in Resources */,
+				63B68B73224A1A3D00158BEA /* MLEmoji_Expression.bundle in Resources */,
 				63F2586C2202D55000C295E5 /* wechat_me_face.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1431,18 +1594,22 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-learning/Pods-learning-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-learning/Pods-learning-resources.sh",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/PYPhotoBrowser/PYPhotoBrowser/PYPhotosView.bundle",
+				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PYPhotosView.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-learning/Pods-learning-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-learning/Pods-learning-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D3DED439BC5CDBED2903366C /* [CP] Check Pods Manifest.lock */ = {
@@ -1463,21 +1630,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E2E44CAE87B58EB386477C38 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-learning/Pods-learning-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1490,6 +1642,7 @@
 				63052E7421B6621C002F5285 /* NSObject+MemoryLeak.m in Sources */,
 				63052E7121B6621C002F5285 /* MLeaksMessenger.m in Sources */,
 				63DB9C1F21B525AE0009A912 /* AILayoutViewController.m in Sources */,
+				63B68B66224A1A3D00158BEA /* NSString+MLLabel.m in Sources */,
 				63F2586A2202D25900C295E5 /* WeChatMeInfoModel.m in Sources */,
 				635DB87321FEDB2D00988502 /* WeChatContactViewController.m in Sources */,
 				6351776F2151E3FE00059F21 /* AIButtonViewController.m in Sources */,
@@ -1513,6 +1666,7 @@
 				631538C32248D2A5000AF5EC /* WeChatChatRoomViewController.m in Sources */,
 				63052E6B21B6621C002F5285 /* MLeakedObjectProxy.m in Sources */,
 				63533EFB213E7BFE008975DF /* BacktraceLogger.m in Sources */,
+				63B68B67224A1A3D00158BEA /* NSAttributedString+MLLabel.m in Sources */,
 				6356C31320CF9EF00034D5ED /* AIPreViewController.m in Sources */,
 				634E21FC20D8A560001FCDE8 /* CALayer+Tools.m in Sources */,
 				634F1DD92123F62B004C2E68 /* NSSet+UnicodeReadable.m in Sources */,
@@ -1543,13 +1697,19 @@
 				6356E26D21D7064C0089D098 /* AITools.m in Sources */,
 				6368F21C21FE947C0008670F /* WeChatHomeMenuView.m in Sources */,
 				63A2B92121143B2F0046CCF8 /* AIHomeTabBarController.m in Sources */,
+				63B68B6B224A1A3D00158BEA /* NSString+MLExpression.m in Sources */,
+				63B68B6A224A1A3D00158BEA /* MLTextAttachment.m in Sources */,
+				63B68B6D224A1A3D00158BEA /* MLLabel.m in Sources */,
+				63B68B6E224A1A3D00158BEA /* MLLabelLayoutManager.m in Sources */,
 				637A03D92201358A00E04A12 /* BMChineseSort.m in Sources */,
 				63FCA7D021F99AA100586618 /* WeChatNavigationController.m in Sources */,
+				63B68B65224A1A3D00158BEA /* NSMutableAttributedString+MLLabel.m in Sources */,
 				63052E6A21B6621C002F5285 /* UINavigationController+MemoryLeak.m in Sources */,
 				630A7F6C22364D2900F28BE4 /* AIPageAnimationViewController.m in Sources */,
 				63533F01213E7EF6008975DF /* AppFluencyMonitor.m in Sources */,
 				633BE2A420EF66120024D945 /* UIButton+tools.m in Sources */,
 				634F1DDA2123F62B004C2E68 /* NSDictionary+UnicodeReadable.m in Sources */,
+				63B68B69224A1A3D00158BEA /* NSAttributedString+MLExpression.m in Sources */,
 				63052E6F21B6621C002F5285 /* UIPageViewController+MemoryLeak.m in Sources */,
 				63A2B91E21143AB40046CCF8 /* AIBaseTabBarController.m in Sources */,
 				630F4E8E20CE042900BEDFE2 /* ViewController.m in Sources */,
@@ -1562,6 +1722,7 @@
 				630F4E9920CE042900BEDFE2 /* main.m in Sources */,
 				6381D32F20DA2AC500E59165 /* AIEOETableViewCell.m in Sources */,
 				63455A0B21B76BA20010FB1E /* AIWebViewController.m in Sources */,
+				6352B1C9224B73DF0017BF18 /* WeChatChatRoomModel.m in Sources */,
 				630F4EC420CE231600BEDFE2 /* UIView+tools.m in Sources */,
 				6362C54F2203F1F9000AD7BA /* UIView+WZLBadge.m in Sources */,
 				639563C921DCA29D001A3D08 /* UIDevice+tool.m in Sources */,
@@ -1571,19 +1732,24 @@
 				6362C54C2203F1F9000AD7BA /* UIBarButtonItem+WZLBadge.m in Sources */,
 				63FCA7C921F9991E00586618 /* WeChatHomeViewController.m in Sources */,
 				63533EF0213E6A79008975DF /* CPU.m in Sources */,
+				63B68B6C224A1A3D00158BEA /* MLExpressionManager.m in Sources */,
 				6386F67C2145F9F00064A1C7 /* AIToastView.m in Sources */,
+				63B68B70224A1A3D00158BEA /* MLEmojiLabel.m in Sources */,
 				63052E7221B6621C002F5285 /* UIViewController+MemoryLeak.m in Sources */,
 				63F258672202CC1300C295E5 /* WeChatMeTableHeaderView.m in Sources */,
 				63052E7321B6621C002F5285 /* UIApplication+MemoryLeak.m in Sources */,
 				635DB87621FEE39D00988502 /* WeChatContactTableViewCell.m in Sources */,
 				630F4E8B20CE042900BEDFE2 /* AppDelegate.m in Sources */,
+				63B68B68224A1A3D00158BEA /* MLLinkLabel.m in Sources */,
 				634A3C8221E43C61003EC8D8 /* AIResponse.m in Sources */,
 				63E3F2CE21CA231E00B01BD3 /* AIGetHeightViewController.m in Sources */,
 				6356C30D20CF9DB90034D5ED /* AIBaseViewController.m in Sources */,
 				63793A8221217062000E2B78 /* AICycleScrollViewController.m in Sources */,
+				63B68B71224A1A3D00158BEA /* TTTAttributedLabel.m in Sources */,
 				63B68B3A2249B3A700158BEA /* UIBarButtonItem+tools.m in Sources */,
 				6313CF2520DBA285003B9278 /* AIRouterConfig.m in Sources */,
 				63F2584F2202934300C295E5 /* WeChatDiscoverViewController.m in Sources */,
+				63B68B3D224A19ED00158BEA /* WeChatChatTableViewCell.m in Sources */,
 				63437E3A212E3D1F005407FD /* AIHUDViewController.m in Sources */,
 				6356C31020CF9EC90034D5ED /* AIGasViewController.m in Sources */,
 				63061614214A5D0F00C7B934 /* UITextView+tools.m in Sources */,

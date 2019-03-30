@@ -2,7 +2,7 @@ platform:ios,'8.0'
 target 'learning' do
 pod 'MJRefresh','~> 3.1'
 pod 'AFNetworking','~> 3.0'
-pod 'SDWebImage','~> 4.4.2'
+pod 'SDWebImage','~> 4.2.1'
 pod 'YYModel','~> 1.0.4' 
 pod 'MBProgressHUD','~> 1.1.0'
 pod 'JLRoutes','~> 2.1'
@@ -11,5 +11,7 @@ pod 'DZNEmptyDataSet','~> 1.8.1'
 pod 'iCarousel','~> 1.8.1'
 pod 'UMengAnalytics-NO-IDFA','~> 4.2.5'
 pod 'IQKeyboardManager','~> 6.2.0'
+pod 'TZImagePickerController','~>3.2.0'
+pod 'PYPhotoBrowser','~>1.5.6'
 end
 

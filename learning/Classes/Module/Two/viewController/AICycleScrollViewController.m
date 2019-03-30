@@ -38,7 +38,7 @@
                                            ]];
     [self setUpSubViews];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.cycleView.imageStringsGroup = @[ @"image1",
+        self.cycleView.imageStringsGroup = @[ @"imageBanner1",
                                               @"http://c.hiphotos.baidu.com/image/w%3D400/sign=c2318ff84334970a4773112fa5c8d1c0/b7fd5266d0160924c1fae5ccd60735fae7cd340d.jpg",
                                               @"https://goss.veer.com/creative/vcg/veer/800water/veer-163531717.jpg",
                                               @"https://goss.veer.com/creative/vcg/veer/800water/veer-302375734.jpg"

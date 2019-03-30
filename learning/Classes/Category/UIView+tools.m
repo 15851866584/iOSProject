@@ -151,6 +151,7 @@ static NSString *tap_touch_block = @"tap_touch_block";
 
 //----------------------------------------------
 - (void)addTarget:(id)target action:(SEL)action{
+    self.userInteractionEnabled = YES;
     //移除其他点击手势
     [self.gestureRecognizers enumerateObjectsUsingBlock:^(__kindof UIGestureRecognizer * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([obj isMemberOfClass:[UITapGestureRecognizer class]]) {

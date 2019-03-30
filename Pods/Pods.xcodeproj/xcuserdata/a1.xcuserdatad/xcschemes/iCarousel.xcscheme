@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3FB3AC7A464197B796C698E9D06DAEEA"
+               BlueprintIdentifier = "94C15A049096B1A98CEF923AC5B7F306"
+               BuildableName = "libiCarousel.a"
                BlueprintName = "iCarousel"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libiCarousel.a">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

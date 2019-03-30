@@ -25,7 +25,12 @@
     
     [self.view addSubview:self.webView];
     
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.jianshu.com/u/1ce8edc3912f"]]];
+    if (_url) {
+        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_url]]];
+    }else{
+        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.jianshu.com/u/1ce8edc3912f"]]];
+    }
+    
 }
 
 
