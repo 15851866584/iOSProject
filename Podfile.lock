@@ -41,7 +41,7 @@ DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - DZNEmptyDataSet (~> 1.8.1)
   - iCarousel (~> 1.8.1)
-  - IQKeyboardManager (~> 6.2.0)
+  - IQKeyboardManager (~> 6.2.1)
   - JLRoutes (~> 2.1)
   - MBProgressHUD (~> 1.1.0)
   - MJRefresh (~> 3.1)
@@ -87,6 +87,6 @@ SPEC CHECKSUMS:
   UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: eaca03b1582dc09ce0878afe19e7b1b39117bd97
+PODFILE CHECKSUM: b1f94098e7ca585170c39970d2e226aebd49ec86
 
 COCOAPODS: 1.6.1

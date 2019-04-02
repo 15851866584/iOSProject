@@ -60,8 +60,6 @@
     [self setSearchController];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:OrgIMG(@"wechat_menu") style:(UIBarButtonItemStylePlain) target:self action:@selector(homeMenu)];
-
-    
 }
 
 //搜索页

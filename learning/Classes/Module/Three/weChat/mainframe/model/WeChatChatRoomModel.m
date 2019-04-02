@@ -13,9 +13,9 @@
 + (NSArray *)responseObject{
     
     NSMutableArray *array = [NSMutableArray array];
-    for (int i = 0; i < 20; i++) {
+    
+    for (int i = 0; i < 10; i++) {
         int random = arc4random()%8;
-        
         NSMutableDictionary *dic = [NSMutableDictionary dictionary];
         
         if (random) {

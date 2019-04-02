@@ -11,7 +11,6 @@
 #import <JLRoutes/JLRoutes.h>
 #import "AIHomeTabBarController.h"
 #import "AIGuidePageView.h"
-#import <IQKeyboardManager/IQKeyboardManager.h>
 #import <UMMobClick/MobClick.h>
 
 #ifdef DEBUG

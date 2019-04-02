@@ -32,10 +32,11 @@
 #define WeChatRGB214 AIRGB(214, 214, 214)
 #define WeChatRGB234 AIRGB(234, 234, 234)
 #define WeChatRGB241 AIRGB(241, 241, 241)
+#define WeChatRGB246 AIRGB(246, 246, 246)
 #define WeChatRGB256 AIRGB(256, 256, 256)
 
 
 #define WeChatBlue AIRGB(30, 182, 95)
 #define WeChatGreen AIRGB(69, 138, 213)
-
+#define WeChatLightGreen AIRGB(162, 229, 99)
 #endif /* AIColorConfig_h */

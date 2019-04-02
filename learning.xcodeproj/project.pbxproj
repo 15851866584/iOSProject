@@ -159,6 +159,7 @@
 		63DC007E20E4D34F001C332D /* AIDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DC007D20E4D34F001C332D /* AIDrawViewController.m */; };
 		63DC008120E4D432001C332D /* AIDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DC008020E4D432001C332D /* AIDrawView.m */; };
 		63E3F2CE21CA231E00B01BD3 /* AIGetHeightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E3F2CD21CA231E00B01BD3 /* AIGetHeightViewController.m */; };
+		63E860632251B27900BE8E4A /* WeChatChatRoomInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E860622251B27900BE8E4A /* WeChatChatRoomInputView.m */; };
 		63F2584C220288C000C295E5 /* WeChatDiscoverListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F2584B220288C000C295E5 /* WeChatDiscoverListModel.m */; };
 		63F2584F2202934300C295E5 /* WeChatDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F2584E2202934300C295E5 /* WeChatDiscoverViewController.m */; };
 		63F258522202958F00C295E5 /* WeChatDiscoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F258512202958F00C295E5 /* WeChatDiscoverTableViewCell.m */; };
@@ -166,7 +167,7 @@
 		63F2585C2202C70B00C295E5 /* WeChatMeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F2585B2202C70B00C295E5 /* WeChatMeListModel.m */; };
 		63F2585F2202C86E00C295E5 /* WeChatMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F2585E2202C86E00C295E5 /* WeChatMeViewController.m */; };
 		63F258622202C9D300C295E5 /* WeChatMeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F258612202C9D300C295E5 /* WeChatMeTableViewCell.m */; };
-		63F258642202CBB800C295E5 /* face2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63F258632202CBB800C295E5 /* face2.jpg */; };
+		63F258642202CBB800C295E5 /* image4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63F258632202CBB800C295E5 /* image4.jpg */; };
 		63F258672202CC1300C295E5 /* WeChatMeTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F258662202CC1300C295E5 /* WeChatMeTableHeaderView.m */; };
 		63F2586A2202D25900C295E5 /* WeChatMeInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F258692202D25900C295E5 /* WeChatMeInfoModel.m */; };
 		63F2586C2202D55000C295E5 /* wechat_me_face.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63F2586B2202D55000C295E5 /* wechat_me_face.jpg */; };
@@ -475,6 +476,8 @@
 		63E3F2CC21CA231E00B01BD3 /* AIGetHeightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIGetHeightViewController.h; sourceTree = "<group>"; };
 		63E3F2CD21CA231E00B01BD3 /* AIGetHeightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIGetHeightViewController.m; sourceTree = "<group>"; };
 		63E653E221E2F44100268F66 /* libMobileGestalt.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libMobileGestalt.tbd; path = usr/lib/libMobileGestalt.tbd; sourceTree = SDKROOT; };
+		63E860612251B27900BE8E4A /* WeChatChatRoomInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatChatRoomInputView.h; sourceTree = "<group>"; };
+		63E860622251B27900BE8E4A /* WeChatChatRoomInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatChatRoomInputView.m; sourceTree = "<group>"; };
 		63F2584A220288C000C295E5 /* WeChatDiscoverListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatDiscoverListModel.h; sourceTree = "<group>"; };
 		63F2584B220288C000C295E5 /* WeChatDiscoverListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatDiscoverListModel.m; sourceTree = "<group>"; };
 		63F2584D2202934300C295E5 /* WeChatDiscoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatDiscoverViewController.h; sourceTree = "<group>"; };
@@ -489,7 +492,7 @@
 		63F2585E2202C86E00C295E5 /* WeChatMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatMeViewController.m; sourceTree = "<group>"; };
 		63F258602202C9D300C295E5 /* WeChatMeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatMeTableViewCell.h; sourceTree = "<group>"; };
 		63F258612202C9D300C295E5 /* WeChatMeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatMeTableViewCell.m; sourceTree = "<group>"; };
-		63F258632202CBB800C295E5 /* face2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = face2.jpg; sourceTree = "<group>"; };
+		63F258632202CBB800C295E5 /* image4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image4.jpg; sourceTree = "<group>"; };
 		63F258652202CC1300C295E5 /* WeChatMeTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatMeTableHeaderView.h; sourceTree = "<group>"; };
 		63F258662202CC1300C295E5 /* WeChatMeTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatMeTableHeaderView.m; sourceTree = "<group>"; };
 		63F258682202D25900C295E5 /* WeChatMeInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatMeInfoModel.h; sourceTree = "<group>"; };
@@ -966,7 +969,7 @@
 				638C540A224CBC3D0024D64A /* image2.png */,
 				638C5408224CBC290024D64A /* image1.png */,
 				638C5406224CBB420024D64A /* image0.png */,
-				63F258632202CBB800C295E5 /* face2.jpg */,
+				63F258632202CBB800C295E5 /* image4.jpg */,
 				63F2586B2202D55000C295E5 /* wechat_me_face.jpg */,
 				63598BB921FAA1CE00055668 /* 0.jpg */,
 				63598BB021FAA1CD00055668 /* 1.jpg */,
@@ -1227,6 +1230,8 @@
 				6368F21B21FE947C0008670F /* WeChatHomeMenuView.m */,
 				63B68B3B224A19ED00158BEA /* WeChatChatTableViewCell.h */,
 				63B68B3C224A19ED00158BEA /* WeChatChatTableViewCell.m */,
+				63E860612251B27900BE8E4A /* WeChatChatRoomInputView.h */,
+				63E860622251B27900BE8E4A /* WeChatChatRoomInputView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1529,7 +1534,7 @@
 				63B68B63224A1A3D00158BEA /* MLEmoji_Expression.plist in Resources */,
 				63598BD921FAA1D000055668 /* 10.jpg in Resources */,
 				63598BDB21FAA1D000055668 /* 17.jpg in Resources */,
-				63F258642202CBB800C295E5 /* face2.jpg in Resources */,
+				63F258642202CBB800C295E5 /* image4.jpg in Resources */,
 				63598BD121FAA1D000055668 /* 0.jpg in Resources */,
 				638C540B224CBC3D0024D64A /* image2.png in Resources */,
 				63598BD621FAA1D000055668 /* 22.jpg in Resources */,
@@ -1637,6 +1642,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63E860632251B27900BE8E4A /* WeChatChatRoomInputView.m in Sources */,
 				63A2B917211431610046CCF8 /* AIBaseNavigationController.m in Sources */,
 				63598BAC21FA9FE100055668 /* WeChatMessageListModel.m in Sources */,
 				63052E7421B6621C002F5285 /* NSObject+MemoryLeak.m in Sources */,

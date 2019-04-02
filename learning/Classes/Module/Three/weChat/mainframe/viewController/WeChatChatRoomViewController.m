@@ -10,6 +10,7 @@
 #import "WeChatChatRoomModel.h"
 #import "AIBaseTableView.h"
 #import "WeChatChatTableViewCell.h"
+#import "WeChatChatRoomInputView.h"
 
 @interface WeChatChatRoomViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -17,13 +18,11 @@
 
 //图片浏览器
 @property (nonatomic, strong)PYPhotoBrowseView *photoBroseView;
+@property (nonatomic, strong)WeChatChatRoomInputView *chatInputView;
 @end
 
 @implementation WeChatChatRoomViewController
-{
-    CGFloat _contentSizeY;//偏移量
 
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -66,21 +65,15 @@
 
 - (void)setUpSubViews{
     //数据源
-    [self.dataSource addObjectsFromArray:[NSArray yy_modelArrayWithClass:[WeChatChatRoomModel class] json:WeChatChatRoomModel.responseObject]];
+    if (arc4random()%2) {
+        [self.dataSource addObjectsFromArray:[NSArray yy_modelArrayWithClass:[WeChatChatRoomModel class] json:WeChatChatRoomModel.responseObject]];
+    }
 
-    
     //布局 tableview，底部输入框
-    self.tableView = [[AIBaseTableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, ViewHNT) style:UITableViewStylePlain];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    self.tableView.showsVerticalScrollIndicator = YES;
-    self.tableView.backgroundColor = self.view.backgroundColor;
-    
     [self.view addSubview:self.tableView];
+    [self.view addSubview:self.chatInputView];
     
-    
-    
-    
+
     //下拉加载更多
     MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
     header.stateLabel.hidden = YES;
@@ -95,6 +88,7 @@
         }
     });
     
+   
 }
 
 //加载更多数据
@@ -102,7 +96,6 @@
     
     //开始位置
     CGFloat beginPoint = self.tableView.contentSize.height;
-  
     [self.tableView.mj_header endRefreshing];
 
     //处理数据源
@@ -119,6 +112,19 @@
 
 }
 
+//加载个人消息
+- (void)loadMineData:(NSArray *)data{
+    [self.dataSource addObjectsFromArray:[NSArray yy_modelArrayWithClass:[WeChatChatRoomModel class] json:data]];
+    [self.tableView reloadData];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.dataSource.count-1 inSection:0];
+    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.view endEditing:YES];
+}
+
 #pragma mark -- UITableViewDelegate,UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.dataSource.count;
@@ -132,6 +138,7 @@
     @weakify(self)
     [cell setDidSelectLinkBlock:^(NSString * _Nonnull link, WeChatClickMessageType type) {
         @strongify(self)
+        [self.chatInputView hidden];
         
         if (type == WeChatClickMessageTypeURL) {
             NSString *urlString = [NSString stringWithFormat:@"AIWebViewController?url=%@",link];
@@ -180,6 +187,7 @@
     return h;
 }
 
+
 #pragma mark --setter/getter
 - (PYPhotoBrowseView *)photoBroseView{
     if (!_photoBroseView) {
@@ -187,6 +195,41 @@
         _photoBroseView.hiddenPageControl = YES;
     }
     return _photoBroseView;
+}
+
+- (WeChatChatRoomInputView *)chatInputView{
+    if (!_chatInputView) {
+         _chatInputView = [[WeChatChatRoomInputView alloc]initWithFrame:CGRectMake(0,VB(_tableView), SCREEN_WIDTH, AI_TabbarHeight)];
+        @weakify(self)
+        [_chatInputView setDidSelectFinishBlock:^(NSString * _Nonnull text) {
+            @strongify(self);
+            //造数据
+            NSDictionary *dic = @{@"photo":@"wechat_me_face.jpg",
+                                  @"messageType":[NSNumber numberWithInt:CRMessageTypeMine],
+                                  @"messageText":text
+                                  };
+            [self loadMineData:@[dic]];
+        }];
+    }
+    return _chatInputView;
+}
+
+- (AIBaseTableView *)tableView{
+    if (!_tableView) {
+        _tableView = [[AIBaseTableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, ViewHNT) style:UITableViewStylePlain];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.showsVerticalScrollIndicator = YES;
+        _tableView.backgroundColor = self.view.backgroundColor;
+        _tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;//滚动键盘消失
+        
+        @weakify(self)
+        [_tableView addActionWithBlock:^{
+            @strongify(self);
+            [self.chatInputView hidden];
+        }];
+    }
+    return _tableView;
 }
 
 @end

@@ -9,7 +9,7 @@
 #import "WeChatChatTableViewCell.h"
 
 #define kChatMessageTopBottomMargin 20.f //消息的上下间隙
-#define kChatBackGroundMargin 10.0f  //背景间隙
+#define kChatBackGroundMargin 5.0f  //背景间隙
 #define kChatIconWidthHight 40.f//头像宽高
 #define kChatIconMessageMargin 10.f//头像和文本间隙
 #define kChatMessageMaxWidth (SCREEN_WIDTH-140)//消息的最大宽度
@@ -50,7 +50,7 @@
     
     _messageBackground.userInteractionEnabled = YES;
     
-    [self setupAutoHeightWithBottomView:_messageBackground bottomMargin:0];
+    [self setupAutoHeightWithBottomView:_messageBackground bottomMargin:kChatBackGroundMargin];
 
     [_messageImgView addTarget:self action:@selector(didSelectMessageImgView)];
 }
@@ -90,7 +90,7 @@
         
         UIView *referView = self.contentView;
         _iconPersonalImgView.sd_resetLayout
-        .leftSpaceToView(referView, kChatBackGroundMargin)
+        .leftSpaceToView(referView, kChatIconMessageMargin)
         .topSpaceToView(referView, kChatBackGroundMargin)
         .widthIs(kChatIconWidthHight)
         .heightIs(kChatIconWidthHight);
@@ -104,7 +104,7 @@
         
         UIView *referView = self.contentView;
         _iconPersonalImgView.sd_resetLayout
-        .rightSpaceToView(referView, kChatBackGroundMargin)
+        .rightSpaceToView(referView, kChatIconMessageMargin)
         .topSpaceToView(referView, kChatBackGroundMargin)
         .widthIs(kChatIconWidthHight)
         .heightIs(kChatIconWidthHight);
@@ -119,7 +119,7 @@
     
     _messageLabel.sd_resetLayout
     .leftSpaceToView(_messageBackground, kChatMessageTopBottomMargin)
-    .topSpaceToView(_messageBackground, kChatBackGroundMargin+3)
+    .topSpaceToView(_messageBackground, 12.0)//背景图片问题，这里手动调整
     .autoHeightRatio(0);
     
     // 设置_messageLabel横向自适应
@@ -159,13 +159,13 @@
         
         UIView *referView = self.contentView;
         _iconPersonalImgView.sd_resetLayout
-        .leftSpaceToView(referView, kChatBackGroundMargin)
+        .leftSpaceToView(referView, kChatIconMessageMargin)
         .topSpaceToView(referView, kChatBackGroundMargin)
         .widthIs(kChatIconWidthHight)
         .heightIs(kChatIconWidthHight);
         
         _messageBackground.sd_resetLayout
-        .leftSpaceToView(_iconPersonalImgView, kChatBackGroundMargin+5)
+        .leftSpaceToView(_iconPersonalImgView, kChatIconMessageMargin+5)
         .topSpaceToView(referView, kChatBackGroundMargin)
         .widthIs(w)
         .heightIs(h);

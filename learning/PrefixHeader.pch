@@ -41,6 +41,7 @@
 #import <TZImagePickerController.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <SDWebImage/UIImage+GIF.h>
+#import <IQKeyboardManager.h>
 #import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
 #import "UINavigationController+FDFullscreenPopGesture.h"
 
