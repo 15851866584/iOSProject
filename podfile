@@ -11,7 +11,7 @@ pod 'DZNEmptyDataSet','~> 1.8.1'
 pod 'iCarousel','~> 1.8.1'
 pod 'UMengAnalytics-NO-IDFA','~> 4.2.5'
 pod 'TZImagePickerController','~>3.2.0'
-pod ' ','~>1.5.6'
+pod 'PYPhotoBrowser','~>1.5.6'
 pod 'IQKeyboardManager','~>6.2.1'
 end
 
