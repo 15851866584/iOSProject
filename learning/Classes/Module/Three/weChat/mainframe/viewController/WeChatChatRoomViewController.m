@@ -73,7 +73,21 @@
     [self.view addSubview:self.tableView];
     [self.view addSubview:self.chatInputView];
     
-
+    @weakify(self)
+    //造数据
+    [self.chatInputView setDidSelectFinishBlock:^(NSString * _Nonnull text) {
+        @strongify(self);
+        if([[text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]length] == 0) {
+            [self text:@"输入值不能为空格"];
+            return ;
+        }
+        NSDictionary *dic = @{@"photo":@"wechat_me_face.jpg",
+                              @"messageType":[NSNumber numberWithInt:CRMessageTypeMine],
+                              @"messageText":text
+                              };
+        [self loadMineData:@[dic]];
+    }];
+    
     //下拉加载更多
     MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
     header.stateLabel.hidden = YES;
@@ -144,9 +158,9 @@
             NSString *urlString = [NSString stringWithFormat:@"AIWebViewController?url=%@",link];
             OpenURL(urlString);
         }else if (type == WeChatClickMessageTypeEmail){
-            [self text:@"这是邮箱"];
+            [self text:@"这个可能是邮箱"];
         }else if (type == WeChatClickMessageTypePhoneNumber){
-            [self text:@"这是电话"];
+            [self text:@"这个可能是电话"];
         }else if (type == WeChatClickMessageTypeImage){
             //处理图片点击方式
             [self dealCurrentIndex:indexPath.row andLink:link];
@@ -187,6 +201,9 @@
     return h;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.chatInputView hidden];
+}
 
 #pragma mark --setter/getter
 - (PYPhotoBrowseView *)photoBroseView{
@@ -200,16 +217,7 @@
 - (WeChatChatRoomInputView *)chatInputView{
     if (!_chatInputView) {
          _chatInputView = [[WeChatChatRoomInputView alloc]initWithFrame:CGRectMake(0,VB(_tableView), SCREEN_WIDTH, AI_TabbarHeight)];
-        @weakify(self)
-        [_chatInputView setDidSelectFinishBlock:^(NSString * _Nonnull text) {
-            @strongify(self);
-            //造数据
-            NSDictionary *dic = @{@"photo":@"wechat_me_face.jpg",
-                                  @"messageType":[NSNumber numberWithInt:CRMessageTypeMine],
-                                  @"messageText":text
-                                  };
-            [self loadMineData:@[dic]];
-        }];
+       
     }
     return _chatInputView;
 }
@@ -222,12 +230,7 @@
         _tableView.showsVerticalScrollIndicator = YES;
         _tableView.backgroundColor = self.view.backgroundColor;
         _tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;//滚动键盘消失
-        
-        @weakify(self)
-        [_tableView addActionWithBlock:^{
-            @strongify(self);
-            [self.chatInputView hidden];
-        }];
+    
     }
     return _tableView;
 }

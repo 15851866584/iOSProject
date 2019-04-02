@@ -67,6 +67,7 @@
     _inputTextView.font = WeChatFont16;
     _inputTextView.delegate = self;
     _inputTextView.returnKeyType = UIReturnKeyDone;
+    _inputTextView.enablesReturnKeyAutomatically = YES;
     
     [_inputImageVoice addTarget:self action:@selector(clickInputVoice:) forControlEvents:UIControlEventTouchUpInside];
     [_inputImageSmile addTarget:self action:@selector(clickInputSmile:) forControlEvents:UIControlEventTouchUpInside];
@@ -155,7 +156,7 @@
     
     if ([text isEqualToString:@"\n"]) {
         
-        if (self.didSelectFinishBlock) {
+        if (self.didSelectFinishBlock && textView.text.length) {
             self.didSelectFinishBlock(textView.text);
             textView.text = @"";
             [self getTextViewHeight];
