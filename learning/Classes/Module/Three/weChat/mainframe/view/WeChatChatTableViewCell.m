@@ -26,6 +26,7 @@
 }
 
 - (void)setUpSubViews{
+   
     self.contentView.backgroundColor = WeChatRGB241;
     
     //初始化，添加到父视图，配置属性值

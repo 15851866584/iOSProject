@@ -68,5 +68,12 @@
     return 10;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) {
+        OpenURL(@"WeChatFriendsCircleViewController?fd_prefersNavigationBarHidden=YES");
+    }else{
+        [self text:@"功能开发中，敬请期待！"];
+    }
+}
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "WeChatDiscoverTableViewCell.h"
+#import "UIView+WZLBadge.h"
 
 @implementation WeChatDiscoverTableViewCell
 {
@@ -57,7 +58,7 @@
     _nameLabel.sd_layout
     .leftSpaceToView(_faceImageView, margin)
     .topSpaceToView(referView, margin)
-    .rightSpaceToView(referView, edge)
+    .rightSpaceToView(_unreadImageView, edge)
     .heightIs(30);
     
     _line = [self.contentView lineWithRect:CGRectMake(75, 60-0.2, SCREEN_WIDTH-75, 0.2) color:AI_RGB125 dashPattern:nil];
@@ -70,6 +71,15 @@
     _faceImageView.image = IMG(discoverModel.photo);
     
     _nameLabel.text = discoverModel.name;
+    
+    if (discoverModel.unread) {
+        UIImage *image = [IMG(discoverModel.unread) circleImageWithCornerRadius:10];
+        _unreadImageView.image = image;
+        [_unreadImageView showBadge];
+    }else{
+        _unreadImageView.image = [UIImage new];
+        [_unreadImageView clearBadge];
+    }
 }
 
 - (void)setHiddenLine:(BOOL)hiddenLine{

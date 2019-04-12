@@ -25,6 +25,12 @@
             NSMutableDictionary *dic = [NSMutableDictionary dictionary];
             [dic setObject:photo[j] forKey:@"photo"];
             [dic setObject:name[j] forKey:@"name"];
+            if (i == 0) {
+                
+                NSString *unread = [NSString stringWithFormat:@"%d.jpg",arc4random()%24];
+                [dic setObject:unread forKey:@"unread"];
+            }
+            
             [arr addObject:dic];
         }
         [item setValue:arr forKey:@"item"];
@@ -48,12 +54,9 @@
 + (NSArray *)names{
     return @[
              @[@"朋友圈"],
-             @[@"扫一扫",
-             @"摇一摇"],
+             @[@"扫一扫",@"摇一摇"],
              @[@"附近的人"],
-             @[@"购物",
-             @"游戏"]
-             ];
+             @[@"购物",@"游戏"]];
 }
 
 + (NSDictionary *)modelContainerPropertyGenericClass {

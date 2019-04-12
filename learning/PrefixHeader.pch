@@ -35,7 +35,7 @@
 //frameworks
 
 #import <YYModel.h>
-#import <SDAutoLayout.h>
+#import "SDAutoLayout.h"
 #import <MJRefresh/MJRefresh.h>
 #import <PYPhotoBrowser.h>
 #import <TZImagePickerController.h>
@@ -88,6 +88,7 @@ static inline BOOL IsEmpty(id thing) {
 
 
 #define AI_StatusBarHeight     [[UIApplication sharedApplication] statusBarFrame].size.height
+#define AI_statusBarHeight     (iPhoneX_SERIES ? 44.0 : 20.0)
 #define AI_NavBarHeight        (iPhoneX_SERIES ? 68.0 : 44.0)
 #define AI_NavAndStatusHeight  (iPhoneX_SERIES ? 88.0 : 64.0)
 #define AI_TabbarSafeHeight    (iPhoneX_SERIES ? 34.0 : 0.0)

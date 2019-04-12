@@ -121,6 +121,8 @@
 		638C540B224CBC3D0024D64A /* image2.png in Resources */ = {isa = PBXBuildFile; fileRef = 638C540A224CBC3D0024D64A /* image2.png */; };
 		638C540D224CBD6E0024D64A /* image3.png in Resources */ = {isa = PBXBuildFile; fileRef = 638C540C224CBD6E0024D64A /* image3.png */; };
 		639563C921DCA29D001A3D08 /* UIDevice+tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 639563C821DCA29D001A3D08 /* UIDevice+tool.m */; };
+		639A65E8225F373400B78EB6 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 639A65E3225F373400B78EB6 /* UIView+SDAutoLayout.m */; };
+		639A65E9225F373400B78EB6 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 639A65E6225F373400B78EB6 /* UITableView+SDAutoTableViewCellHeight.m */; };
 		639B1F962126A2B7000CAA41 /* NSObject+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 639B1F952126A2B7000CAA41 /* NSObject+Tools.m */; };
 		639C5631211050650095149A /* UniversLTStd-UltraCn.otf in Resources */ = {isa = PBXBuildFile; fileRef = 639C5630211050650095149A /* UniversLTStd-UltraCn.otf */; };
 		63A2B917211431610046CCF8 /* AIBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A2B916211431610046CCF8 /* AIBaseNavigationController.m */; };
@@ -153,12 +155,16 @@
 		63CD88D5212FDB7300C30CA8 /* AISpringView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CD88D4212FDB7300C30CA8 /* AISpringView.m */; };
 		63CD88D7212FF2C800C30CA8 /* saber.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 63CD88D6212FF2C800C30CA8 /* saber.jpeg */; };
 		63D0017421F9AFF9002764B7 /* WeChatHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D0017321F9AFF9002764B7 /* WeChatHomeTableViewCell.m */; };
+		63DA9A11225DBAA700379988 /* WeChatFriendsCircleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DA9A10225DBAA700379988 /* WeChatFriendsCircleModel.m */; };
 		63DB9C1F21B525AE0009A912 /* AILayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DB9C1D21B525AE0009A912 /* AILayoutViewController.m */; };
 		63DB9C2021B525AE0009A912 /* AILayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63DB9C1E21B525AE0009A912 /* AILayoutViewController.xib */; };
 		63DC007B20E4C2DE001C332D /* UIAlertController+tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DC007A20E4C2DE001C332D /* UIAlertController+tools.m */; };
 		63DC007E20E4D34F001C332D /* AIDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DC007D20E4D34F001C332D /* AIDrawViewController.m */; };
 		63DC008120E4D432001C332D /* AIDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DC008020E4D432001C332D /* AIDrawView.m */; };
 		63E3F2CE21CA231E00B01BD3 /* AIGetHeightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E3F2CD21CA231E00B01BD3 /* AIGetHeightViewController.m */; };
+		63E61688225AF27600433CD5 /* WeChatFriendsCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E61687225AF27600433CD5 /* WeChatFriendsCircleViewController.m */; };
+		63E6168B225B16B800433CD5 /* WeChatFriendsCircleHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E6168A225B16B800433CD5 /* WeChatFriendsCircleHeaderFooterView.m */; };
+		63E6168E225B2A4500433CD5 /* WeChatFriendsCircleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E6168D225B2A4500433CD5 /* WeChatFriendsCircleTableViewCell.m */; };
 		63E860632251B27900BE8E4A /* WeChatChatRoomInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E860622251B27900BE8E4A /* WeChatChatRoomInputView.m */; };
 		63F2584C220288C000C295E5 /* WeChatDiscoverListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F2584B220288C000C295E5 /* WeChatDiscoverListModel.m */; };
 		63F2584F2202934300C295E5 /* WeChatDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F2584E2202934300C295E5 /* WeChatDiscoverViewController.m */; };
@@ -406,6 +412,11 @@
 		639563C721DCA29D001A3D08 /* UIDevice+tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+tool.h"; sourceTree = "<group>"; };
 		639563C821DCA29D001A3D08 /* UIDevice+tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+tool.m"; sourceTree = "<group>"; };
 		639563CA21DCA785001A3D08 /* learning.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = learning.entitlements; sourceTree = "<group>"; };
+		639A65E3225F373400B78EB6 /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
+		639A65E4225F373400B78EB6 /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
+		639A65E5225F373400B78EB6 /* SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAutoLayout.h; sourceTree = "<group>"; };
+		639A65E6225F373400B78EB6 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
+		639A65E7225F373400B78EB6 /* UIView+SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDAutoLayout.h"; sourceTree = "<group>"; };
 		639B1F942126A2B7000CAA41 /* NSObject+Tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Tools.h"; sourceTree = "<group>"; };
 		639B1F952126A2B7000CAA41 /* NSObject+Tools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Tools.m"; sourceTree = "<group>"; };
 		639C5630211050650095149A /* UniversLTStd-UltraCn.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UniversLTStd-UltraCn.otf"; sourceTree = "<group>"; };
@@ -464,6 +475,8 @@
 		63CD88D6212FF2C800C30CA8 /* saber.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = saber.jpeg; sourceTree = "<group>"; };
 		63D0017221F9AFF9002764B7 /* WeChatHomeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatHomeTableViewCell.h; sourceTree = "<group>"; };
 		63D0017321F9AFF9002764B7 /* WeChatHomeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatHomeTableViewCell.m; sourceTree = "<group>"; };
+		63DA9A0F225DBAA700379988 /* WeChatFriendsCircleModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatFriendsCircleModel.h; sourceTree = "<group>"; };
+		63DA9A10225DBAA700379988 /* WeChatFriendsCircleModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatFriendsCircleModel.m; sourceTree = "<group>"; };
 		63DB9C1C21B525AE0009A912 /* AILayoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AILayoutViewController.h; sourceTree = "<group>"; };
 		63DB9C1D21B525AE0009A912 /* AILayoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AILayoutViewController.m; sourceTree = "<group>"; };
 		63DB9C1E21B525AE0009A912 /* AILayoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AILayoutViewController.xib; sourceTree = "<group>"; };
@@ -475,6 +488,12 @@
 		63DC008020E4D432001C332D /* AIDrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIDrawView.m; sourceTree = "<group>"; };
 		63E3F2CC21CA231E00B01BD3 /* AIGetHeightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIGetHeightViewController.h; sourceTree = "<group>"; };
 		63E3F2CD21CA231E00B01BD3 /* AIGetHeightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIGetHeightViewController.m; sourceTree = "<group>"; };
+		63E61686225AF27600433CD5 /* WeChatFriendsCircleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatFriendsCircleViewController.h; sourceTree = "<group>"; };
+		63E61687225AF27600433CD5 /* WeChatFriendsCircleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatFriendsCircleViewController.m; sourceTree = "<group>"; };
+		63E61689225B16B800433CD5 /* WeChatFriendsCircleHeaderFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatFriendsCircleHeaderFooterView.h; sourceTree = "<group>"; };
+		63E6168A225B16B800433CD5 /* WeChatFriendsCircleHeaderFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatFriendsCircleHeaderFooterView.m; sourceTree = "<group>"; };
+		63E6168C225B2A4500433CD5 /* WeChatFriendsCircleTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatFriendsCircleTableViewCell.h; sourceTree = "<group>"; };
+		63E6168D225B2A4500433CD5 /* WeChatFriendsCircleTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatFriendsCircleTableViewCell.m; sourceTree = "<group>"; };
 		63E653E221E2F44100268F66 /* libMobileGestalt.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libMobileGestalt.tbd; path = usr/lib/libMobileGestalt.tbd; sourceTree = SDKROOT; };
 		63E860612251B27900BE8E4A /* WeChatChatRoomInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatChatRoomInputView.h; sourceTree = "<group>"; };
 		63E860622251B27900BE8E4A /* WeChatChatRoomInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatChatRoomInputView.m; sourceTree = "<group>"; };
@@ -1074,6 +1093,7 @@
 		6362C53C2203E33A000AD7BA /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				639A65E2225F373400B78EB6 /* SDAutoLayout */,
 				63B68B3E224A1A2400158BEA /* MLEmojiLabel */,
 				6362C5402203E39E000AD7BA /* badge */,
 			);
@@ -1103,6 +1123,18 @@
 				63837F9321C0F34100EDEE57 /* AIMVVMViewModel.m */,
 			);
 			path = viewModel;
+			sourceTree = "<group>";
+		};
+		639A65E2225F373400B78EB6 /* SDAutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				639A65E3225F373400B78EB6 /* UIView+SDAutoLayout.m */,
+				639A65E4225F373400B78EB6 /* UITableView+SDAutoTableViewCellHeight.h */,
+				639A65E5225F373400B78EB6 /* SDAutoLayout.h */,
+				639A65E6225F373400B78EB6 /* UITableView+SDAutoTableViewCellHeight.m */,
+				639A65E7225F373400B78EB6 /* UIView+SDAutoLayout.h */,
+			);
+			path = SDAutoLayout;
 			sourceTree = "<group>";
 		};
 		63A2B91B21143A6F0046CCF8 /* TabBar */ = {
@@ -1277,6 +1309,10 @@
 				63F258512202958F00C295E5 /* WeChatDiscoverTableViewCell.m */,
 				63F2585322029D6C00C295E5 /* WeChatDiscoverTableFooterView.h */,
 				63F2585422029D6C00C295E5 /* WeChatDiscoverTableFooterView.m */,
+				63E61689225B16B800433CD5 /* WeChatFriendsCircleHeaderFooterView.h */,
+				63E6168A225B16B800433CD5 /* WeChatFriendsCircleHeaderFooterView.m */,
+				63E6168C225B2A4500433CD5 /* WeChatFriendsCircleTableViewCell.h */,
+				63E6168D225B2A4500433CD5 /* WeChatFriendsCircleTableViewCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1286,6 +1322,8 @@
 			children = (
 				63F2584A220288C000C295E5 /* WeChatDiscoverListModel.h */,
 				63F2584B220288C000C295E5 /* WeChatDiscoverListModel.m */,
+				63DA9A0F225DBAA700379988 /* WeChatFriendsCircleModel.h */,
+				63DA9A10225DBAA700379988 /* WeChatFriendsCircleModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1295,6 +1333,8 @@
 			children = (
 				63F2584D2202934300C295E5 /* WeChatDiscoverViewController.h */,
 				63F2584E2202934300C295E5 /* WeChatDiscoverViewController.m */,
+				63E61686225AF27600433CD5 /* WeChatFriendsCircleViewController.h */,
+				63E61687225AF27600433CD5 /* WeChatFriendsCircleViewController.m */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -1660,9 +1700,11 @@
 				63052E6D21B6621C002F5285 /* UITouch+MemoryLeak.m in Sources */,
 				63D0017421F9AFF9002764B7 /* WeChatHomeTableViewCell.m in Sources */,
 				63052E6C21B6621C002F5285 /* UIView+MemoryLeak.m in Sources */,
+				639A65E8225F373400B78EB6 /* UIView+SDAutoLayout.m in Sources */,
 				63FCA7C521F9954100586618 /* WeChatTabBarController.m in Sources */,
 				6386F67F2145FF920064A1C7 /* AITextView.m in Sources */,
 				63F2585522029D6C00C295E5 /* WeChatDiscoverTableFooterView.m in Sources */,
+				639A65E9225F373400B78EB6 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				63CD88D5212FDB7300C30CA8 /* AISpringView.m in Sources */,
 				63FCA7B521F95C5500586618 /* AIBaseCollectionView.m in Sources */,
 				63BFBF092122C7ED00E68798 /* AIGuidePageView.m in Sources */,
@@ -1689,6 +1731,7 @@
 				6381D32920DA264A00E59165 /* AIBaseTableView.m in Sources */,
 				6381D32C20DA286B00E59165 /* AIBaseTableViewCell.m in Sources */,
 				634F47DF212A5A3D004BEAE9 /* AIKnowledgeViewController.m in Sources */,
+				63E61688225AF27600433CD5 /* WeChatFriendsCircleViewController.m in Sources */,
 				63FCA7D321F99ABE00586618 /* WeChatViewController.m in Sources */,
 				639B1F962126A2B7000CAA41 /* NSObject+Tools.m in Sources */,
 				633E10E820D0BC9F00D16A21 /* UILabel+tools.m in Sources */,
@@ -1730,6 +1773,7 @@
 				63455A0B21B76BA20010FB1E /* AIWebViewController.m in Sources */,
 				6352B1C9224B73DF0017BF18 /* WeChatChatRoomModel.m in Sources */,
 				630F4EC420CE231600BEDFE2 /* UIView+tools.m in Sources */,
+				63DA9A11225DBAA700379988 /* WeChatFriendsCircleModel.m in Sources */,
 				6362C54F2203F1F9000AD7BA /* UIView+WZLBadge.m in Sources */,
 				639563C921DCA29D001A3D08 /* UIDevice+tool.m in Sources */,
 				637A9A1A2216673C00A0B4BB /* WeChatSearchResultController.m in Sources */,
@@ -1749,6 +1793,7 @@
 				63B68B68224A1A3D00158BEA /* MLLinkLabel.m in Sources */,
 				634A3C8221E43C61003EC8D8 /* AIResponse.m in Sources */,
 				63E3F2CE21CA231E00B01BD3 /* AIGetHeightViewController.m in Sources */,
+				63E6168B225B16B800433CD5 /* WeChatFriendsCircleHeaderFooterView.m in Sources */,
 				6356C30D20CF9DB90034D5ED /* AIBaseViewController.m in Sources */,
 				63793A8221217062000E2B78 /* AICycleScrollViewController.m in Sources */,
 				63B68B71224A1A3D00158BEA /* TTTAttributedLabel.m in Sources */,
@@ -1762,6 +1807,7 @@
 				634F47E2212A5B1C004BEAE9 /* Knowledge.m in Sources */,
 				633E10DC20D0B32900D16A21 /* DoubiCarousel.m in Sources */,
 				63F258522202958F00C295E5 /* WeChatDiscoverTableViewCell.m in Sources */,
+				63E6168E225B2A4500433CD5 /* WeChatFriendsCircleTableViewCell.m in Sources */,
 				63DC007E20E4D34F001C332D /* AIDrawViewController.m in Sources */,
 				632CFD3C20D3541B00E1B2B8 /* UIImage+tools.m in Sources */,
 				634A3C8121E43C61003EC8D8 /* AIBaseNetwork.m in Sources */,
