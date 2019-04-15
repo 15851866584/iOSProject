@@ -165,7 +165,7 @@
         _releaseTimeLabel.sd_layout.topSpaceToView(_photosView, lrMargin);
     }else if (!_loadButton.hidden && _photosView.hidden){
         _loadButton.sd_layout.topSpaceToView(_messageLabel, lrMargin);
-        _releaseTimeLabel.sd_layout.topSpaceToView(_photosView, lrMargin);
+        _releaseTimeLabel.sd_layout.topSpaceToView(_loadButton, lrMargin);
     }else{
         _loadButton.sd_layout.topSpaceToView(_messageLabel, lrMargin);
         _photosView.sd_layout.topSpaceToView(_loadButton, lrMargin);

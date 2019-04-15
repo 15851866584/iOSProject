@@ -15,10 +15,13 @@
 @interface WeChatFriendsCircleViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) AIBaseTableView *tableView;
 @property (nonatomic, strong) UIButton *backBtn;
+@property (nonatomic, strong) UIImageView *circleView;
 @end
 
 @implementation WeChatFriendsCircleViewController
-
+{
+    CGFloat _contentOffsetY;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"朋友圈";
@@ -29,21 +32,47 @@
 
 - (void)setUpSubViews{
     [self.dataSource addObjectsFromArray:[NSArray yy_modelArrayWithClass:[WeChatFriendsCircleModel class] json:WeChatFriendsCircleModel.localData]];
+
     
-    //返回按钮
-    UIButton *backBtn = [[UIButton alloc]initWithFrame:CGRectMake(8, AI_statusBarHeight, 44, 44)];
-    [backBtn setImage:IMG(@"ai_left_back") forState:UIControlStateNormal];
-    [backBtn addTarget:self action:@selector(clickBackBtnEvent) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:backBtn];
-    self.backBtn = backBtn;
-    
-    self.tableView = [[AIBaseTableView alloc]initWithFrame:CGRectMake(0, -AI_NavAndStatusHeight, SCREEN_WIDTH, SCREEN_HEIGHT+AI_NavAndStatusHeight) style:UITableViewStyleGrouped];
+    self.tableView = [[AIBaseTableView alloc]initWithFrame:CGRectMake(0,0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.showsVerticalScrollIndicator = YES;
     self.tableView.backgroundColor = self.view.backgroundColor;
     [self.view addSubview:self.tableView];
+    self.edgesForExtendedLayout = UIRectEdgeTop;
     
+    
+    //上拉加载更多
+    MJRefreshAutoFooter *footer = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    self.tableView.mj_footer = footer;
+    
+    //返回按钮
+    UIButton *backBtn = [[UIButton alloc]initWithFrame:CGRectMake(5, AI_statusBarHeight, 44, 44)];
+    [backBtn setImage:IMG(@"ai_left_back") forState:UIControlStateNormal];
+    [backBtn addTarget:self action:@selector(clickBackBtnEvent) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:backBtn];
+    self.backBtn = backBtn;
+    
+    //加载视图
+    UIImageView *circleView = [[UIImageView alloc]initWithFrame:CGRectMake(20, AI_NavAndStatusHeight+20, 28, 28)];
+    circleView.image = IMG(@"wechat_discover_friendsCircle");
+    [self.view addSubview:circleView];
+    circleView.hidden = YES;
+    self.circleView = circleView;
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self scrollViewNavgationBar];
+}
+
+
+- (void)loadMoreData{
+    [self.tableView.mj_footer endRefreshing];
+    [self.dataSource addObjectsFromArray:[NSArray yy_modelArrayWithClass:[WeChatFriendsCircleModel class] json:WeChatFriendsCircleModel.localData]];
+    [self.tableView reloadData];
 }
 
 - (void)clickBackBtnEvent{
@@ -52,7 +81,29 @@
 
 #pragma mark -- UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    if ([scrollView isEqual:self.tableView]) {
+        _contentOffsetY = scrollView.contentOffset.y;
+        
+        [self scrollViewNavgationBar];
+    }
+}
+
+- (void)scrollViewNavgationBar{
+    if (self.tableView.contentOffset.y < -100) {
+        self.circleView.hidden = NO;
+        self.circleView.transform = CGAffineTransformMakeRotation(self.tableView.contentOffset.y/(M_PI*8));
+    }else{
+        self.circleView.hidden = YES;
+    }
     
+    
+    if (self.tableView.contentOffset.y > SCREEN_HEIGHT*0.44-AI_NavAndStatusHeight) {
+        self.backBtn.hidden = YES;
+        [self.navigationController setNavigationBarHidden:NO animated:NO];
+    }else{
+        self.backBtn.hidden = NO;
+        [self.navigationController setNavigationBarHidden:YES animated:NO];
+    }
 }
 
 #pragma mark -- UITableViewDelegate,UITableViewDataSource
