@@ -47,7 +47,7 @@
     //友盟统计
     [self UMConfig];
 #ifdef DEBUG
-    [self.window addSubview:[FPSLabel new]];
+//    [self.window addSubview:[FPSLabel new]];
 #endif
 
     

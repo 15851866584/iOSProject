@@ -19,6 +19,7 @@ typedef void (^UITouchBlock)(void);
 @property (nonatomic, assign) CGPoint origin;
 @property (nonatomic, assign) CGSize  size;
 
+
 //是否可以拖拽 area：superview
 @property (nonatomic, assign) BOOL isDragable;
 

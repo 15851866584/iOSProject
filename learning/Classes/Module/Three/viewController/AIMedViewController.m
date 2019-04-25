@@ -84,7 +84,17 @@ static NSString *identifier = @"AIMedCollectionViewCell";
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    OpenURL(@"present/WeChatTabBarController");
+    switch (indexPath.row) {
+        case 0:
+            OpenURL(@"present/WeChatTabBarController");
+            break;
+            case 1:
+           
+            break;
+        default:
+            break;
+    }
+    
 }
 
 - (UICollectionView *)collectionView{

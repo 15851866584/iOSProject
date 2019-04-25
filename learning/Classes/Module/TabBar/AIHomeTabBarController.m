@@ -18,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
 }
 
 
@@ -30,6 +32,7 @@
         Class class = NSClassFromString(vcs[i]);
         [self setUpViewControllersInNavClass:[AIBaseNavigationController class] rootClass:class tabBarName:names[i] tabBarImageName:images[i]];
     }
+
 }
 
 - (void)didReceiveMemoryWarning {

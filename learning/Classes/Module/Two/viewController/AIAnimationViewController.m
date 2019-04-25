@@ -8,10 +8,11 @@
 
 #import "AIAnimationViewController.h"
 #import "AICycleScrollView.h"
-
-@interface AIAnimationViewController ()<AICycleScrollViewDelegate>
-
-@property (nonatomic, strong) UIButton *animationView;
+#import "AIBaseTableView.h"
+#import "AIEOETableViewCell.h"
+@interface AIAnimationViewController ()<AICycleScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic, strong) AIBaseTableView *tableView;
+@property (nonatomic, strong) UIView *animationView;
 
 @end
 
@@ -20,7 +21,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _animationView = [UIButton buttonWithFrame:CGRectMake(100, 100, 100, 100) textColor:[UIColor whiteColor] backgroundColor:[UIColor redColor] font:WeChatFont20 text:@"点我" target:self action:@selector(clickEvent)];
+    
+    [self setUpSubViews];
+}
+
+- (void)setUpSubViews{
+    [self.dataSource addObjectsFromArray:@[@"CABasicAnimation",@"CAKeyframeAnimation",@"CATransitionAnimation",@"CGAffineTransformIdentity"]];
+    
+    self.tableView = [[AIBaseTableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, ViewHNT) style:(UITableViewStylePlain)];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.rowHeight = 50.0;
+    [self.view addSubview:self.tableView];
+    
+    _animationView = [[UIView alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
+    _animationView.backgroundColor = [UIColor redColor];
     [self.view addSubview:_animationView];
 }
 
@@ -136,19 +151,20 @@
     }];
 }
 
-- (void)clickEvent{
-    NSArray *oks = @[@"CABasicAnimation",@"CAKeyframeAnimation",@"CATransitionAnimation",@"CGAffineTransformIdentity"];
-    UIAlertController *vc = [UIAlertController alertStyle:0 title:@"动画实例" message:nil cancelTitle:@"取消" cancel:^(NSString *cancel) {
-        
-    } oksTitle:oks ok:^(NSUInteger index) {
-        [self performMethod:oks[index]];
-    }];
-    [self presentViewController:vc animated:YES completion:nil];
+#pragma mark -- UITableViewDelegate,UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.dataSource.count;
 }
 
-- (void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    AIEOETableViewCell *cell = [AIEOETableViewCell initWithTableView:tableView];
+    cell.title = self.dataSource[indexPath.row];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self performMethod:self.dataSource[indexPath.row]];
 }
 
 - (void)didReceiveMemoryWarning {

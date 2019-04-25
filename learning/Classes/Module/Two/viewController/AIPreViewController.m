@@ -51,6 +51,7 @@
     self.tableView.dataSource = self;
     self.tableView.rowHeight = 50.0;
     [self.view addSubview:self.tableView];
+  
 }
 
 - (void)didReceiveMemoryWarning {

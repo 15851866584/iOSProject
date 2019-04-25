@@ -41,4 +41,9 @@
 #define WeChatGreen AIRGB(69, 138, 213)
 #define WeChatPurple AIRGB(120, 138, 169)
 #define WeChatLightGreen AIRGB(162, 229, 99)
+
+
+//douyin颜色值
+
+
 #endif /* AIColorConfig_h */

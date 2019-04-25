@@ -1531,6 +1531,12 @@
 							com.apple.AccessWiFi = {
 								enabled = 1;
 							};
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
 						};
 					};
 					630F4E9D20CE042900BEDFE2 = {

@@ -82,6 +82,11 @@
     [super viewWillDisappear:animated];
     [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
 }
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
+}
 /*
 #pragma mark - Navigation
 
